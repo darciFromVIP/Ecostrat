@@ -10,6 +10,7 @@ public class Bubble : MonoBehaviour
     private void Awake()
     {
         button = GetComponent<Button>();
+        button.onClick.AddListener(GameManager.instance.AddMoney);
         button.onClick.AddListener(DestroySelf);
     }
 
