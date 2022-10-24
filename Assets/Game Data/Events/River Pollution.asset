@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
+  m_Name: River Pollution
+  m_EditorClassIdentifier: 
+  artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
+  time: 20
+  repeatTime: 0
+  reactions:
+  - description: Organize trash collection with our followers. -200$
+    actions:
+    - {fileID: 11400000, guid: 0d4173e35cb1f4343942d01e1ec67cb5, type: 2}
+  - description: Make a post on social sites. +700 followers
+    actions:
+    - {fileID: 11400000, guid: dcd42dbb492fb8444837bfda2e625391, type: 2}
+    - {fileID: 11400000, guid: 9cfac793596615a4cb5960ca6dbb70e8, type: 2}
+  eventDescription: There is too much trash in the river!

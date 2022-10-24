@@ -8,16 +8,24 @@ public class GameManager : MonoBehaviour
 {
     private int money = 500;
     private int followers = 0;
-    private float basicTimer = 0;
+    private int trash = 0;
+    private float gameTimer = 3600;
+    private float bubbleTimer = 0;
+    private float trashTimer = 0;
+    private int trashIncrementAmount = 10;
+    private int trashIncrementInterval = 3;
     private List<GameObject> trashBubbles = new();
 
     public Texture2D mapSprite;
-    public Button bubble;
-    public GameObject trashBubble;
+    public Button bubblePrefab;
+    public GameObject trashBubblePrefab;
+    public Event eventPrefab;
+    public EventDatabase eventDatabase;
 
     [Header("UI References")]
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI followerText;
+    public TextMeshProUGUI gameTimerText;
     public Canvas mapCanvas;
     public Canvas interactiveCanvas;
 
@@ -31,33 +39,56 @@ public class GameManager : MonoBehaviour
     {
         Canvas.GetDefaultCanvasMaterial().enableInstancing = true;
         UpdateUI();
-        for (int i = 0; i < 10000; i++)
+        trash = 10000;
+        for (int i = 0; i < trash; i++)
         {
             CreateTrashBubble();
+        }
+        foreach (var item in eventDatabase.events)
+        {
+            StartCoroutine(StartEventTimer(item));
         }
     }
     private void Update()
     {
-        basicTimer += Time.deltaTime;
-        if (basicTimer >= 2)
+        gameTimer -= Time.deltaTime;
+        System.TimeSpan timeSpan = System.TimeSpan.FromSeconds(gameTimer);
+        gameTimerText.text = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
+        if (gameTimer <= 0)
+            Defeat();
+        bubbleTimer += Time.deltaTime;
+        if (bubbleTimer >= 2)
         {
-            basicTimer = 0;
+            bubbleTimer = 0;
             CreateBubble();
-            CreateTrashBubble();
+        }
+        trashTimer += Time.deltaTime;
+        if (trashTimer >= trashIncrementInterval)
+        {
+            trashTimer = 0;
+            trash += trashIncrementAmount;
+            for (int i = 0; i < trashIncrementAmount; i++)
+            {
+                CreateTrashBubble();
+            }
         }
     }
     private void CreateBubble()
     {
-        Button bubbleInstance = Instantiate(bubble, interactiveCanvas.transform);
+        Button bubbleInstance = Instantiate(bubblePrefab, interactiveCanvas.transform);
         bubbleInstance.GetComponent<RectTransform>().anchoredPosition = GetPointOnTerrain();
     }
     private void CreateTrashBubble()
     {
-        GameObject bubbleInstance = Instantiate(trashBubble, mapCanvas.transform);
+        GameObject bubbleInstance = Instantiate(trashBubblePrefab, mapCanvas.transform);
         bubbleInstance.GetComponent<RectTransform>().anchoredPosition = GetPointOnTerrain();
         float random = Random.Range(0.8f, 1.5f);
         bubbleInstance.GetComponent<RectTransform>().localScale = new Vector3(random, random, random);
         trashBubbles.Add(bubbleInstance);
+    }
+    private void RemoveTrashBubble()
+    {
+        trashBubbles.Remove(trashBubbles[trashBubbles.Count - 1]);
     }
     private Vector2 GetPointOnTerrain()
     {
@@ -79,5 +110,78 @@ public class GameManager : MonoBehaviour
     {
         money += Random.Range(10, 51);
         UpdateUI();
+    }
+    public void ChangeStats(PlayerStat stat, int modifier)
+    {
+        switch (stat)
+        {
+            case PlayerStat.Followers:
+                followers += modifier;
+                break;
+            case PlayerStat.Money:
+                money += modifier;
+                break;
+            case PlayerStat.Timer:
+                gameTimer += modifier;
+                break;
+            case PlayerStat.Trash:
+                trash += modifier;
+                if (modifier > 0)
+                    for (int i = 0; i < modifier; i++)
+                    {
+                        CreateTrashBubble();
+                    }
+                else
+                    for (int i = 0; i > modifier; i--)
+                    {
+                        RemoveTrashBubble();
+                    }
+                break;
+            case PlayerStat.TrashIncrement:
+                trashIncrementAmount += modifier;
+                break;
+            case PlayerStat.TrashIncrementInterval:
+                trashIncrementInterval += modifier;
+                break;
+            default:
+                break;
+        }
+        UpdateUI();
+    }
+    public bool TestChangeStats(PlayerStat stat, int modifier)
+    {
+        switch (stat)
+        {
+            case PlayerStat.Followers:
+                break;
+            case PlayerStat.Money:
+                if (money + modifier < 0)
+                    return false;
+                break;
+            case PlayerStat.Timer:
+                break;
+            case PlayerStat.Trash:
+                break;
+            case PlayerStat.TrashIncrement:
+                break;
+            case PlayerStat.TrashIncrementInterval:
+                break;
+            default:
+                break;
+        }
+        return true;
+    }
+    public IEnumerator StartEventTimer(EventDataScriptable eventData)
+    {
+        yield return new WaitForSeconds(eventData.time);
+        Event tempEvent = Instantiate(eventPrefab, interactiveCanvas.transform);
+        tempEvent.GetComponent<RectTransform>().anchoredPosition = GetPointOnTerrain();
+        tempEvent.UpdateEvent(eventData);
+        if (eventData.repeatTime > 0)
+            StartCoroutine(StartEventTimer(eventData));
+    }
+    private void Defeat()
+    {
+
     }
 }
