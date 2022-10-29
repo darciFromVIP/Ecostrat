@@ -6,15 +6,26 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    private int money = 500;
+    public int money = 500;
     private int followers = 0;
-    private int trash = 0;
+    [SerializeField] private int trash = 0;
     private float gameTimer = 3600;
     private float bubbleTimer = 0;
     private float trashTimer = 0;
     private int trashIncrementAmount = 10;
     private int trashIncrementInterval = 3;
     private List<GameObject> trashBubbles = new();
+    private bool paused = false;
+
+    private int negotiationLevel = 0;
+    private int socialSitesLevel = 0;
+    private int riotsLevel = 0;
+    private int socialEventsLevel = 0;
+    private int oceanCleansingLevel = 0;
+    private int hackingLevel = 0;
+    private int bribeLevel = 0;
+    private int blackmailLevel = 0;
+    private int vandalismLevel = 0;
 
     public Texture2D mapSprite;
     public Button bubblePrefab;
@@ -51,6 +62,8 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
+        if (paused)
+            return;
         gameTimer -= Time.deltaTime;
         System.TimeSpan timeSpan = System.TimeSpan.FromSeconds(gameTimer);
         gameTimerText.text = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
@@ -179,6 +192,50 @@ public class GameManager : MonoBehaviour
         tempEvent.UpdateEvent(eventData);
         if (eventData.repeatTime > 0)
             StartCoroutine(StartEventTimer(eventData));
+    }
+    public void UpgradePerk(UpgradeInfo info)
+    {
+        money -= info.price;
+        foreach (var item in info.actions)
+        {
+            item.Execute();
+        }
+        switch (info.upgradeType)
+        {
+            case UpgradeType.Negotiation:
+                negotiationLevel++;
+                break;
+            case UpgradeType.SocialSites:
+                socialSitesLevel++;
+                break;
+            case UpgradeType.Riots:
+                riotsLevel++;
+                break;
+            case UpgradeType.SocialEvents:
+                socialEventsLevel++;
+                break;
+            case UpgradeType.OceanCleansing:
+                oceanCleansingLevel++;
+                break;
+            case UpgradeType.Hacking:
+                hackingLevel++;
+                break;
+            case UpgradeType.Bribe:
+                bribeLevel++;
+                break;
+            case UpgradeType.Blackmail:
+                blackmailLevel++;
+                break;
+            case UpgradeType.Vandalism:
+                vandalismLevel++;
+                break;
+            default:
+                break;
+        }
+    }
+    public void PauseGameToggle(bool value)
+    {
+        paused = value;
     }
     private void Defeat()
     {

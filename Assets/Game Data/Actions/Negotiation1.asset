@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd21324020339d14c8b2103411b5a775, type: 3}
+  m_Name: Negotiation1
+  m_EditorClassIdentifier: 
+  chances: 3c00000028000000
+  actions:
+  - {fileID: 11400000, guid: fc2243922fa3ae24c8857913d9cfa923, type: 2}
+  - {fileID: 11400000, guid: 48e8e76256ea4e54ebbea3727f16f56b, type: 2}
