@@ -8,10 +8,12 @@ public class GameManager : MonoBehaviour
 {
     public int money = 500;
     private int followers = 0;
+    private int illegality = 0;
     [SerializeField] private int trash = 0;
     private float gameTimer = 3600;
     private float bubbleTimer = 0;
     private float trashTimer = 0;
+    private float illegalityTimer = 0;
     private int trashIncrementAmount = 10;
     private int trashIncrementInterval = 3;
     private List<GameObject> trashBubbles = new();
@@ -36,7 +38,8 @@ public class GameManager : MonoBehaviour
     [Header("UI References")]
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI followerText;
-    public TextMeshProUGUI gameTimerText;
+    public Slider gameTimerSlider;
+    public Slider illegalitySlider;
     public Canvas mapCanvas;
     public Canvas interactiveCanvas;
 
@@ -65,8 +68,7 @@ public class GameManager : MonoBehaviour
         if (paused)
             return;
         gameTimer -= Time.deltaTime;
-        System.TimeSpan timeSpan = System.TimeSpan.FromSeconds(gameTimer);
-        gameTimerText.text = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
+        gameTimerSlider.value = gameTimer;
         if (gameTimer <= 0)
             Defeat();
         bubbleTimer += Time.deltaTime;
@@ -84,6 +86,14 @@ public class GameManager : MonoBehaviour
             {
                 CreateTrashBubble();
             }
+        }
+        illegalityTimer += Time.deltaTime;
+        if (illegalityTimer >= 60)
+        {
+            illegality -= 5;
+            if (illegality < 0)
+                illegality = 0;
+            illegalityTimer = 0;
         }
     }
     private void CreateBubble()
@@ -118,6 +128,7 @@ public class GameManager : MonoBehaviour
     {
         moneyText.text = money.ToString();
         followerText.text = followers.ToString();
+        illegalitySlider.value = illegality;
     }
     public void AddMoney()
     {
@@ -156,6 +167,10 @@ public class GameManager : MonoBehaviour
             case PlayerStat.TrashIncrementInterval:
                 trashIncrementInterval += modifier;
                 break;
+            case PlayerStat.Illegality:
+                illegality += modifier;
+                illegalityTimer = 0;
+                break;
             default:
                 break;
         }
@@ -188,7 +203,10 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(eventData.time);
         Event tempEvent = Instantiate(eventPrefab, interactiveCanvas.transform);
-        tempEvent.GetComponent<RectTransform>().anchoredPosition = GetPointOnTerrain();
+        if (eventData.mapPosition == Vector2.zero)
+            tempEvent.GetComponent<RectTransform>().anchoredPosition = GetPointOnTerrain();
+        else
+            tempEvent.GetComponent<RectTransform>().anchoredPosition = eventData.mapPosition / 4;
         tempEvent.UpdateEvent(eventData);
         if (eventData.repeatTime > 0)
             StartCoroutine(StartEventTimer(eventData));

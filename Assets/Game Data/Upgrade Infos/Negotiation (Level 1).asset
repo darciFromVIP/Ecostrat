@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Negotiation (Level 1)
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: da50c106b9f0f2e46a9b3828ec955810, type: 3}
+  artwork: {fileID: 21300000, guid: b23e1ca8243f7174f8ef420560536196, type: 3}
   upgradeType: 0
   price: 400
   description: 'You were never a good speaker, but your friend Cynthia studies geo-political
