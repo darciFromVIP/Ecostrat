@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
+  m_Name: Blackmaili 2
+  m_EditorClassIdentifier: 
+  artwork: {fileID: 21300000, guid: b7a176ae7126ff2409f0eace7872677e, type: 3}
+  upgradeType: 7
+  price: 4000
+  description: "You have already learned to use pressure on those who try to pretend
+    that no climate change is happening and that humanity is progressing as it should.
+    It becomes a problem if someone finds your name at the end of an email or letter
+    written by you. That\u2019s exactly why you need a person for such filth, so
+    the unnecessary threat doesn\u2019t cost you the chance to save the planet. Adam
+    Plutoe, local bouncer and anarchist, already has some experience with this. He
+    is always annoyed with the system, and a few nasty letters have already passed
+    through his hands. Based on his police record, he should be an easy victim, but
+    for a decent financial reward he will take the risk for you."
+  benefits: 
+  actions: []

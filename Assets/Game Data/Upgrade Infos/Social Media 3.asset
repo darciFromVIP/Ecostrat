@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
+  m_Name: Social Media 3
+  m_EditorClassIdentifier: 
+  artwork: {fileID: 21300000, guid: b13ef5ac73c20f2498ad899606c7cff8, type: 3}
+  upgradeType: 1
+  price: 6000
+  description: "One thing is to have the paid advertisement activated, the other
+    is to have it purposefully targeted on your desired audience. Sam was skilled
+    enough just to create the advertisement for you, so you need to find someone
+    more skilled in targeting an audience. Mary Elizabeth Winkley is a social media
+    specialist for more than 15 years, though during the covid pandemy she was fired
+    from a prestigious Finnish company Swappie and she\u2019s looking for a job where
+    she can make a good use of her experience."
+  benefits: '80% + Followers
+
+    20% - Followers'
+  actions: []

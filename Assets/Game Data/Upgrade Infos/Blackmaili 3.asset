@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
+  m_Name: Blackmaili 3
+  m_EditorClassIdentifier: 
+  artwork: {fileID: 21300000, guid: 9be6174ba4646d2439a4d634b6e22102, type: 3}
+  upgradeType: 7
+  price: 8000
+  description: "With great power there must also come great responsibility. And with
+    great responsibility comes great caution. Relying on one person will no longer
+    be possible if we want to remain completely anonymous. The team of 3 college
+    friends, whose conversation you overheard in a cafe near your apartment, sounded
+    quite engaged in topics that won\u2019t let you sleep well at night either. Dirt
+    everywhere you look, garbage on every corner and not only on land. Cities that
+    don\u2019t do anything about it and competent people pretend to be blind and
+    deaf, only for the benefit of their own. You couldn\u2019t resist contacting
+    one of the college group and introduced them with your own ideas. You finally
+    came to the conclusion that they would be willing to lay their necks down for
+    a good cause."
+  benefits: 
+  actions: []

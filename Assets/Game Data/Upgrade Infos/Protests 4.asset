@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
+  m_Name: Protests 4
+  m_EditorClassIdentifier: 
+  artwork: {fileID: 21300000, guid: 0528f6dd725514d428235f73d2d24216, type: 3}
+  upgradeType: 2
+  price: 35000
+  description: "Our protests are protected by one common idea. Take responsibility
+    into your own hands and make order in high political and managerial corporations,
+    for people who are not competent to meet our demands. The pressure we exert on
+    them is unrelenting and we plan to continue with it. The more followers we gain,
+    the bigger the protests become. But we will also need a much bigger team, to
+    prepare all the locations and details of a legal protest. That\u2019s why you
+    decided to contact a professional in this industry, John LaCante, who has a rich
+    history in nationwide protests against presidents, terrorists and conglomerates.
+    He\u2019s not cheap, but he offered us a full-time work with his entire team."
+  benefits: 
+  actions: []

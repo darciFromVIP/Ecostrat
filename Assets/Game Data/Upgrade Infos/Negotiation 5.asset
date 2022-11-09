@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
+  m_Name: Negotiation 5
+  m_EditorClassIdentifier: 
+  artwork: {fileID: 21300000, guid: 8f795a30c7b280d44ac5bffc252aa94f, type: 3}
+  upgradeType: 0
+  price: 50000
+  description: "Who else can help you when lawyers can\u2019t help you anymore? Politicians!
+    This is the highest political game about saving our planet, and if we want to
+    influence the decisions of countries, we need to financially support political
+    campaigns to gain influence over politicians and to gain their trust as well."
+  benefits: 
+  actions: []

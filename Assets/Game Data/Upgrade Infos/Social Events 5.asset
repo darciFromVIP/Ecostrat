@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
+  m_Name: Social Events 5
+  m_EditorClassIdentifier: 
+  artwork: {fileID: 21300000, guid: 114008bcdb4441e48bb75c51122ac6c0, type: 3}
+  upgradeType: 3
+  price: 50000
+  description: "Instead of the usual garbage collection from parks or riverbeds,
+    you\u2019ve decided to take it to another level. Our social events will be accompanied
+    by a programme and speakers from the industry who are also trying to save our
+    planet. We will teach people how to live ecologically, from small children to
+    our grandparents. At the same time, we want everything from our events to be
+    free for everyone."
+  benefits: 
+  actions: []

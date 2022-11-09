@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
+  m_Name: Protests 5
+  m_EditorClassIdentifier: 
+  artwork: {fileID: 21300000, guid: 00082068a38cd944ab22721645b33982, type: 3}
+  upgradeType: 2
+  price: 70000
+  description: "We need more familiar faces to speak for the population in their
+    given region. If we want to create a global movement, we can\u2019t just focus
+    on American companies and politicians. We need to expand worldwide. That\u2019s
+    why you get in contact with similar organisations like us all over the world.
+    With our knowledge, money and their people, we will be able to respond through
+    protests all around the world.\r\n"
+  benefits: 
+  actions: []

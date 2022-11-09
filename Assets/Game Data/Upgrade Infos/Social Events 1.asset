@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
+  m_Name: Social Events 1
+  m_EditorClassIdentifier: 
+  artwork: {fileID: 21300000, guid: 48c8012228154214b8cbe7de167ef542, type: 3}
+  upgradeType: 3
+  price: 800
+  description: "You\u2019ve always enjoyed organising events, but it takes more than
+    just natural talent. You will need the support of the people with whom you want
+    to hold these social events. That\u2019s why you decided to create a stand at
+    the places where garbage will be collected. And of course, everyone can buy a
+    small snack for their hard work there as well."
+  benefits: 
+  actions: []

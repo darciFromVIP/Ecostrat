@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
+  m_Name: Social Media 5
+  m_EditorClassIdentifier: 
+  artwork: {fileID: 21300000, guid: de37408f2254341418635e87c807395d, type: 3}
+  upgradeType: 1
+  price: 65000
+  description: "Cooperation with other corporations works well, but there\u2019s
+    something else that interests people even more. Influencers! The last step is
+    to create a team that can work with them. For that you\u2019ll need an even bigger
+    budget, because no famous influencer will promote something without a fat amount
+    of cash."
+  benefits: 100% + Followers
+  actions: []
