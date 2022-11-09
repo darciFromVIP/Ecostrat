@@ -16,7 +16,7 @@ MonoBehaviour:
   time: 10
   repeatTime: 15
   reactions:
-  - description: Organize trash collection with our followers. -100$
+  - description: Organize trash collection with our followers.
     actions:
     - {fileID: 11400000, guid: 3e54d9e0c381b1146901eadf5efa09b7, type: 2}
   - description: "Send a letter to the local \xFArad aby to dal dokopy omegalul.

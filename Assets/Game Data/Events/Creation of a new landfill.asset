@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Creation of a new landfill
   m_EditorClassIdentifier: 
   artwork: {fileID: 0}
-  time: 0
-  repeatTime: 0
+  time: 5
+  repeatTime: 3
   reactions: []
-  eventDescription: 
+  eventDescription: An additional place for collecting waste.
   mapPosition: {x: 0, y: 0}

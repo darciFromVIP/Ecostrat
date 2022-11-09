@@ -16,7 +16,7 @@ MonoBehaviour:
   time: 20
   repeatTime: 0
   reactions:
-  - description: Organize trash collection with our followers. -200$
+  - description: Organize trash collection with our followers.
     actions:
     - {fileID: 11400000, guid: 0d4173e35cb1f4343942d01e1ec67cb5, type: 2}
   - description: Make a post on social sites. +700 followers
@@ -24,3 +24,4 @@ MonoBehaviour:
     - {fileID: 11400000, guid: dcd42dbb492fb8444837bfda2e625391, type: 2}
     - {fileID: 11400000, guid: 9cfac793596615a4cb5960ca6dbb70e8, type: 2}
   eventDescription: There is too much trash in the river!
+  mapPosition: {x: 0, y: 0}

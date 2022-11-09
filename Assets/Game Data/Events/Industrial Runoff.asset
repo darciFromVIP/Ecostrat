@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Industrial Runoff
   m_EditorClassIdentifier: 
   artwork: {fileID: 0}
-  time: 0
-  repeatTime: 0
+  time: 12
+  repeatTime: 10
   reactions: []
-  eventDescription: 
+  eventDescription: Increased pollution of groundwater and seas.
   mapPosition: {x: 0, y: 0}

@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Buriganga River (Bangladesh)
   m_EditorClassIdentifier: 
   artwork: {fileID: 0}
-  time: 0
+  time: 20
   repeatTime: 0
   reactions: []
-  eventDescription: 
+  eventDescription: Buriganga River (Bangladesh) is polluted by industry and people!
   mapPosition: {x: 0, y: 0}

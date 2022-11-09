@@ -12,9 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Vandalism 3
   m_EditorClassIdentifier: 
-  artwork: {fileID: 0}
-  upgradeType: 0
-  price: 0
-  description: 
+  artwork: {fileID: 21300000, guid: 3deee3cc8d1b6f04784dcd13ca1946d5, type: 3}
+  upgradeType: 8
+  price: 100000
+  description: "You are tired of the constant effort to spread the message for those
+    who are deaf and blind to your legacy. Instead of begging others, let\u2019s
+    show those who don\u2019t care that you and your followers will be heard, no
+    matter what. However, organising an illegal protest costs a lot of effort and
+    especially, the organisers can\u2019t be associated with it. You found a secret
+    group on the dark web to help you with something like this, and you can only
+    hope your followers will support you with their presence."
   benefits: 
   actions: []

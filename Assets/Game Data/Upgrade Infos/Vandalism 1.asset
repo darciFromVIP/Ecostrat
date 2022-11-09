@@ -12,9 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Vandalism 1
   m_EditorClassIdentifier: 
-  artwork: {fileID: 0}
-  upgradeType: 0
-  price: 0
-  description: 
+  artwork: {fileID: 21300000, guid: e41395721d66a2944b661d5735b661e6, type: 3}
+  upgradeType: 8
+  price: 15000
+  description: "You invented your own stickers that you send out to your fans, so
+    they can stick them wherever they want. \u201CFor Green Planet\u201D stickers
+    are meant to show everyone who still doesn\u2019t understand that it\u2019s important
+    to take good care of your planet Earth. Our supporters will certainly be happy
+    to support your idea in such a way and spread the message to the streets."
   benefits: 
   actions: []
