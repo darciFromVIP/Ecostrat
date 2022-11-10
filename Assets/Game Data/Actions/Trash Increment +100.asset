@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 950498fb3f5a01a44b7958155cc03d56, type: 3}
   m_Name: Trash Increment +100
   m_EditorClassIdentifier: 
-  stat: 3
+  stat: 4
   modifier: 100
