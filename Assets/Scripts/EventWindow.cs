@@ -7,25 +7,31 @@ public class EventWindow : MonoBehaviour
 {
     public TextMeshProUGUI labelText, descriptionText;
     public Reactions reactions;
+    private Event currentEvent;
 
     public static EventWindow instance;
     private void Awake()
     {
         instance = this;
+        Hide();
     }
-    public void UpdateEvent(EventDataScriptable eventData)
+    public void UpdateEvent(EventDataScriptable eventData, Event currentEvent)
     {
+        Show();
+        this.currentEvent = currentEvent;
         labelText.text = eventData.name;
         descriptionText.text = eventData.eventDescription;
         reactions.SetNewReactions(eventData.reactions);
-        Show();
     }
-    private void Show()
+    public void Show()
     {
         gameObject.SetActive(true);
+        GameManager.instance.PauseGameToggle(true);
     }
-    private void Hide()
+    public void Hide()
     {
         gameObject.SetActive(false);
+        currentEvent.Destroy();
+        GameManager.instance.PauseGameToggle(false);
     }
 }

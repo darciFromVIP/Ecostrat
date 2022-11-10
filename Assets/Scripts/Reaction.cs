@@ -22,7 +22,7 @@ public class Reaction : MonoBehaviour
     {
         btn.interactable = true;
         btn.onClick.AddListener(data.ExecuteActions);
-        btn.onClick.AddListener(GetComponentInParent<Event>().Destroy);
+        btn.onClick.AddListener(EventWindow.instance.Hide);
         description.text = data.description;
         if (!data.TestExecute())
             btn.interactable = false;

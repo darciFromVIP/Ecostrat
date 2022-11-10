@@ -8,7 +8,7 @@ public class CameraControl : MonoBehaviour
     private Vector3 mouseWorldPosStart;
     private float zoomScale = 100;
     private float zoomMin = 100f;
-    private float zoomMax = 1000f;
+    private float zoomMax = 700f;
     private bool dragPanModeActive;
     private Vector2 lastMousePosition;
     private Vector3 defaultCameraPosition;

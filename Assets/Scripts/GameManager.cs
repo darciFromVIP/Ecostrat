@@ -42,6 +42,7 @@ public class GameManager : MonoBehaviour
     public Slider illegalitySlider;
     public Canvas mapCanvas;
     public Canvas interactiveCanvas;
+    public GameOverScreen gameoverScreen;
 
     public static GameManager instance;
 
@@ -70,7 +71,7 @@ public class GameManager : MonoBehaviour
         gameTimer -= Time.deltaTime;
         gameTimerSlider.value = gameTimer;
         if (gameTimer <= 0)
-            Defeat();
+            GameOver("Not enough time...", "Unfortunately, your operations have been too slow and weren't sufficient to save the planet in time.");
         bubbleTimer += Time.deltaTime;
         if (bubbleTimer >= 2)
         {
@@ -118,6 +119,17 @@ public class GameManager : MonoBehaviour
         Vector2 targetPos = new Vector2(Random.Range(0, mapCanvas.pixelRect.width), Random.Range(0, mapCanvas.pixelRect.height));
         Color color = mapSprite.GetPixel((int)targetPos.x * 4, (int)targetPos.y * 4);
         while (color.r >= 0.202 && color.r <= 0.206 && color.g >= 0.410 && color.g <= 0.414 && color.b >= 0.578 && color.b <= 0.582)    // Sea Color: R 204 G 412 B 480
+        {
+            targetPos = new Vector2(Random.Range(0, mapCanvas.pixelRect.width), Random.Range(0, mapCanvas.pixelRect.height));
+            color = mapSprite.GetPixel((int)targetPos.x * 4, (int)targetPos.y * 4);
+        }
+        return targetPos;
+    }
+    private Vector2 GetPointOnWater()
+    {
+        Vector2 targetPos = new Vector2(Random.Range(0, mapCanvas.pixelRect.width), Random.Range(0, mapCanvas.pixelRect.height));
+        Color color = mapSprite.GetPixel((int)targetPos.x * 4, (int)targetPos.y * 4);
+        while (!(color.r >= 0.202 && color.r <= 0.206 && color.g >= 0.410 && color.g <= 0.414 && color.b >= 0.578 && color.b <= 0.582))
         {
             targetPos = new Vector2(Random.Range(0, mapCanvas.pixelRect.width), Random.Range(0, mapCanvas.pixelRect.height));
             color = mapSprite.GetPixel((int)targetPos.x * 4, (int)targetPos.y * 4);
@@ -174,6 +186,12 @@ public class GameManager : MonoBehaviour
             default:
                 break;
         }
+        if (illegality >= 100)
+            GameOver("They caught you!", "You should've thought this through more carefully... Welp.");
+        if (trash >= 20000)
+            GameOver("Too much garbage!", "People have been really good in polluting the planet even more... The planet is unable to bear such amount of trash and it will soon be unable to be inhabited by humans.");
+        if (trash <= 0)
+            GameOver("All Clean!", "Congratulations! All the trash on this planet has been taken care of, which means we have nothing to fear anymore!");
         UpdateUI();
     }
     public bool TestChangeStats(PlayerStat stat, int modifier)
@@ -250,13 +268,15 @@ public class GameManager : MonoBehaviour
             default:
                 break;
         }
+        if (oceanCleansingLevel == 5)
+            GameOver("Planet Earth is saved!", "You managed to cleanse the oceans, which have been the biggest problem of all! Great job!");
     }
     public void PauseGameToggle(bool value)
     {
         paused = value;
     }
-    private void Defeat()
+    private void GameOver(string label, string description)
     {
-
+        gameoverScreen.UpdateTexts(label, description);
     }
 }

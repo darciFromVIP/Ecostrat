@@ -20,7 +20,7 @@ public class Event : MonoBehaviour
     }
     private void ShowEventWindow()
     {
-        EventWindow.instance.UpdateEvent(eventData);
+        EventWindow.instance.UpdateEvent(eventData, this);
     }
     public void Destroy()
     {
