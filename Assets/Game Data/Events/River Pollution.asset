@@ -23,5 +23,9 @@ MonoBehaviour:
     actions:
     - {fileID: 11400000, guid: dcd42dbb492fb8444837bfda2e625391, type: 2}
     - {fileID: 11400000, guid: 9cfac793596615a4cb5960ca6dbb70e8, type: 2}
+  - description: 
+    actions:
+    - {fileID: 11400000, guid: dcd42dbb492fb8444837bfda2e625391, type: 2}
+    - {fileID: 11400000, guid: 9cfac793596615a4cb5960ca6dbb70e8, type: 2}
   eventDescription: There is too much trash in the river!
   mapPosition: {x: 0, y: 0}
