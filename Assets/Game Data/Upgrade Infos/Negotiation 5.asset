@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Negotiation 5
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 8f795a30c7b280d44ac5bffc252aa94f, type: 3}
+  artwork: {fileID: 21300000, guid: 2b172e9457c45714483d524c10acf13b, type: 3}
   upgradeType: 0
   price: 50000
   description: "Who else can help you when lawyers can\u2019t help you anymore? Politicians!

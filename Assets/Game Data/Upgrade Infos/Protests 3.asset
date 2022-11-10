@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Protests 3
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 77c9790152f0f704e9c0358720599eb4, type: 3}
+  artwork: {fileID: 21300000, guid: 0f16c297505554b4386ffb9e04b71cd9, type: 3}
   upgradeType: 2
   price: 10000
   description: Activists are great, especially those who cooperate with us. However,

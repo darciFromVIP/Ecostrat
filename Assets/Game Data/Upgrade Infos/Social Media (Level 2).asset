@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Social Media (Level 2)
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: aaff9d47f4bb24d4abca2f1cd76c0978, type: 3}
+  artwork: {fileID: 21300000, guid: adaccad6b01e71f4580c66ac2c8c5672, type: 3}
   upgradeType: 1
   price: 2000
   description: "If you want to have a paid advertisement, you also need to find someone

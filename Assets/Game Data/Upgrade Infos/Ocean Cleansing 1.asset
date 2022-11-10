@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Ocean Cleansing 1
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 9795c54112fd3a44aa33ff68a10ea217, type: 3}
+  artwork: {fileID: 21300000, guid: 6f2a8a57f341bc24e91666399ae0603d, type: 3}
   upgradeType: 4
   price: 20000
   description: "The seabed is flooded with garbage, mainly plastic. We need to start

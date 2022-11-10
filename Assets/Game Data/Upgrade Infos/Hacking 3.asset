@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Hacking 3
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 71433653785698844b81afddc7690c5b, type: 3}
+  artwork: {fileID: 21300000, guid: 594cc791022ab2444b7c2ed3539a35cd, type: 3}
   upgradeType: 5
   price: 8000
   description: "Paul showed you the possibilities of the Dark Web. You found a hacker

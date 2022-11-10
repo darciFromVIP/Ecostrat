@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Hacking 4
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: f689b9afd0e2bf544b950b6e6f12cec7, type: 3}
+  artwork: {fileID: 21300000, guid: 71433653785698844b81afddc7690c5b, type: 3}
   upgradeType: 5
   price: 15000
   description: "WHN are amazing, but they don\u2019t have the technology that you

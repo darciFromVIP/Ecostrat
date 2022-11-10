@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Vandalism 2
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: d21fc79d50f4bb64790b6dad9a723c23, type: 3}
+  artwork: {fileID: 21300000, guid: e41395721d66a2944b661d5735b661e6, type: 3}
   upgradeType: 8
   price: 40000
   description: "Although the stickers spread your message, state corporations organise

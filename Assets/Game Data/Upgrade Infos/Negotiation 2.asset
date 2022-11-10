@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Negotiation 2
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: bc23d33231594b044ad31775a12d8958, type: 3}
+  artwork: {fileID: 21300000, guid: da50c106b9f0f2e46a9b3828ec955810, type: 3}
   upgradeType: 0
   price: 2500
   description: "Cynthia helped you with your stuttering and also taught you how to

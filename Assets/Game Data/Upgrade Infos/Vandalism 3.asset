@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Vandalism 3
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 3deee3cc8d1b6f04784dcd13ca1946d5, type: 3}
+  artwork: {fileID: 21300000, guid: d21fc79d50f4bb64790b6dad9a723c23, type: 3}
   upgradeType: 8
   price: 100000
   description: "You are tired of the constant effort to spread the message for those

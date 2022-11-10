@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Social Events 2
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 352269f0bc777354c917dce88fbd7361, type: 3}
+  artwork: {fileID: 21300000, guid: 48c8012228154214b8cbe7de167ef542, type: 3}
   upgradeType: 3
   price: 2500
   description: "You found out that people really liked the snack stand, but the waste

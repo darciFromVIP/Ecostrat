@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Bribe 1
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: a29d6c067f964f54490d5388d835c81f, type: 3}
+  artwork: {fileID: 21300000, guid: 8ac49367e866da044b9938d36f8b4068, type: 3}
   upgradeType: 6
   price: 700
   description: "You can\u2019t be directly connected to bribing, so you\u2019ve found

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Hacking 1
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: ba793f2412480ee4ab7d8df1fe9e3333, type: 3}
+  artwork: {fileID: 21300000, guid: f5e35f46c144f524fa51853d5372a3a2, type: 3}
   upgradeType: 5
   price: 500
   description: Your friend Johny Novovitch studies IT technologies. Together with

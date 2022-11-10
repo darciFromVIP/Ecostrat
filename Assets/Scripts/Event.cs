@@ -2,29 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 public class Event : MonoBehaviour
 {
     private Button btn;
-    public TextMeshProUGUI labelText, descriptionText;
-    public GameObject eventWindow;
-    public Reactions reactions;
-
+    private Image image;
+    private EventDataScriptable eventData;
     private void Awake()
     {
+        image = GetComponent<Image>();
         btn = GetComponent<Button>();
-        btn.onClick.AddListener(ToggleReactions);
+        btn.onClick.AddListener(ShowEventWindow);
     }
     public void UpdateEvent(EventDataScriptable eventData)
     {
-        labelText.text = eventData.name;
-        descriptionText.text = eventData.eventDescription;
-        reactions.SetNewReactions(eventData.reactions);
-        eventWindow.SetActive(false);
+        this.eventData = eventData;
+        image.sprite = eventData.artwork;
     }
-    private void ToggleReactions()
+    private void ShowEventWindow()
     {
-        eventWindow.SetActive(!eventWindow.activeSelf);
+        EventWindow.instance.UpdateEvent(eventData);
     }
     public void Destroy()
     {

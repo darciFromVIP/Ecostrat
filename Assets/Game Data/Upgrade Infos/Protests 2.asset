@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Protests 2
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 0f16c297505554b4386ffb9e04b71cd9, type: 3}
+  artwork: {fileID: 21300000, guid: aac95d4200271244583aa9c467d54d8f, type: 3}
   upgradeType: 2
   price: 3000
   description: "Although we have protests in written form as well, speaking about

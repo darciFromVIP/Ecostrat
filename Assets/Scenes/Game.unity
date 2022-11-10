@@ -1243,7 +1243,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeInfos:
-  - {fileID: 11400000, guid: c588647413c1d144ba7615edb8b5a3a6, type: 2}
+  - {fileID: 11400000, guid: 891b0cf2eb9065f409b8c1242fd8b1d1, type: 2}
+  - {fileID: 11400000, guid: 814ed5749df6f99478b09c88d3e3582e, type: 2}
+  - {fileID: 11400000, guid: 51cbd84e1791365449f583ca91da04d4, type: 2}
+  - {fileID: 11400000, guid: d310223453c686b49ab700e6b8179111, type: 2}
+  - {fileID: 11400000, guid: 257da8872f227e14798179021345dc30, type: 2}
 --- !u!114 &469518692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1778,7 +1782,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeInfos:
-  - {fileID: 11400000, guid: c588647413c1d144ba7615edb8b5a3a6, type: 2}
+  - {fileID: 11400000, guid: 8ab83d6a1ac85ec46b823acff8a619d9, type: 2}
+  - {fileID: 11400000, guid: 42e5b919f04edfd4abb33985f4748d50, type: 2}
+  - {fileID: 11400000, guid: bb4a89d66bfc9cb47be33719028f3d5d, type: 2}
+  - {fileID: 11400000, guid: 51abe322b5820fc46a0d01e39692a369, type: 2}
+  - {fileID: 11400000, guid: 29b7f82f960280b4e9aa4290b69ee6d6, type: 2}
 --- !u!114 &610672602
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1944,7 +1952,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeInfos:
-  - {fileID: 11400000, guid: c588647413c1d144ba7615edb8b5a3a6, type: 2}
+  - {fileID: 11400000, guid: f6d8a8cfc5d06234189ed5426c1f3c1d, type: 2}
+  - {fileID: 11400000, guid: 006bebebdb6b2d14eb679bf80acf23c4, type: 2}
+  - {fileID: 11400000, guid: c2a457abb5de19844b34d46c69a6ce21, type: 2}
+  - {fileID: 11400000, guid: 7586ec47479f58743babfcd3cf8bd13d, type: 2}
+  - {fileID: 11400000, guid: 5c7fff7ed65034d47b04df0229e9f08b, type: 2}
 --- !u!114 &632749525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2110,7 +2122,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeInfos:
-  - {fileID: 11400000, guid: c588647413c1d144ba7615edb8b5a3a6, type: 2}
+  - {fileID: 11400000, guid: af8cd19048e7e5244ab6b60be77ee814, type: 2}
+  - {fileID: 11400000, guid: 2a98c524c6932784aad9272980d364bb, type: 2}
+  - {fileID: 11400000, guid: 363dd849ad806914da3bf9abda81d85d, type: 2}
+  - {fileID: 11400000, guid: 2a25078f436fb104185a2ddc7f4869fa, type: 2}
+  - {fileID: 11400000, guid: 014be372d5a7a5c4b89fe506d4cba257, type: 2}
 --- !u!114 &719531770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2276,7 +2292,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeInfos:
-  - {fileID: 11400000, guid: c588647413c1d144ba7615edb8b5a3a6, type: 2}
+  - {fileID: 11400000, guid: 713e9c15a90c4c341ae11be3bce7696d, type: 2}
+  - {fileID: 11400000, guid: 307efcdcba3f5184387386836d3f3dca, type: 2}
+  - {fileID: 11400000, guid: cb6d172b6c2e4cd4eae5cc3c0b7a9b61, type: 2}
+  - {fileID: 11400000, guid: 3fc187031812df2488de0cfcfde06d79, type: 2}
+  - {fileID: 11400000, guid: 28cfc8d33ec60c044855c629b11a7064, type: 2}
 --- !u!114 &728516006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2823,6 +2843,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeInfos:
   - {fileID: 11400000, guid: c588647413c1d144ba7615edb8b5a3a6, type: 2}
+  - {fileID: 11400000, guid: 95660b788e9cde24d86f226004f84e77, type: 2}
+  - {fileID: 11400000, guid: 8557b9936812892428487ed3d4e06172, type: 2}
+  - {fileID: 11400000, guid: 2faa61aaa2bd8fe4181e075ef96f218e, type: 2}
+  - {fileID: 11400000, guid: 8dffa6fbf342cff449dac79ca9d65629, type: 2}
 --- !u!114 &1060596447
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4007,7 +4031,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeInfos:
-  - {fileID: 11400000, guid: c588647413c1d144ba7615edb8b5a3a6, type: 2}
+  - {fileID: 11400000, guid: da0284557b31d9240ad9f40e1d030a21, type: 2}
+  - {fileID: 11400000, guid: aa16fed5c5bf53f42838c2ed9c21ddaa, type: 2}
+  - {fileID: 11400000, guid: 941b65d94155ea64abbe5b87d3286126, type: 2}
+  - {fileID: 11400000, guid: 713a5cd86b4354d4e9f7dfd53a345ba7, type: 2}
+  - {fileID: 11400000, guid: be38ad474ee918b4fa4a5dd4bd3f91a1, type: 2}
 --- !u!114 &1636060954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4165,7 +4193,7 @@ GameObject:
   - component: {fileID: 1711929991}
   - component: {fileID: 1711929992}
   m_Layer: 5
-  m_Name: Riots
+  m_Name: Protests
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4286,7 +4314,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeInfos:
-  - {fileID: 11400000, guid: c588647413c1d144ba7615edb8b5a3a6, type: 2}
+  - {fileID: 11400000, guid: c49758daa2fb73f40a70a3848801e333, type: 2}
+  - {fileID: 11400000, guid: 9fc545d941801584cb2b124026d34489, type: 2}
+  - {fileID: 11400000, guid: 88d9d239e6133824186e3ca117581ad1, type: 2}
+  - {fileID: 11400000, guid: c536dcbc791fc2344989fe0da813d248, type: 2}
+  - {fileID: 11400000, guid: b0f1f5e6ab723a8448dff3062b8df480, type: 2}
 --- !u!114 &1711929992
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5230,7 +5262,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   upgradeInfos:
-  - {fileID: 11400000, guid: c588647413c1d144ba7615edb8b5a3a6, type: 2}
+  - {fileID: 11400000, guid: 6dacc271c207be64baba4ad928dac7a6, type: 2}
+  - {fileID: 11400000, guid: 69a097059955ea94e82824f3b2fd702c, type: 2}
+  - {fileID: 11400000, guid: 3419ab1b9c2c3be4e94461432f4cfa09, type: 2}
+  - {fileID: 11400000, guid: fe4b58c4835f3084c9f06a6d736d418a, type: 2}
+  - {fileID: 11400000, guid: 28267f4cbc9ee6f40a38d58b1bf73917, type: 2}
 --- !u!114 &1944035713
 MonoBehaviour:
   m_ObjectHideFlags: 0

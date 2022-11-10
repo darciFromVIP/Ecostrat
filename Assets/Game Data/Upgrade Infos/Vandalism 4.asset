@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Vandalism 4
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 6ffd4a6fd2d530a4f941cf7bda704d60, type: 3}
+  artwork: {fileID: 21300000, guid: 3deee3cc8d1b6f04784dcd13ca1946d5, type: 3}
   upgradeType: 8
   price: 180000
   description: "You finally caught the attention of those who pretended that nothing

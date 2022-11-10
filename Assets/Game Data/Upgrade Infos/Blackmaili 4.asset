@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Blackmaili 4
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: bb17f04ba641ba24d9dd43a38395ba46, type: 3}
+  artwork: {fileID: 21300000, guid: 9be6174ba4646d2439a4d634b6e22102, type: 3}
   upgradeType: 7
   price: 20000
   description: "Sometimes it\u2019s really sad where a person has to go to be able

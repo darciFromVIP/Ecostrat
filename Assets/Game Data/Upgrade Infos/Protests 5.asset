@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Protests 5
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 00082068a38cd944ab22721645b33982, type: 3}
+  artwork: {fileID: 21300000, guid: 0528f6dd725514d428235f73d2d24216, type: 3}
   upgradeType: 2
   price: 70000
   description: "We need more familiar faces to speak for the population in their
