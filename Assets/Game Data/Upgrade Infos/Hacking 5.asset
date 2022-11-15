@@ -18,5 +18,6 @@ MonoBehaviour:
   description: You hold control over the biggest corporations, but when it comes
     to the government and worldwide conglomerates, the only group that can help you
     is ANONYMOUS.
-  benefits: Hints for the right reaction. +3 Hints
+  benefits: Hints for your upcoming reaction (a hint shows you the consequences of
+    your reactions). +3 Hints
   actions: []

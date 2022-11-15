@@ -18,5 +18,6 @@ MonoBehaviour:
   description: Your friend Johny Novovitch studies IT technologies. Together with
     his friends as you talked over a beer, you thought it would be a great idea to
     do some illegal activity for a good cause.
-  benefits: Hints for the right reaction. +1 Hint
+  benefits: Hints for your upcoming reaction (a hint shows you the consequences of
+    your reactions). +1 Hint
   actions: []

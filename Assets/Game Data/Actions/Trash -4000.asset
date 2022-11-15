@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Trash -4000
   m_EditorClassIdentifier: 
   stat: 3
-  modifier: -2000
+  modifier: -4000

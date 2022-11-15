@@ -25,4 +25,4 @@ MonoBehaviour:
     8 000 followers
   actions:
   - {fileID: 11400000, guid: 6807dc6c4b3fa2249a12185fb4bf2b1a, type: 2}
-  - {fileID: 11400000, guid: 43c97e6e6c9855145b1a456befb6690d, type: 2}
+  - {fileID: 11400000, guid: e68d6768dad72444ab3917802a9102fc, type: 2}
