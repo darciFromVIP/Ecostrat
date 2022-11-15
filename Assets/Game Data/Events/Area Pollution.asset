@@ -19,10 +19,10 @@ MonoBehaviour:
   - description: Organize trash collection with our followers.
     actions:
     - {fileID: 11400000, guid: 3e54d9e0c381b1146901eadf5efa09b7, type: 2}
-  - description: "Send a letter to the local \xFArad aby to dal dokopy omegalul.
-      +150 Followers, -1 minute"
+    - {fileID: 11400000, guid: fc2243922fa3ae24c8857913d9cfa923, type: 2}
+  - description: 'Send a letter to the local authority. '
     actions:
-    - {fileID: 11400000, guid: 3f5d39d02ad3e2d4f895be50ec7c6380, type: 2}
-    - {fileID: 11400000, guid: 9cfac793596615a4cb5960ca6dbb70e8, type: 2}
+    - {fileID: 11400000, guid: 9c9afe97304d2e74a9c82cc30436074e, type: 2}
+    - {fileID: 11400000, guid: 0657bc9c82aafb54cb44d3acb1c2b6ea, type: 2}
   eventDescription: There is too much trash in the streets!
   mapPosition: {x: 7360, y: 1112}

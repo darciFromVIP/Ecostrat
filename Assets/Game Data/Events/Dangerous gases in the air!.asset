@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
+  m_Name: Dangerous gases in the air!
+  m_EditorClassIdentifier: 
+  artwork: {fileID: 0}
+  time: 7
+  repeatTime: 5
+  reactions:
+  - description: Bribing MPs to increase emissions for non-electronic vehicles. -
+      20 000$
+    actions:
+    - {fileID: 11400000, guid: 1d9ae9ddc7737b5468345db9349c5c45, type: 2}
+    - {fileID: 11400000, guid: d2eeba675124b28439f3353adff85879, type: 2}
+    - {fileID: 11400000, guid: 8f1ff4d1715166b4dad1e78d91c38e97, type: 2}
+  - description: Online campaign in the given location for more frequent use of city
+      transport, bicycles and walking. - 5 000$
+    actions:
+    - {fileID: 11400000, guid: 24b63840c232b6b40988eaf3127a3899, type: 2}
+    - {fileID: 11400000, guid: 57d6ba77b1d852c46a33208a930ff13d, type: 2}
+    - {fileID: 11400000, guid: ee450c8a11893b442bcae8cbc3e99e2e, type: 2}
+  - description: Agreement with local companies for the creation of electric bicycles
+      in the given area. - 25 000$
+    actions:
+    - {fileID: 11400000, guid: 8ef07ed76ad1a1748965d308ef887bf9, type: 2}
+    - {fileID: 11400000, guid: ff29a2752a2038449b5f55336122629c, type: 2}
+  eventDescription: Too many cars in the area are emitting dangerous gases into the
+    air!
+  mapPosition: {x: 0, y: 0}
