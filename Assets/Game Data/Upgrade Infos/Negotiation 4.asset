@@ -18,5 +18,6 @@ MonoBehaviour:
   description: "Shawn Diaz is great, but still he\u2019s just a single unit. And
     for big negotiation sessions he won\u2019t be enough. You found a group of lawyers
     from Harvard, who are willing to fight for your needs for a bigger sum of money."
-  benefits: 
-  actions: []
+  benefits: Gives you more time to save the planet Earth. +7 minutes
+  actions:
+  - {fileID: 11400000, guid: cc323a18520cbf34a8b92c5aa92cbc75, type: 2}

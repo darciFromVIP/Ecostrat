@@ -16,5 +16,5 @@ MonoBehaviour:
   upgradeType: 7
   price: 0
   description: Level MAX
-  benefits: 
+  benefits: Less detection of illegal activities. -30 illegality
   actions: []

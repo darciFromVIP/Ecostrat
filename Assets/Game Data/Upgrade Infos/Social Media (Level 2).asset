@@ -21,8 +21,6 @@ MonoBehaviour:
     grade at Stanford University, but he swore to be able to help you. You\u2019re
     just required to pay him his rent for 3 months. Let\u2019s hope he\u2019ll be
     useful. "
-  benefits: '75% + Followers
-
-    25% - Followers'
+  benefits: More followers. +500 followers
   actions:
-  - {fileID: 11400000, guid: a6b7e163781a9f848bc1e029c99219a7, type: 2}
+  - {fileID: 11400000, guid: d2b0cdd206f105f4caaee109340bb4de, type: 2}

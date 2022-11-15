@@ -18,5 +18,6 @@ MonoBehaviour:
   description: "You have also decided to add a group of divers to your team, so you
     don\u2019t have to constantly rely on other companies for performing the cleaning
     work."
-  benefits: 
-  actions: []
+  benefits: Cleansing trash increment. -1 000 trash increment
+  actions:
+  - {fileID: 11400000, guid: 5a910878b3d275e4193ae6583db25b67, type: 2}

@@ -22,5 +22,6 @@ MonoBehaviour:
     nicknames, nothing. Communication via head-to-head meetings, because online messages
     and calls are not advisable. Highly organised secret mafia will fulfil everything
     you require. Of course, for the right amount of money.
-  benefits: 
-  actions: []
+  benefits: Gives you more time to save the planet Earth. +10 minutes
+  actions:
+  - {fileID: 11400000, guid: 264096afd08f0ca43a9b080cac4f2bf4, type: 2}

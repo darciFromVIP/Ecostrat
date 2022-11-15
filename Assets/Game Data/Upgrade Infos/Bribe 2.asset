@@ -20,5 +20,6 @@ MonoBehaviour:
     more courageous and trustworthy. Your friend Johny gave you a tip about his cousin
     Jake Reins, who works with a bunch of other companies and has control over some
     of their managers. He\u2019ll definitely be useful to you."
-  benefits: 
-  actions: []
+  benefits: Gives you more time to save the planet Earth. +3 minutes
+  actions:
+  - {fileID: 11400000, guid: 882a021a4a57bd6429cff2111136c4ef, type: 2}

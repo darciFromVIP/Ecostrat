@@ -20,5 +20,8 @@ MonoBehaviour:
     are meant to show everyone who still doesn\u2019t understand that it\u2019s important
     to take good care of your planet Earth. Our supporters will certainly be happy
     to support your idea in such a way and spread the message to the streets."
-  benefits: 
-  actions: []
+  benefits: Cleansing trash for the price of your own followers. - 500 trash - 1
+    000 followers
+  actions:
+  - {fileID: 11400000, guid: 9eea74686d74a874ab5d0a0a35559be8, type: 2}
+  - {fileID: 11400000, guid: 5ece3c40c1dd68d4288a358303c9447a, type: 2}

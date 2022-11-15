@@ -20,5 +20,6 @@ MonoBehaviour:
     with corporations for real, you will need more than that. Luckily, you know a
     police investigator, who will reveal some of his tips and tricks, but it\u2019s
     not going to be for free."
-  benefits: 
-  actions: []
+  benefits: Gives you more time to save the planet Earth. +3 minutes
+  actions:
+  - {fileID: 11400000, guid: 882a021a4a57bd6429cff2111136c4ef, type: 2}

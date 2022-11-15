@@ -16,5 +16,5 @@ MonoBehaviour:
   upgradeType: 5
   price: 0
   description: Level MAX
-  benefits: 
+  benefits: Hints for the right reaction. +3 Hints
   actions: []

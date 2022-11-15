@@ -16,5 +16,5 @@ MonoBehaviour:
   upgradeType: 4
   price: 0
   description: Level MAX
-  benefits: 
+  benefits: VICTORY
   actions: []

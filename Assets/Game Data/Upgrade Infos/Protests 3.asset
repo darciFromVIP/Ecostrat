@@ -21,5 +21,7 @@ MonoBehaviour:
     more solid and organised group of young activists who had already made their
     own protests in the past, with very similar context to ours. You decided to support
     their own initiative and invite them to participate in our own protests.
-  benefits: 
-  actions: []
+  benefits: Followers but at a price of more trash. +1 500 followers +750 trash
+  actions:
+  - {fileID: 11400000, guid: 539f30ea3ac6edd4984d2793532068fb, type: 2}
+  - {fileID: 11400000, guid: 9b8af635256be1741b57d49e23534575, type: 2}

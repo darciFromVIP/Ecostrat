@@ -21,5 +21,6 @@ MonoBehaviour:
     water surfaces even a day could mean saving our planet, you decide to develop
     a special robot SPU-P1, which stands for Special Cleaning Unit - Prototype 1.
     This makes our team focus on other areas than directly cleaning."
-  benefits: 
-  actions: []
+  benefits: Cleansing trash increment. -3 000 trash increment
+  actions:
+  - {fileID: 11400000, guid: 07e7db6c4c9466d40b9a1a4cbb4d496f, type: 2}

@@ -21,5 +21,7 @@ MonoBehaviour:
     why you get in contact with similar organisations like us all over the world.
     With our knowledge, money and their people, we will be able to respond through
     protests all around the world.\r\n"
-  benefits: 
-  actions: []
+  benefits: Followers but at a price of more trash. +5 000 followers +2 000 trash
+  actions:
+  - {fileID: 11400000, guid: 8f02263a2629c1e4599243c86ef75d9c, type: 2}
+  - {fileID: 11400000, guid: 24b63840c232b6b40988eaf3127a3899, type: 2}

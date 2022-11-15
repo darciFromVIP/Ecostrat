@@ -20,5 +20,6 @@ MonoBehaviour:
     will be covered on social media. In order to spread our activities even more,
     the production staff will help us with short videos and photos from our events.
     These will be posted on social networks and our own new official website!"
-  benefits: 
-  actions: []
+  benefits: Cleansing trash. -1 700 trash
+  actions:
+  - {fileID: 11400000, guid: 31f4904e14096b1428f3511d34c1e379, type: 2}

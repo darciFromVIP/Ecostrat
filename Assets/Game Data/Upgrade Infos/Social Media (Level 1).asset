@@ -19,6 +19,6 @@ MonoBehaviour:
     how to gain more reach. You spoke to your colleague Jane Rogers, who takes care
     of the social media of the company you work in. She\u2019s not the best, but
     at least she knows how to use hashtags and her posts have bigger reach.\r\n"
-  benefits: '75%: '
+  benefits: More followers. +200 followers
   actions:
-  - {fileID: 11400000, guid: f5d4fca3840d8fa489f7805f33638114, type: 2}
+  - {fileID: 11400000, guid: 0975edb4bd5a9244d9264805dd90cc88, type: 2}

@@ -21,5 +21,6 @@ MonoBehaviour:
     but the Suburban Boston Gang is ready to help you after you encounter them in
     a bar on a street corner. $20,000 for using their own services and methods. The
     main thing is that the work will be taken care of."
-  benefits: 
-  actions: []
+  benefits: Less detection of illegal activities. -20 illegality
+  actions:
+  - {fileID: 11400000, guid: 624d74da155a16044821bb92935a077f, type: 2}

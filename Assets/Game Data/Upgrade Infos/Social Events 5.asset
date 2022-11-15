@@ -21,5 +21,6 @@ MonoBehaviour:
     planet. We will teach people how to live ecologically, from small children to
     our grandparents. At the same time, we want everything from our events to be
     free for everyone."
-  benefits: 
-  actions: []
+  benefits: Cleansing trash. -3 000 trash
+  actions:
+  - {fileID: 11400000, guid: 43c97e6e6c9855145b1a456befb6690d, type: 2}

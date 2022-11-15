@@ -19,5 +19,6 @@ MonoBehaviour:
     doing something about it if we are not going to go swimming in seas of plastic
     and dead suffocated fish. That\u2019s why we create a team of experts and analysts
     to research ideal solutions for this problem."
-  benefits: 
-  actions: []
+  benefits: Cleansing trash increment. -500 trash increment
+  actions:
+  - {fileID: 11400000, guid: 7a3505f90f720be47a50e31071ffbf04, type: 2}
