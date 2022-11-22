@@ -31,7 +31,8 @@ public class EventWindow : MonoBehaviour
     public void Hide()
     {
         gameObject.SetActive(false);
-        currentEvent.Destroy();
+        if (currentEvent)
+            currentEvent.Destroy();
         GameManager.instance.PauseGameToggle(false);
     }
 }

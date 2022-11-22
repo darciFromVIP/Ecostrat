@@ -20,4 +20,5 @@ MonoBehaviour:
     and ask them for help to protect the Earth together."
   benefits: Hints for your upcoming reaction (a hint shows you the consequences of
     your reactions). +2 Hints
-  actions: []
+  actions:
+  - {fileID: 11400000, guid: 95ec3378c0116fa4da256325c32cc817, type: 2}

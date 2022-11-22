@@ -20,4 +20,5 @@ MonoBehaviour:
     is ANONYMOUS.
   benefits: Hints for your upcoming reaction (a hint shows you the consequences of
     your reactions). +3 Hints
-  actions: []
+  actions:
+  - {fileID: 11400000, guid: 50649e19f81cbc642a2f7cffd3342981, type: 2}

@@ -7,6 +7,7 @@ public class ReactionData
 {
     [TextArea(3, 3)]
     public string description;
+    public string additionalDescription;
     public List<Action> actions = new();
 
     public void ExecuteActions()

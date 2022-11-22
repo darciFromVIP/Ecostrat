@@ -21,4 +21,5 @@ MonoBehaviour:
     in greenpeace activities."
   benefits: Hints for your upcoming reaction (a hint shows you the consequences of
     your reactions). +1 Hint
-  actions: []
+  actions:
+  - {fileID: 11400000, guid: 9c91fe5cef0e80f49abc920fc68ef2d2, type: 2}

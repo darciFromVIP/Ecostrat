@@ -14,16 +14,15 @@ public class Reaction : MonoBehaviour
     {
         btn = GetComponent<Button>();
     }
-    private void SetButtonInteractability()
-    {
-        btn.interactable = false;
-    }
     public void UpdateReaction(ReactionData data)
     {
         btn.interactable = true;
         btn.onClick.AddListener(data.ExecuteActions);
         btn.onClick.AddListener(EventWindow.instance.Hide);
-        description.text = data.description;
+        if (GameManager.instance.hints > 0)
+            description.text = data.description + data.additionalDescription;
+        else
+            description.text = data.description;
         if (!data.TestExecute())
             btn.interactable = false;
     }

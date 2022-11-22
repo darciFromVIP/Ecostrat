@@ -12,16 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
   m_Name: A huge amount of smog in Shanghai!
   m_EditorClassIdentifier: 
-  artwork: {fileID: 0}
-  time: 13
+  artwork: {fileID: 21300000, guid: e58000457a5517c4195b0f552961e1a2, type: 3}
+  time: 726
   repeatTime: 0
   reactions:
   - description: Electrical solution design. - 15 000$
+    additionalDescription: 
     actions:
     - {fileID: 11400000, guid: 1b93fe6f616ee384d8ef321a928162b4, type: 2}
     - {fileID: 11400000, guid: 997201db536c4ba40b2dfeb18ab391b4, type: 2}
     - {fileID: 11400000, guid: 6d89670dc37218b4898bf7f03ab3b2fa, type: 2}
-  - description: Rousing the Shanghai population. - 3 500$
+  - description: Rouse the Shanghai population. - 3 500$
+    additionalDescription: 
     actions:
     - {fileID: 11400000, guid: 24b63840c232b6b40988eaf3127a3899, type: 2}
     - {fileID: 11400000, guid: 9a0709ae9d63d9a41a6cce822addef51, type: 2}
@@ -29,6 +31,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 342040239e8a5744fb22e9d88b07f0f7, type: 2}
   - description: Online negotiations with the management of companies that produce
       smog and contracts to adjust their production. - 5 000$
+    additionalDescription: 
     actions:
     - {fileID: 11400000, guid: 24b63840c232b6b40988eaf3127a3899, type: 2}
     - {fileID: 11400000, guid: 8828e5e68a05fde40b8f19f29842ef7e, type: 2}

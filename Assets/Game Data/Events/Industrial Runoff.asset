@@ -12,12 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
   m_Name: Industrial Runoff
   m_EditorClassIdentifier: 
-  artwork: {fileID: 0}
-  time: 12
-  repeatTime: 10
+  artwork: {fileID: 21300000, guid: e58000457a5517c4195b0f552961e1a2, type: 3}
+  time: 369
+  repeatTime: 0
   reactions:
   - description: A hacker attack on the factory with the threat of a complete shutdown
       of the factory. - 2 000$
+    additionalDescription: 
     actions:
     - {fileID: 11400000, guid: 1816f15b9180fb640a6473da5d0b82f9, type: 2}
     - {fileID: 11400000, guid: c0acd878a7076444faf448cc37e506a8, type: 2}
@@ -25,11 +26,13 @@ MonoBehaviour:
     - {fileID: 11400000, guid: dcc5ef84bd1eeb34084d199af4d99fa6, type: 2}
   - description: Bribing the head of the company to support a more ecological solution.
       - 5 000$
+    additionalDescription: 
     actions:
     - {fileID: 11400000, guid: ac15418341863b1499fd03e1caf96aad, type: 2}
     - {fileID: 11400000, guid: 20f56ffd831ada84a847916ee59318cb, type: 2}
     - {fileID: 11400000, guid: ee450c8a11893b442bcae8cbc3e99e2e, type: 2}
   - description: Public protests in the given areas. - 3 000$
+    additionalDescription: 
     actions:
     - {fileID: 11400000, guid: 1816f15b9180fb640a6473da5d0b82f9, type: 2}
     - {fileID: 11400000, guid: 57d6ba77b1d852c46a33208a930ff13d, type: 2}

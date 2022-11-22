@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public int money = 500;
     private int followers = 0;
+    private float followerIncomeTimer = 0;
     private int illegality = 0;
     [SerializeField] private int trash = 0;
     private float gameTimer = 3600;
@@ -18,6 +19,10 @@ public class GameManager : MonoBehaviour
     private int trashIncrementInterval = 3;
     private List<GameObject> trashBubbles = new();
     private bool paused = false;
+    private float oneDayInSec;
+    private float dayTimer = 0;
+    private int days = 0;
+    public int hints = 0;
 
     private int negotiationLevel = 0;
     private int socialSitesLevel = 0;
@@ -34,15 +39,23 @@ public class GameManager : MonoBehaviour
     public GameObject trashBubblePrefab;
     public Event eventPrefab;
     public EventDatabase eventDatabase;
+    public FloatingText floatingTextPrefab;
 
     [Header("UI References")]
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI followerText;
+    public TextMeshProUGUI trashText;
     public Slider gameTimerSlider;
     public Slider illegalitySlider;
     public Canvas mapCanvas;
     public Canvas interactiveCanvas;
     public GameOverScreen gameoverScreen;
+    public TextMeshProUGUI dayText;
+    public RectTransform followersFloatingText;
+    public RectTransform moneyFloatingText;
+    public RectTransform timeFloatingText;
+    public RectTransform illegalityFloatingText;
+    public RectTransform trashFloatingText;
 
     public static GameManager instance;
 
@@ -53,7 +66,6 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Canvas.GetDefaultCanvasMaterial().enableInstancing = true;
-        UpdateUI();
         trash = 10000;
         for (int i = 0; i < trash; i++)
         {
@@ -63,6 +75,10 @@ public class GameManager : MonoBehaviour
         {
             StartCoroutine(StartEventTimer(item));
         }
+        StartCoroutine(GameNewsCoroutine());
+        StartCoroutine(IllegalityNewsCoroutine());
+        oneDayInSec = gameTimer / 365;
+        UpdateUI();
     }
     private void Update()
     {
@@ -73,7 +89,7 @@ public class GameManager : MonoBehaviour
         if (gameTimer <= 0)
             GameOver("Not enough time...", "Unfortunately, your operations have been too slow and weren't sufficient to save the planet in time.");
         bubbleTimer += Time.deltaTime;
-        if (bubbleTimer >= 2)
+        if (bubbleTimer >= 5)
         {
             bubbleTimer = 0;
             CreateBubble();
@@ -82,10 +98,14 @@ public class GameManager : MonoBehaviour
         if (trashTimer >= trashIncrementInterval)
         {
             trashTimer = 0;
-            trash += trashIncrementAmount;
+            ChangeStats(PlayerStat.Trash, trashIncrementAmount);
             for (int i = 0; i < trashIncrementAmount; i++)
             {
                 CreateTrashBubble();
+            }
+            for (int i = 0; i > trashIncrementAmount; i--)
+            {
+                RemoveTrashBubble();
             }
         }
         illegalityTimer += Time.deltaTime;
@@ -95,6 +115,19 @@ public class GameManager : MonoBehaviour
             if (illegality < 0)
                 illegality = 0;
             illegalityTimer = 0;
+        }
+        followerIncomeTimer += Time.deltaTime;
+        if (followerIncomeTimer >= 30)
+        {
+            followerIncomeTimer = 0;
+            ChangeStats(PlayerStat.Money, followers);
+        }
+        dayTimer += Time.deltaTime;
+        if (dayTimer >= oneDayInSec)
+        {
+            dayTimer = 0;
+            days++;
+            dayText.text = "Day " + days;
         }
     }
     private void CreateBubble()
@@ -140,25 +173,36 @@ public class GameManager : MonoBehaviour
     {
         moneyText.text = money.ToString();
         followerText.text = followers.ToString();
+        trashText.text = trash.ToString();
         illegalitySlider.value = illegality;
     }
     public void AddMoney()
     {
-        money += Random.Range(10, 51);
-        UpdateUI();
+        ChangeStats(PlayerStat.Money, (int)(Random.Range(10, 51) * 3600 / gameTimer));
     }
     public void ChangeStats(PlayerStat stat, int modifier)
     {
+        FloatingText text;
         switch (stat)
         {
             case PlayerStat.Followers:
                 followers += modifier;
+                if (followers < 0)
+                    followers = 0;
+                text = Instantiate(floatingTextPrefab, followersFloatingText);
+                text.UpdateText(modifier.ToString("+#;-#;0"), modifier > 0, true);
                 break;
             case PlayerStat.Money:
                 money += modifier;
+                if (money < 0)
+                    money = 0;
+                text = Instantiate(floatingTextPrefab, moneyFloatingText);
+                text.UpdateText(modifier.ToString("+#;-#;0"), modifier > 0, true);
                 break;
             case PlayerStat.Timer:
                 gameTimer += modifier;
+                text = Instantiate(floatingTextPrefab, timeFloatingText);
+                text.UpdateText(modifier.ToString("+#;-#;0") + " seconds", modifier > 0, false);
                 break;
             case PlayerStat.Trash:
                 trash += modifier;
@@ -172,6 +216,8 @@ public class GameManager : MonoBehaviour
                     {
                         RemoveTrashBubble();
                     }
+                text = Instantiate(floatingTextPrefab, trashFloatingText);
+                text.UpdateText(modifier.ToString("+#;-#;0"), modifier < 0, true);
                 break;
             case PlayerStat.TrashIncrement:
                 trashIncrementAmount += modifier;
@@ -181,7 +227,16 @@ public class GameManager : MonoBehaviour
                 break;
             case PlayerStat.Illegality:
                 illegality += modifier;
+                if (illegality < 0)
+                    illegality = 0;
                 illegalityTimer = 0;
+                text = Instantiate(floatingTextPrefab, illegalityFloatingText);
+                text.UpdateText(modifier.ToString("+#;-#;0"), modifier < 0, true);
+                break;
+            case PlayerStat.Hint:
+                hints += modifier;
+                if (hints < 0)
+                    hints = 0;
                 break;
             default:
                 break;
@@ -219,7 +274,13 @@ public class GameManager : MonoBehaviour
     }
     public IEnumerator StartEventTimer(EventDataScriptable eventData)
     {
-        yield return new WaitForSeconds(eventData.time);
+        float time = eventData.time;
+        while (time > 0)
+        {
+            if (!paused)
+                time -= Time.deltaTime;
+            yield return null;
+        }
         Event tempEvent = Instantiate(eventPrefab, interactiveCanvas.transform);
         if (eventData.mapPosition == Vector2.zero)
             tempEvent.GetComponent<RectTransform>().anchoredPosition = GetPointOnTerrain();
@@ -228,6 +289,35 @@ public class GameManager : MonoBehaviour
         tempEvent.UpdateEvent(eventData);
         if (eventData.repeatTime > 0)
             StartCoroutine(StartEventTimer(eventData));
+    }
+    private IEnumerator GameNewsCoroutine()
+    {
+        yield return new WaitUntil(() => gameTimer < 2700);
+        News.instance.AddMessage("Zostávajú ti 3/4 pôvodného èasu, èo sa rovná presne 273 dní. Ak máš v pláne zachráni Zem, mal by si sa rozhýba!");
+        yield return new WaitUntil(() => gameTimer < 1800);
+        News.instance.AddMessage("Zostáva ti presne polovica pôvodného èasu, èo je presne 182 a pól dòa. Nechcem mudrova, ale myslím, že by si naozaj mal zaèal robi zmeny k lepšiemu, lebo inak èelíme záhube, ak si si to ešte neuvedomil!");
+        yield return new WaitUntil(() => gameTimer < 900);
+        News.instance.AddMessage("Zostáva ti 1/4 pôvodného èasu, èo je presne 91 dní, èiže 3 mesiace. Je mi jedno ako si to chceš vypoèíta, dôležité je len aby si pochopil, že už naozaj nemáme èas stráca èas!");
+        yield return new WaitUntil(() => gameTimer < 600);
+        News.instance.AddMessage("Zostáva ti 60 dní, èiže 2 mesiace. Z práce si dostal dopis, že kvôli nepríjemnej situácií s množstvom odpadkov v oceánoch sa vaša poboèka zatvára. Síce si aj celkom rád kvôli všetkej tej korupcií, ale na druhú stranu prichádzaš o mesaèný income (- 1 500$ mesaène).");
+        // Implement money income
+        yield return new WaitUntil(() => gameTimer < 300);
+        News.instance.AddMessage("Zostáva ti 30 dní, a. k. a. 1 mesiac, tak sa už koneène rozhýb, inak bude nie len Game Over, ale aj Planeta Zem s ¾udstvom over!");
+        yield return new WaitUntil(() => gameTimer < 180);
+        News.instance.AddMessage("Zostáva ti 7 dní a to znamená posledný týždeò! Odpadky zaplavujú ulice miest. Doomsday klope na dvere!");
+        yield return new WaitUntil(() => gameTimer < 60);
+        News.instance.AddMessage("Zostáva ti 6 dni! Z morí a oceánov sa vyplavujú tisícky mrtvých rýb zadusených plastami. Rob s tým pre boha nieèo!");
+    }
+    private IEnumerator IllegalityNewsCoroutine()
+    {
+        yield return new WaitUntil(() => illegality >= 20);
+        News.instance.AddMessage("Tvoj kamoš Johny bol predvolaný na výsluch. Dávaj pozor aby si neskonèil tak isto!");
+        yield return new WaitUntil(() => illegality >= 40);
+        News.instance.AddMessage("Bol si predvolaný na výsluch! Si ale dobre krytý, èiže žiadne ve¾ké problémy ti nehrozia. (môžeme zakomponova special event 50/50 že dostaneš pokutu or not)");
+        yield return new WaitUntil(() => illegality >= 60);
+        News.instance.AddMessage("Okolo tvojho bytu sa podozrivo èasto zaèína objavova èierne BMW a je tam celý deò aj noc. Skoro to zaèína vyzera, že nás zelení (cops) sledujú.");
+        yield return new WaitUntil(() => illegality >= 80);
+        News.instance.AddMessage("Breaking News! The Green Inc. - pomoc planéte alebo zloèinecká organizácia?!");
     }
     public void UpgradePerk(UpgradeInfo info)
     {
@@ -269,11 +359,21 @@ public class GameManager : MonoBehaviour
                 break;
         }
         if (oceanCleansingLevel == 5)
-            GameOver("Planet Earth is saved!", "You managed to cleanse the oceans, which have been the biggest problem of all! Great job!");
+            GameOver("Planet Earth is saved!", "You managed to cleanse the oceans, which has been the biggest problem of all! Great job!");
+        if (vandalismLevel == 5)
+            GameOver("Planet Earth is saved!", "You vandal! :)");
     }
     public void PauseGameToggle(bool value)
     {
         paused = value;
+    }
+    public bool LegalUltimatePerkUnlocked()
+    {
+        return negotiationLevel == 5 && socialSitesLevel == 5 && riotsLevel == 5 && socialEventsLevel == 5;
+    }
+    public bool IllegalUltimatePerkUnlocked()
+    {
+        return hackingLevel == 5 && bribeLevel == 5 && blackmailLevel == 5;
     }
     private void GameOver(string label, string description)
     {

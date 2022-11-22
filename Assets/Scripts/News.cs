@@ -10,7 +10,7 @@ public class News : MonoBehaviour
     private float scrollPosition = 0;
     private Queue<string> messages = new();
 
-    public static News instance = new();
+    public static News instance;
     private void Awake()
     {
         instance = this;

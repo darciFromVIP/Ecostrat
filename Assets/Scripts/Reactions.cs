@@ -15,6 +15,7 @@ public class Reactions : MonoBehaviour
             Reaction reaction = Instantiate(reactionPrefab, reactionPrefab.transform.position, reactionPrefab.transform.rotation, transform);
             reaction.UpdateReaction(reactionData[i]);
         }
+        GameManager.instance.ChangeStats(PlayerStat.Hint, -1);
     }
     private void ClearContainer()
     {

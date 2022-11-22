@@ -1,4 +1,4 @@
 public enum PlayerStat
 {
-    Followers, Money, Timer, Trash, TrashIncrement, TrashIncrementInterval, Illegality
+    Followers, Money, Timer, Trash, TrashIncrement, TrashIncrementInterval, Illegality, Hint
 }

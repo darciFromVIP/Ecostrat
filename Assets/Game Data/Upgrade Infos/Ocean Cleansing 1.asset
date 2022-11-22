@@ -18,7 +18,8 @@ MonoBehaviour:
   description: "The seabed is flooded with garbage, mainly plastic. We need to start
     doing something about it if we are not going to go swimming in seas of plastic
     and dead suffocated fish. That\u2019s why we create a team of experts and analysts
-    to research ideal solutions for this problem."
+    to research ideal solutions for this problem. REQUIRES ALL OTHER LEGAL PERKS
+    ON LEVEL 5"
   benefits: Cleansing trash increment. -500 trash increment
   actions:
   - {fileID: 11400000, guid: 7a3505f90f720be47a50e31071ffbf04, type: 2}

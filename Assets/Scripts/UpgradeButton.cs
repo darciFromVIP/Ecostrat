@@ -22,6 +22,10 @@ public class UpgradeButton : MonoBehaviour
             btn.interactable = false;
         else
             btn.interactable = true;
+        if (name == "OceanCleansing" && !GameManager.instance.LegalUltimatePerkUnlocked())
+            btn.interactable = false;
+        if (name == "Vandalism" && !GameManager.instance.IllegalUltimatePerkUnlocked())
+            btn.interactable = false;
         GetComponent<Image>().sprite = currentUpgradeInfo.artwork;
     }
     public void UpdateDescription()
