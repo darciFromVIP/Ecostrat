@@ -10,19 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
-  m_Name: River Pollution
+  m_Name: River Pollution Level 1
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
   time: 32
   repeatTime: 61
   reactions:
   - description: Organize trash collection with our followers. - 200$
-    additionalDescription: 
+    additionalDescription: 'HINT: Trash -300'
     actions:
     - {fileID: 11400000, guid: 0d4173e35cb1f4343942d01e1ec67cb5, type: 2}
     - {fileID: 11400000, guid: 6dbea55d1c068124fbc50b9d8c4c1ce4, type: 2}
-  - description: Make a post on social sites.
-    additionalDescription: 
+  - description: Make a post on social sites. - 0$
+    additionalDescription: 'HINT: Trash +300, Followers +700'
     actions:
     - {fileID: 11400000, guid: dcd42dbb492fb8444837bfda2e625391, type: 2}
     - {fileID: 11400000, guid: a163ec0d9c973e242a551473b5788bcd, type: 2}

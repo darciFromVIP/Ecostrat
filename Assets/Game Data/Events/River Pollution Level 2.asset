@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
+  m_Name: River Pollution Level 2
+  m_EditorClassIdentifier: 
+  artwork: {fileID: 0}
+  time: 0
+  repeatTime: 0
+  reactions:
+  - description: Organize a protest. - 1 000$
+    additionalDescription: 'HINT: Trash +400, Followers +1 000'
+    actions:
+    - {fileID: 11400000, guid: 7cd9a0868562dc04ab0e5be98508ff29, type: 2}
+    - {fileID: 11400000, guid: 87aa984b03d8f2d488696644fc862458, type: 2}
+    - {fileID: 11400000, guid: 488d2fe792eb04446b9c59aa4a5135f0, type: 2}
+  - description: Negotiate with the city council for a remedy. - 700$
+    additionalDescription: 'HINT: Trash Increment -200'
+    actions:
+    - {fileID: 11400000, guid: 62bbcddaf7d884345931bfc4dc48ae0a, type: 2}
+    - {fileID: 11400000, guid: 0cc634446587a6f41a7541e6edbe5dd5, type: 2}
+  - description: Hire graffiti artists and let them move the message of pollution
+      to the streets. - 1 300$
+    additionalDescription: 'HINT:  Trash Increment -200, Followers +600, Illegality
+      +10'
+    actions:
+    - {fileID: 11400000, guid: 62bbcddaf7d884345931bfc4dc48ae0a, type: 2}
+    - {fileID: 11400000, guid: 6f2ea3817e9b7854cadca9c3d766576d, type: 2}
+    - {fileID: 11400000, guid: ac15418341863b1499fd03e1caf96aad, type: 2}
+    - {fileID: 11400000, guid: 4a1ca20032124f947a70f2dc4af77086, type: 2}
+  eventDescription: Pollution of the river of the given location - too much garbage
+    in the river corridors!
+  mapPosition: {x: 0, y: 0}

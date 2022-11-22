@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: +200 Follower
   m_EditorClassIdentifier: 
   stat: 0
-  modifier: 150
+  modifier: 200
