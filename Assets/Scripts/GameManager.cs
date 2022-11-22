@@ -15,8 +15,8 @@ public class GameManager : MonoBehaviour
     private float bubbleTimer = 0;
     private float trashTimer = 0;
     private float illegalityTimer = 0;
-    private int trashIncrementAmount = 10;
-    private int trashIncrementInterval = 3;
+    [SerializeField] private int trashIncrementAmount = 10;
+    [SerializeField] private int trashIncrementInterval = 3;
     private List<GameObject> trashBubbles = new();
     private bool paused = false;
     private float oneDayInSec;
