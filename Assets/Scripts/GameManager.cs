@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     private float dayTimer = 0;
     private int days = 0;
     public int hints = 0;
+    private int speed = 1;
 
     private int negotiationLevel = 0;
     private int socialSitesLevel = 0;
@@ -84,17 +85,17 @@ public class GameManager : MonoBehaviour
     {
         if (paused)
             return;
-        gameTimer -= Time.deltaTime;
+        gameTimer -= Time.deltaTime * speed;
         gameTimerSlider.value = gameTimer;
         if (gameTimer <= 0)
             GameOver("Not enough time...", "Unfortunately, your operations have been too slow and weren't sufficient to save the planet in time.");
-        bubbleTimer += Time.deltaTime;
+        bubbleTimer += Time.deltaTime * speed;
         if (bubbleTimer >= 5)
         {
             bubbleTimer = 0;
             CreateBubble();
         }
-        trashTimer += Time.deltaTime;
+        trashTimer += Time.deltaTime * speed;
         if (trashTimer >= trashIncrementInterval)
         {
             trashTimer = 0;
@@ -108,7 +109,7 @@ public class GameManager : MonoBehaviour
                 RemoveTrashBubble();
             }
         }
-        illegalityTimer += Time.deltaTime;
+        illegalityTimer += Time.deltaTime * speed;
         if (illegalityTimer >= 60)
         {
             illegality -= 5;
@@ -116,13 +117,13 @@ public class GameManager : MonoBehaviour
                 illegality = 0;
             illegalityTimer = 0;
         }
-        followerIncomeTimer += Time.deltaTime;
+        followerIncomeTimer += Time.deltaTime * speed;
         if (followerIncomeTimer >= 30)
         {
             followerIncomeTimer = 0;
             ChangeStats(PlayerStat.Money, followers);
         }
-        dayTimer += Time.deltaTime;
+        dayTimer += Time.deltaTime * speed;
         if (dayTimer >= oneDayInSec)
         {
             dayTimer = 0;
@@ -278,7 +279,7 @@ public class GameManager : MonoBehaviour
         while (time > 0)
         {
             if (!paused)
-                time -= Time.deltaTime;
+                time -= Time.deltaTime * speed;
             yield return null;
         }
         Event tempEvent = Instantiate(eventPrefab, interactiveCanvas.transform);
@@ -374,6 +375,10 @@ public class GameManager : MonoBehaviour
     public bool IllegalUltimatePerkUnlocked()
     {
         return hackingLevel == 5 && bribeLevel == 5 && blackmailLevel == 5;
+    }
+    public void ChangeGameSpeed(int speed)
+    {
+        this.speed = speed;
     }
     private void GameOver(string label, string description)
     {
