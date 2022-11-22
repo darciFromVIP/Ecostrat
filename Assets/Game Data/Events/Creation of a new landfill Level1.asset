@@ -14,16 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
   time: 74
-  repeatTime: 93
+  repeatTime: 0
   reactions:
   - description: Organize a protest - 500$
-    additionalDescription: ' HINT: Trash Increment -500, Followers +500, $ -500'
+    additionalDescription: 'HINT: Trash Increment -500, Followers +500, $ -500'
     actions:
     - {fileID: 11400000, guid: 7a3505f90f720be47a50e31071ffbf04, type: 2}
     - {fileID: 11400000, guid: d2b0cdd206f105f4caaee109340bb4de, type: 2}
     - {fileID: 11400000, guid: a5b7aff7062308e4f9e5102770373d04, type: 2}
   - description: Post on social networks. - 0$
-    additionalDescription: ' HINT: Trash Increment +500, Followers -300'
+    additionalDescription: 'HINT: Trash Increment +500, Followers -300'
     actions:
     - {fileID: 11400000, guid: b7d9995dfffd230418f528ec8a5dac45, type: 2}
     - {fileID: 11400000, guid: 8fe8670e373e0b94e8941616f6f03561, type: 2}

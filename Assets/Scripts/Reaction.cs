@@ -20,7 +20,7 @@ public class Reaction : MonoBehaviour
         btn.onClick.AddListener(data.ExecuteActions);
         btn.onClick.AddListener(EventWindow.instance.Hide);
         if (GameManager.instance.hints > 0)
-            description.text = data.description + data.additionalDescription;
+            description.text = data.description + "" + data.additionalDescription;
         else
             description.text = data.description;
         if (!data.TestExecute())

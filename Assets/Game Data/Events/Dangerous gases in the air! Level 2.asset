@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
   m_Name: Dangerous gases in the air! Level 2
   m_EditorClassIdentifier: 
-  artwork: {fileID: 0}
-  time: 0
+  artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
+  time: 1556
   repeatTime: 0
   reactions:
   - description: Creating a vandalism protest where we can clearly state what we
