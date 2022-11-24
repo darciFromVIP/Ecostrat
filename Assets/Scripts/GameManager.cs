@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour
         ChangeStats(PlayerStat.Trash, 10000);
         foreach (var item in eventDatabase.events)
         {
-            StartCoroutine(StartEventTimer(item));
+            StartCoroutine(StartEventTimer(item, item.repeatTimes));
         }
         StartCoroutine(GameNewsCoroutine());
         StartCoroutine(IllegalityNewsCoroutine());
@@ -273,7 +273,7 @@ public class GameManager : MonoBehaviour
         }
         return true;
     }
-    public IEnumerator StartEventTimer(EventDataScriptable eventData)
+    public IEnumerator StartEventTimer(EventDataScriptable eventData, int repeatTimes)
     {
         float time = eventData.time;
         while (time > 0)
@@ -288,8 +288,8 @@ public class GameManager : MonoBehaviour
         else
             tempEvent.GetComponent<RectTransform>().anchoredPosition = eventData.mapPosition / 4;
         tempEvent.UpdateEvent(eventData);
-        if (eventData.repeatTime > 0)
-            StartCoroutine(StartEventTimer(eventData));
+        if (eventData.repeatInterval > 0 && repeatTimes > 0)
+            StartCoroutine(StartEventTimer(eventData, repeatTimes - 1));
     }
     private IEnumerator GameNewsCoroutine()
     {
