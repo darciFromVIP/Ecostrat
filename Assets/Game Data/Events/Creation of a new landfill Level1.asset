@@ -18,16 +18,23 @@ MonoBehaviour:
   repeatTimes: 2
   reactions:
   - description: Organize a protest - 1 500$
-    additionalDescription: 'HINT: Trash Increment -200, Followers +500, $ -500'
+    additionalDescription: 'HINT: Trash Increment -1, Followers +500, $ -500'
     actions:
     - {fileID: 11400000, guid: 62bbcddaf7d884345931bfc4dc48ae0a, type: 2}
     - {fileID: 11400000, guid: d2b0cdd206f105f4caaee109340bb4de, type: 2}
     - {fileID: 11400000, guid: f4810ef93bf84cb4aa35ec74a9df5346, type: 2}
+    consequenceMessage: Great! Your protest against the newest landfill was successful
+      and the council rejected the proposal of creating a new landfill.
   - description: Post on social networks. - 500$
-    additionalDescription: 'HINT: Trash Increment +500, Followers -300'
+    additionalDescription: 'HINT: Trash Increment +3, Followers -300'
     actions:
     - {fileID: 11400000, guid: b7d9995dfffd230418f528ec8a5dac45, type: 2}
     - {fileID: 11400000, guid: 8fe8670e373e0b94e8941616f6f03561, type: 2}
     - {fileID: 11400000, guid: a5b7aff7062308e4f9e5102770373d04, type: 2}
+    consequenceMessage: "A social media post is not ideal when action is needed.
+      Thus, we did not win any support of the people. No worries, we\u2019ll learn
+      to make better decisions."
+  ignoreConsequences:
+  - {fileID: 11400000, guid: b7d9995dfffd230418f528ec8a5dac45, type: 2}
   eventDescription: An additional place for collecting waste.
   mapPosition: {x: 0, y: 0}

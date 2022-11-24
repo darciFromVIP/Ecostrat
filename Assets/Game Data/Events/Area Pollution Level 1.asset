@@ -22,14 +22,17 @@ MonoBehaviour:
     actions:
     - {fileID: 11400000, guid: 0d4173e35cb1f4343942d01e1ec67cb5, type: 2}
     - {fileID: 11400000, guid: fc2243922fa3ae24c8857913d9cfa923, type: 2}
-    consequenceMessage: 
+    consequenceMessage: Residents are happy about your garbage collection event,
+      they can finally live in a clean environment!
   - description: Send a letter to the local authority. - 100$
-    additionalDescription: 'HINT: Trash +100, Followers +250'
+    additionalDescription: 'HINT: Trash +100, Followers +150'
     actions:
-    - {fileID: 11400000, guid: 9c9afe97304d2e74a9c82cc30436074e, type: 2}
+    - {fileID: 11400000, guid: 3f5d39d02ad3e2d4f895be50ec7c6380, type: 2}
     - {fileID: 11400000, guid: 0657bc9c82aafb54cb44d3acb1c2b6ea, type: 2}
     - {fileID: 11400000, guid: 3e54d9e0c381b1146901eadf5efa09b7, type: 2}
-    consequenceMessage: 
-  ignoreConsequences: []
+    consequenceMessage: The letter could work if the council feels pressure from
+      a collective of people, not an individual.
+  ignoreConsequences:
+  - {fileID: 11400000, guid: 0657bc9c82aafb54cb44d3acb1c2b6ea, type: 2}
   eventDescription: There is too much trash in the streets!
   mapPosition: {x: 0, y: 0}

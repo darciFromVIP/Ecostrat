@@ -23,20 +23,28 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 7cd9a0868562dc04ab0e5be98508ff29, type: 2}
     - {fileID: 11400000, guid: 87aa984b03d8f2d488696644fc862458, type: 2}
     - {fileID: 11400000, guid: ee450c8a11893b442bcae8cbc3e99e2e, type: 2}
+    consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
+      but at least you gained more followers!"
   - description: Negotiate with the city council for a remedy. - 2 500$
-    additionalDescription: 'HINT: Trash Increment -200'
+    additionalDescription: 'HINT: Trash Increment -1'
     actions:
     - {fileID: 11400000, guid: 62bbcddaf7d884345931bfc4dc48ae0a, type: 2}
     - {fileID: 11400000, guid: 75fd2671ce01f48469b0eb5ab5b0d326, type: 2}
+    consequenceMessage: Congratulations! You managed to clean the pollution from
+      the river. Keep up the good work!
   - description: Hire graffiti artists and let them move the message of pollution
       to the streets. - 4 000$
-    additionalDescription: 'HINT:  Trash Increment -200, Followers +600, Illegality
-      +10'
+    additionalDescription: 'HINT:  Trash Increment -1, Followers +600, Illegality
+      +15'
     actions:
     - {fileID: 11400000, guid: 62bbcddaf7d884345931bfc4dc48ae0a, type: 2}
     - {fileID: 11400000, guid: 6f2ea3817e9b7854cadca9c3d766576d, type: 2}
-    - {fileID: 11400000, guid: ac15418341863b1499fd03e1caf96aad, type: 2}
+    - {fileID: 11400000, guid: 6ad33248fb674c6468974514ba3714bf, type: 2}
     - {fileID: 11400000, guid: 2ce3c60116341f04a9a75da692edd15f, type: 2}
+    consequenceMessage: Even though you risked your freedom, you still earned exactly
+      what you wanted!
+  ignoreConsequences:
+  - {fileID: 11400000, guid: edf234e8cd8bc2349be38f7c156fb79a, type: 2}
   eventDescription: Pollution of the river of the given location - too much garbage
     in the river corridors!
   mapPosition: {x: 0, y: 0}

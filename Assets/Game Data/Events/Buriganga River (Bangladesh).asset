@@ -14,19 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: e58000457a5517c4195b0f552961e1a2, type: 3}
   time: 850
-  repeatTime: 0
+  repeatInterval: 0
+  repeatTimes: 0
   reactions:
   - description: Paid advertising campaign on social networks. - 13 500$
-    additionalDescription: 'HINT: Trash Increment +3 000, Followers + 20 000'
+    additionalDescription: 'HINT: Trash Increment +20, Followers + 15 000'
     actions:
     - {fileID: 11400000, guid: be9bdf21b372aee4a96a157871773f97, type: 2}
-    - {fileID: 11400000, guid: edf1bae7174981049a0f0926d739f632, type: 2}
+    - {fileID: 11400000, guid: 9a0709ae9d63d9a41a6cce822addef51, type: 2}
     - {fileID: 11400000, guid: 330b68308a21f214d8923f941c5e3503, type: 2}
+    consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
+      but at least you gained more followers!"
   - description: Purchase of special cleaning works. - 20 000$
     additionalDescription: 'HINT: Trash -3 000'
     actions:
     - {fileID: 11400000, guid: 43c97e6e6c9855145b1a456befb6690d, type: 2}
     - {fileID: 11400000, guid: 8f1ff4d1715166b4dad1e78d91c38e97, type: 2}
+    consequenceMessage: Residents are happy about your garbage collection event,
+      they can finally live in a clean environment!
   - description: "A viral video on social networks where we point out the polluted
       environment and scold people who throw garbage into the river.\r - 25 000$\n"
     additionalDescription: 'HINT: Trash +3 000, Followers -15 000'
@@ -34,5 +39,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 55f367cbbcf896c4097db0fabd0b1919, type: 2}
     - {fileID: 11400000, guid: 99fa470380c327241b9557d0dbdb7a83, type: 2}
     - {fileID: 11400000, guid: ff29a2752a2038449b5f55336122629c, type: 2}
+    consequenceMessage: Your video was viral, but not exactly popular. It will cost
+      you a few thousand followers, but you will definitely have more luck and determination
+      in the future.
+  ignoreConsequences:
+  - {fileID: 11400000, guid: e35cf0a47b9159047a9da026d7fab3f5, type: 2}
   eventDescription: Buriganga River (Bangladesh) is polluted by industry and people!
   mapPosition: {x: 0, y: 0}
