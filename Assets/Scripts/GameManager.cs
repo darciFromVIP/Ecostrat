@@ -99,11 +99,9 @@ public class GameManager : MonoBehaviour
             ChangeStats(PlayerStat.Trash, trashIncrementAmount);
         }
         illegalityTimer += Time.deltaTime * speed;
-        if (illegalityTimer >= 60)
+        if (illegalityTimer >= 120)
         {
-            illegality -= 5;
-            if (illegality < 0)
-                illegality = 0;
+            ChangeStats(PlayerStat.Illegality, -5);
             illegalityTimer = 0;
         }
         followerIncomeTimer += Time.deltaTime * speed;
