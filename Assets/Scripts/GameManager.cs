@@ -24,6 +24,7 @@ public class GameManager : MonoBehaviour
     private int days = 0;
     public int hints = 0;
     private int speed = 1;
+    private float trashIncrementAmountIncreaseTimer = 0;
 
     private int negotiationLevel = 0;
     private int socialSitesLevel = 0;
@@ -67,11 +68,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Canvas.GetDefaultCanvasMaterial().enableInstancing = true;
-        trash = 10000;
-        for (int i = 0; i < trash; i++)
-        {
-            CreateTrashBubble();
-        }
+        ChangeStats(PlayerStat.Trash, 10000);
         foreach (var item in eventDatabase.events)
         {
             StartCoroutine(StartEventTimer(item));
@@ -100,14 +97,6 @@ public class GameManager : MonoBehaviour
         {
             trashTimer = 0;
             ChangeStats(PlayerStat.Trash, trashIncrementAmount);
-            for (int i = 0; i < trashIncrementAmount; i++)
-            {
-                CreateTrashBubble();
-            }
-            for (int i = 0; i > trashIncrementAmount; i--)
-            {
-                RemoveTrashBubble();
-            }
         }
         illegalityTimer += Time.deltaTime * speed;
         if (illegalityTimer >= 60)
@@ -130,6 +119,12 @@ public class GameManager : MonoBehaviour
             days++;
             dayText.text = "Day " + days;
         }
+        trashIncrementAmountIncreaseTimer += Time.deltaTime;
+        if (trashIncrementAmountIncreaseTimer >= 300)
+        {
+            trashIncrementAmountIncreaseTimer = 0;
+            ChangeStats(PlayerStat.TrashIncrement, 5);
+        }     
     }
     private void CreateBubble()
     {
@@ -146,7 +141,12 @@ public class GameManager : MonoBehaviour
     }
     private void RemoveTrashBubble()
     {
-        trashBubbles.Remove(trashBubbles[trashBubbles.Count - 1]);
+        if (trashBubbles.Count > 0)
+        {
+            GameObject obj = trashBubbles[trashBubbles.Count - 1];
+            trashBubbles.Remove(obj);
+            Destroy(obj);
+        }
     }
     private Vector2 GetPointOnTerrain()
     {
@@ -219,6 +219,8 @@ public class GameManager : MonoBehaviour
                     }
                 text = Instantiate(floatingTextPrefab, trashFloatingText);
                 text.UpdateText(modifier.ToString("+#;-#;0"), modifier < 0, true);
+                if (trash < 0)
+                    trash = 0;
                 break;
             case PlayerStat.TrashIncrement:
                 trashIncrementAmount += modifier;
