@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     private float followerIncomeTimer = 0;
     private int illegality = 0;
     [SerializeField] private int trash = 0;
-    private float gameTimer = 3600;
+    private float gameTimer = 1800;
     private float bubbleTimer = 0;
     private float trashTimer = 0;
     private float illegalityTimer = 0;
@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     public int hints = 0;
     private int speed = 1;
     private float trashIncrementAmountIncreaseTimer = 0;
+    private int income = 0;
 
     private int negotiationLevel = 0;
     private int socialSitesLevel = 0;
@@ -108,7 +109,7 @@ public class GameManager : MonoBehaviour
         if (followerIncomeTimer >= 30)
         {
             followerIncomeTimer = 0;
-            ChangeStats(PlayerStat.Money, followers);
+            ChangeStats(PlayerStat.Money, followers + income);
         }
         dayTimer += Time.deltaTime * speed;
         if (dayTimer >= oneDayInSec)
@@ -118,7 +119,7 @@ public class GameManager : MonoBehaviour
             dayText.text = "Day " + days;
         }
         trashIncrementAmountIncreaseTimer += Time.deltaTime;
-        if (trashIncrementAmountIncreaseTimer >= 300)
+        if (trashIncrementAmountIncreaseTimer >= 60)
         {
             trashIncrementAmountIncreaseTimer = 0;
             ChangeStats(PlayerStat.TrashIncrement, 5);
@@ -177,7 +178,7 @@ public class GameManager : MonoBehaviour
     }
     public void AddMoney()
     {
-        ChangeStats(PlayerStat.Money, (int)(Random.Range(10, 51) * 3600 / gameTimer));
+        ChangeStats(PlayerStat.Money, (int)(Random.Range(10, 51) * 1800 / gameTimer));
     }
     public void ChangeStats(PlayerStat stat, int modifier)
     {
@@ -243,7 +244,7 @@ public class GameManager : MonoBehaviour
                 break;
         }
         if (illegality >= 100)
-            GameOver("They caught you!", "You should've thought this through more carefully... Welp.");
+            GameOver("You are summoned to court!", "The police have found you.");
         if (trash >= 20000)
             GameOver("Too much garbage!", "People have been really good in polluting the planet even more... The planet is unable to bear such amount of trash and it will soon be unable to be inhabited by humans.");
         if (trash <= 0)
@@ -293,32 +294,34 @@ public class GameManager : MonoBehaviour
     }
     private IEnumerator GameNewsCoroutine()
     {
-        yield return new WaitUntil(() => gameTimer < 2700);
-        News.instance.AddMessage("Zostávajú ti 3/4 pôvodného èasu, èo sa rovná presne 273 dní. Ak máš v pláne zachráni Zem, mal by si sa rozhýba!");
-        yield return new WaitUntil(() => gameTimer < 1800);
-        News.instance.AddMessage("Zostáva ti presne polovica pôvodného èasu, èo je presne 182 a pól dòa. Nechcem mudrova, ale myslím, že by si naozaj mal zaèal robi zmeny k lepšiemu, lebo inak èelíme záhube, ak si si to ešte neuvedomil!");
+        yield return new WaitUntil(() => gameTimer < 1350);
+        News.instance.AddMessage("There are 273 days remaining. If you plan to save the Earth, you better get moving!");
         yield return new WaitUntil(() => gameTimer < 900);
-        News.instance.AddMessage("Zostáva ti 1/4 pôvodného èasu, èo je presne 91 dní, èiže 3 mesiace. Je mi jedno ako si to chceš vypoèíta, dôležité je len aby si pochopil, že už naozaj nemáme èas stráca èas!");
-        yield return new WaitUntil(() => gameTimer < 600);
-        News.instance.AddMessage("Zostáva ti 60 dní, èiže 2 mesiace. Z práce si dostal dopis, že kvôli nepríjemnej situácií s množstvom odpadkov v oceánoch sa vaša poboèka zatvára. Síce si aj celkom rád kvôli všetkej tej korupcií, ale na druhú stranu prichádzaš o mesaèný income (- 1 500$ mesaène).");
-        // Implement money income
+        News.instance.AddMessage("You have exactly half of the time remaining, exactly 182 and a half days. I don’t want to be smart, but I think you really should start making changes for the better if you haven’t realised it yet!");
+        yield return new WaitUntil(() => gameTimer < 450);
+        News.instance.AddMessage("There are 91 days remaining. I don’t care how you want to calculate it, the important thing is that you understand we don’t have any time to waste anymore!");
         yield return new WaitUntil(() => gameTimer < 300);
-        News.instance.AddMessage("Zostáva ti 30 dní, a. k. a. 1 mesiac, tak sa už koneène rozhýb, inak bude nie len Game Over, ale aj Planeta Zem s ¾udstvom over!");
-        yield return new WaitUntil(() => gameTimer < 180);
-        News.instance.AddMessage("Zostáva ti 7 dní a to znamená posledný týždeò! Odpadky zaplavujú ulice miest. Doomsday klope na dvere!");
-        yield return new WaitUntil(() => gameTimer < 60);
-        News.instance.AddMessage("Zostáva ti 6 dni! Z morí a oceánov sa vyplavujú tisícky mrtvých rýb zadusených plastami. Rob s tým pre boha nieèo!");
+        News.instance.AddMessage("You have 60 days left, i.e. 2 months. You received a letter from work that your branch office is closing. Although you are quite happy because of all the corruption, but you lose your monthly income of $1 500.");
+        income -= 1500;
+        yield return new WaitUntil(() => gameTimer < 150);
+        News.instance.AddMessage("One month remaining! Get moving, otherwise it will be not only Game Over, but also forget about the future of humanity on the Earth.");
+        yield return new WaitUntil(() => gameTimer < 90);
+        News.instance.AddMessage("One week remaining. Garbage is flooding the cities. Doomsday is knocking on the door.");
+        yield return new WaitUntil(() => gameTimer < 30);
+        News.instance.AddMessage("6 days and it’s all over. Thousands of dead fish suffocated are being washed up from the seas and the oceans. Do something about it!");
+        yield return new WaitUntil(() => gameTimer < 15);
+        News.instance.AddMessage("Last rescue task - last 3 days. The whole world is infested with garbage, Doomsday is here!");
     }
     private IEnumerator IllegalityNewsCoroutine()
     {
         yield return new WaitUntil(() => illegality >= 20);
-        News.instance.AddMessage("Tvoj kamoš Johny bol predvolaný na výsluch. Dávaj pozor aby si neskonèil tak isto!");
+        News.instance.AddMessage("Your friend Johny has been summoned for questioning. Be careful so you don’t end up the same!");
         yield return new WaitUntil(() => illegality >= 40);
-        News.instance.AddMessage("Bol si predvolaný na výsluch! Si ale dobre krytý, èiže žiadne ve¾ké problémy ti nehrozia. (môžeme zakomponova special event 50/50 že dostaneš pokutu or not)");
+        News.instance.AddMessage("You have been summoned for questioning! No worries, you are well covered, so you are not at risk of any major problems.");
         yield return new WaitUntil(() => illegality >= 60);
-        News.instance.AddMessage("Okolo tvojho bytu sa podozrivo èasto zaèína objavova èierne BMW a je tam celý deò aj noc. Skoro to zaèína vyzera, že nás zelení (cops) sledujú.");
+        News.instance.AddMessage("Black BMWs start to appear suspiciously often around your apartment. It’s starting to look like the cops are watching us.");
         yield return new WaitUntil(() => illegality >= 80);
-        News.instance.AddMessage("Breaking News! The Green Inc. - pomoc planéte alebo zloèinecká organizácia?!");
+        News.instance.AddMessage("Breaking News! The Green Inc. - helping the planet or a criminal organisation?!");
     }
     public void UpgradePerk(UpgradeInfo info)
     {

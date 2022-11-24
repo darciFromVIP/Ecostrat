@@ -15,8 +15,18 @@ public class EventDataScriptable : ScriptableObject
     public int repeatTimes = 0;
     [Tooltip("How can the player react to this? Create reactions and fill them with Actions, which are created in the File System.")]
     public List<ReactionData> reactions;
+    [Tooltip("What happens if player chooses to ignore this event?")]
+    public List<Action> ignoreConsequences;
     [TextArea(3, 3)]
     public string eventDescription;
     [Tooltip("Insert 0 for a random location, otherwise this event will spawn on these coordinates.")]
     public Vector2 mapPosition;
+
+    public void ExecuteIgnoreConsequences()
+    {
+        foreach (var item in ignoreConsequences)
+        {
+            item.Execute();
+        }
+    }
 }

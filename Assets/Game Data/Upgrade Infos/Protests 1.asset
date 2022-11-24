@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Protests 1
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 61308d46cba7e9d4190c0d80a935a213, type: 3}
+  artwork: {fileID: 21300000, guid: 43e0da3ab1003ae44afb507876cd7d8d, type: 3}
   upgradeType: 2
   price: 1000
   description: "Our skills with social networks and the number of our subscribers

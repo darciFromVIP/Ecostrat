@@ -9,6 +9,8 @@ public class ReactionData
     public string description;
     public string additionalDescription;
     public List<Action> actions = new();
+    [TextArea(3, 3)]
+    public string consequenceMessage;
 
     public void ExecuteActions()
     {
@@ -16,6 +18,7 @@ public class ReactionData
         {
             item.Execute();
         }
+        News.instance.AddMessage(consequenceMessage);
     }
     public void ExecuteSecondaryActions()
     {

@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class EventWindow : MonoBehaviour
 {
     public TextMeshProUGUI labelText, descriptionText;
     public Reactions reactions;
     private Event currentEvent;
+    public Button ignoreButton;
 
     public static EventWindow instance;
     private void Awake()
@@ -22,6 +24,9 @@ public class EventWindow : MonoBehaviour
         labelText.text = eventData.name;
         descriptionText.text = eventData.eventDescription;
         reactions.SetNewReactions(eventData.reactions);
+        ignoreButton.onClick.RemoveAllListeners();
+        ignoreButton.onClick.AddListener(eventData.ExecuteIgnoreConsequences);
+        ignoreButton.onClick.AddListener(Hide);
     }
     public void Show()
     {

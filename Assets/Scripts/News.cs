@@ -19,7 +19,7 @@ public class News : MonoBehaviour
     {
         startingPosition = scrollingText.rectTransform.anchoredPosition;
         AddMessage("Welcome to Ecostrat!");
-        AddMessage(" Can you save the planet Earth from a Trashcalypse?");
+        AddMessage("You have one year left to save our planet. There is not a lot of time, so you need to act as quickly as possible!");
         NextMessage();
     }
     private void Update()
