@@ -13,18 +13,19 @@ MonoBehaviour:
   m_Name: Area Pollution Level 1
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
-  time: 11
+  time: 15
   repeatTime: 0
   reactions:
-  - description: Organize trash collection with our followers. - 100$
+  - description: Organize trash collection with our followers. - 200$
     additionalDescription: 'HINT: Trash -100'
     actions:
-    - {fileID: 11400000, guid: 3e54d9e0c381b1146901eadf5efa09b7, type: 2}
+    - {fileID: 11400000, guid: 0d4173e35cb1f4343942d01e1ec67cb5, type: 2}
     - {fileID: 11400000, guid: fc2243922fa3ae24c8857913d9cfa923, type: 2}
-  - description: Send a letter to the local authority. - 0$
+  - description: Send a letter to the local authority. - 100$
     additionalDescription: 'HINT: Trash +100, Followers +250'
     actions:
     - {fileID: 11400000, guid: 9c9afe97304d2e74a9c82cc30436074e, type: 2}
     - {fileID: 11400000, guid: 0657bc9c82aafb54cb44d3acb1c2b6ea, type: 2}
+    - {fileID: 11400000, guid: 3e54d9e0c381b1146901eadf5efa09b7, type: 2}
   eventDescription: There is too much trash in the streets!
   mapPosition: {x: 0, y: 0}

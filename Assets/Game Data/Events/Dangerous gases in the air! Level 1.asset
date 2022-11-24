@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Dangerous gases in the air! Level 1
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: e58000457a5517c4195b0f552961e1a2, type: 3}
-  time: 1139
+  time: 750
   repeatTime: 0
   reactions:
   - description: Bribing MPs to increase emissions for non-electronic vehicles. -
@@ -24,12 +24,12 @@ MonoBehaviour:
     - {fileID: 11400000, guid: d2eeba675124b28439f3353adff85879, type: 2}
     - {fileID: 11400000, guid: 8f1ff4d1715166b4dad1e78d91c38e97, type: 2}
   - description: Online campaign in the given location for more frequent use of city
-      transport, bicycles and walking. - 6 000$
+      transport, bicycles and walking. - 18 000$
     additionalDescription: 'HINT: Trash Increment +2 000, Followers +7 000'
     actions:
     - {fileID: 11400000, guid: 24b63840c232b6b40988eaf3127a3899, type: 2}
     - {fileID: 11400000, guid: 57d6ba77b1d852c46a33208a930ff13d, type: 2}
-    - {fileID: 11400000, guid: 00d9277a3aef6b549b4417b999bb3d1d, type: 2}
+    - {fileID: 11400000, guid: 735ad536ed66b8d4a9bf951721f49277, type: 2}
   - description: Agreement with local companies for the creation of electric bicycles
       in the given area. - 25 000$
     additionalDescription: 'HINT: Trash -2 500'

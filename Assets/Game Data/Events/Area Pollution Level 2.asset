@@ -13,27 +13,27 @@ MonoBehaviour:
   m_Name: Area Pollution Level 2
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
-  time: 201
+  time: 150
   repeatTime: 0
   reactions:
-  - description: "Organize trash collection with our followers.\r - 500$\n"
+  - description: "Organize trash collection with our followers.\r - 700$\n"
     additionalDescription: 'HINT: Trash -350, Followers +300'
     actions:
     - {fileID: 11400000, guid: 2c451700aca233a48bcfd0437c1720f2, type: 2}
     - {fileID: 11400000, guid: b81fcee334151874f9640c0f39e9c224, type: 2}
-    - {fileID: 11400000, guid: a5b7aff7062308e4f9e5102770373d04, type: 2}
-  - description: Bribe the mayor to procure cleaning services. - 2 000$
+    - {fileID: 11400000, guid: 0cc634446587a6f41a7541e6edbe5dd5, type: 2}
+  - description: Bribe the mayor to procure cleaning services. - 3 000$
     additionalDescription: 'HINT: Trash -350, Illegality +10'
     actions:
     - {fileID: 11400000, guid: ac15418341863b1499fd03e1caf96aad, type: 2}
     - {fileID: 11400000, guid: b81fcee334151874f9640c0f39e9c224, type: 2}
-    - {fileID: 11400000, guid: dcc5ef84bd1eeb34084d199af4d99fa6, type: 2}
+    - {fileID: 11400000, guid: 1cda4c076a78052428c5f786b633d9c2, type: 2}
   - description: "Hacking the city office with threatening messages and demanding
-      immediate correction of this unfavorable situation.\r - 1 000$\n"
+      immediate correction of this unfavorable situation.\r - 1 300$\n"
     additionalDescription: 'HINT: Followers -500, Illegality +15'
     actions:
     - {fileID: 11400000, guid: 39d31053d0a2d134fbbe95344891f662, type: 2}
     - {fileID: 11400000, guid: 6ad33248fb674c6468974514ba3714bf, type: 2}
-    - {fileID: 11400000, guid: 488d2fe792eb04446b9c59aa4a5135f0, type: 2}
+    - {fileID: 11400000, guid: 4a1ca20032124f947a70f2dc4af77086, type: 2}
   eventDescription: There is too much trash in the streets!
   mapPosition: {x: 0, y: 0}

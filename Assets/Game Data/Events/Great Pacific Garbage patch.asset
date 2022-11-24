@@ -13,33 +13,29 @@ MonoBehaviour:
   m_Name: Great Pacific Garbage patch
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: e58000457a5517c4195b0f552961e1a2, type: 3}
-  time: 2264
+  time: 1050
   repeatTime: 321
   reactions:
   - description: Protests against throwing plastics into the sea and non-recycling
-      of waste. - 13 500$
+      of waste. - 30 000$
     additionalDescription: 'HINT: Trash Increment +3 500. Followers +10 000'
     actions:
     - {fileID: 11400000, guid: fc40fc52acb8d2d459a6137d4f63e16e, type: 2}
     - {fileID: 11400000, guid: 997201db536c4ba40b2dfeb18ab391b4, type: 2}
-    - {fileID: 11400000, guid: 330b68308a21f214d8923f941c5e3503, type: 2}
+    - {fileID: 11400000, guid: abb6a522f1e0c564b943e82f5be5bf7c, type: 2}
   - description: Purchase of special equipment and personnel for the removal of marine
-      waste. - 50 000$
+      waste. - 60 000$
     additionalDescription: 'HINT: Trash Increment -3 500, Followers +5 000'
     actions:
     - {fileID: 11400000, guid: b9f8ca3c114d57348b76bfd51ab6df3c, type: 2}
     - {fileID: 11400000, guid: 8f02263a2629c1e4599243c86ef75d9c, type: 2}
-    - {fileID: 11400000, guid: 26ea4c5acfdafe34aaf7077830e9eff7, type: 2}
+    - {fileID: 11400000, guid: 3151b8833e9bdde47808526c693da75e, type: 2}
   - description: Hacker shutdown of transport ships in a given section that produce
-      waste. - 30 000$
+      waste. - 40 000$
     additionalDescription: 'HINT: Trash Increment -3 500, Illegality +35'
     actions:
     - {fileID: 11400000, guid: b9f8ca3c114d57348b76bfd51ab6df3c, type: 2}
     - {fileID: 11400000, guid: 1274f25f09c920a438464bd558e443bd, type: 2}
-    - {fileID: 11400000, guid: abb6a522f1e0c564b943e82f5be5bf7c, type: 2}
-  - description: Purchase of special equipment and personnel for the removal of marine
-      waste.
-    additionalDescription: 
-    actions: []
+    - {fileID: 11400000, guid: 0bc0638e1942f374c96258dcc9b3b445, type: 2}
   eventDescription: Increased concentration of marine waste!
   mapPosition: {x: 0, y: 0}
