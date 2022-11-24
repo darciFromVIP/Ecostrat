@@ -24,4 +24,4 @@ MonoBehaviour:
   benefits: Followers but at a price of more trash. +5 000 followers +2 000 trash
   actions:
   - {fileID: 11400000, guid: 8f02263a2629c1e4599243c86ef75d9c, type: 2}
-  - {fileID: 11400000, guid: 24b63840c232b6b40988eaf3127a3899, type: 2}
+  - {fileID: 11400000, guid: 6415401738fa56e458d611a0445a05c7, type: 2}

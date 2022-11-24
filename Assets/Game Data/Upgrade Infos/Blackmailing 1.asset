@@ -23,4 +23,4 @@ MonoBehaviour:
     this persuasive method first."
   benefits: Less detection of illegal activities. -5 illegality
   actions:
-  - {fileID: 11400000, guid: 0e84a58de3c2c7741821e5cf3ee725c4, type: 2}
+  - {fileID: 11400000, guid: 02edac20010d6454f814d5b019d1caa1, type: 2}
