@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: e58000457a5517c4195b0f552961e1a2, type: 3}
   time: 1000
-  repeatInterval: 1
-  repeatTimes: 350
+  repeatInterval: 350
+  repeatTimes: 1
   reactions:
   - description: Bribing MPs to increase emissions for non-electronic vehicles. -
       20 000$
