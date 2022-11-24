@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Vandalism 1
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 3064f46dfea809e408c287aead9b90f9, type: 3}
+  artwork: {fileID: 21300000, guid: 5a95bf35fb2af6b4f81548a7f0a10d9e, type: 3}
   upgradeType: 8
   price: 15000
   description: "You invented your own stickers that you send out to your fans, so
