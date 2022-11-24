@@ -12,31 +12,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
   m_Name: Dangerous gases in the air! Level 2
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
-  time: 950
-  repeatTime: 0
+  artwork: {fileID: 21300000, guid: e58000457a5517c4195b0f552961e1a2, type: 3}
+  time: 1000
+  repeatInterval: 1
+  repeatTimes: 350
   reactions:
-  - description: Creating a vandalism protest where we can clearly state what we
-      think about it. - 8 000$
-    additionalDescription: 'HINT: Trash +1 000, Illegality +30'
+  - description: Bribing MPs to increase emissions for non-electronic vehicles. -
+      20 000$
+    additionalDescription: 'HINT: Trash Increment -2 500, Illegality +30'
     actions:
-    - {fileID: 11400000, guid: 49363572ae0b54f4b92791e49d1f4782, type: 2}
+    - {fileID: 11400000, guid: 1d9ae9ddc7737b5468345db9349c5c45, type: 2}
     - {fileID: 11400000, guid: d2eeba675124b28439f3353adff85879, type: 2}
-    - {fileID: 11400000, guid: 76f39640be5df194c89b827b37cebad1, type: 2}
-  - description: Agreement with local companies for the creation of a joint campaign
-      for more frequent use of city transport, bicycles and walking. - 15 000$
-    additionalDescription: 'HINT: Trash Increment +1 500, Followers +10 000'
+    - {fileID: 11400000, guid: 8f1ff4d1715166b4dad1e78d91c38e97, type: 2}
+  - description: Online campaign in the given location for more frequent use of city
+      transport, bicycles and walking. - 18 000$
+    additionalDescription: 'HINT: Trash Increment +2 000, Followers +7 000'
     actions:
-    - {fileID: 11400000, guid: e35cf0a47b9159047a9da026d7fab3f5, type: 2}
-    - {fileID: 11400000, guid: 997201db536c4ba40b2dfeb18ab391b4, type: 2}
-    - {fileID: 11400000, guid: 6d89670dc37218b4898bf7f03ab3b2fa, type: 2}
-  - description: Negotiations with politicians for the creation of special benefits
-      for owners of electronic vehicles. - 30 000$
-    additionalDescription: 'HINT: Trash Increment -1 500, Followers +8 000'
+    - {fileID: 11400000, guid: 24b63840c232b6b40988eaf3127a3899, type: 2}
+    - {fileID: 11400000, guid: 57d6ba77b1d852c46a33208a930ff13d, type: 2}
+    - {fileID: 11400000, guid: 735ad536ed66b8d4a9bf951721f49277, type: 2}
+  - description: Agreement with local companies for the creation of electric bicycles
+      in the given area. - 25 000$
+    additionalDescription: 'HINT: Trash -2 500'
     actions:
-    - {fileID: 11400000, guid: c4ef9b2c4f0c9a24f985c15f17df0c80, type: 2}
-    - {fileID: 11400000, guid: 1b93fe6f616ee384d8ef321a928162b4, type: 2}
-    - {fileID: 11400000, guid: abb6a522f1e0c564b943e82f5be5bf7c, type: 2}
+    - {fileID: 11400000, guid: 8ef07ed76ad1a1748965d308ef887bf9, type: 2}
+    - {fileID: 11400000, guid: ff29a2752a2038449b5f55336122629c, type: 2}
   eventDescription: Too many cars in the area are emitting dangerous gases into the
     air!
   mapPosition: {x: 0, y: 0}

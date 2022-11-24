@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
   time: 550
-  repeatTime: 0
+  repeatInterval: 250
+  repeatTimes: 1
   reactions:
   - description: Organize a protest. - 5 000$
     additionalDescription: 'HINT: Trash +400, Followers +1 000'
