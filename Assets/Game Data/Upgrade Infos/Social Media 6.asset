@@ -16,5 +16,9 @@ MonoBehaviour:
   upgradeType: 1
   price: 0
   description: Level MAX
+<<<<<<< HEAD
   benefits: More followers. +4 000 followers
+=======
+  benefits: 
+>>>>>>> 80b4b4d9caadb3959dbbb6037b4811f75876c16a
   actions: []
