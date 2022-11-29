@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: d0864bdddb29d2c4aa8255a99d25fd97, type: 3}
   upgradeType: 1
-  price: 350
+  price: 500
   description: "You know how to create a post on social media, but you have no clue
     how to gain more reach. You spoke to your colleague Jane Rogers, who takes care
     of the social media of the company you work in. She\u2019s not the best, but

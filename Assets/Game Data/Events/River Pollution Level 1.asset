@@ -25,9 +25,9 @@ MonoBehaviour:
     consequenceMessage: Congratulations! You managed to clean the pollution from
       the river. Keep up the good work!
   - description: Make a post on social sites. - 1 000$
-    additionalDescription: 'HINT: Trash +300, Followers +700'
+    additionalDescription: 'HINT: Trash +300, Followers +600'
     actions:
-    - {fileID: 11400000, guid: dcd42dbb492fb8444837bfda2e625391, type: 2}
+    - {fileID: 11400000, guid: 6f2ea3817e9b7854cadca9c3d766576d, type: 2}
     - {fileID: 11400000, guid: a163ec0d9c973e242a551473b5788bcd, type: 2}
     - {fileID: 11400000, guid: 488d2fe792eb04446b9c59aa4a5135f0, type: 2}
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,

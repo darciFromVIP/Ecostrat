@@ -22,8 +22,7 @@ MonoBehaviour:
     actions:
     - {fileID: 11400000, guid: 0d4173e35cb1f4343942d01e1ec67cb5, type: 2}
     - {fileID: 11400000, guid: fc2243922fa3ae24c8857913d9cfa923, type: 2}
-    consequenceMessage: Residents are happy about your garbage collection event,
-      they can finally live in a clean environment!
+    consequenceMessage: Residents are happy about your garbage collection event!
   - description: Send a letter to the local authority. - 100$
     additionalDescription: 'HINT: Trash +100, Followers +200'
     actions:

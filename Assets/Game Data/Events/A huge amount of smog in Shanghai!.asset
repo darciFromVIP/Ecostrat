@@ -17,35 +17,32 @@ MonoBehaviour:
   repeatInterval: 0
   repeatTimes: 0
   reactions:
-  - description: Electrical solution design. - 15 000$
-    additionalDescription: 'HINT: Trash Increment -1 500, Followers + 10 000'
+  - description: Electrical solution design. - 18 000$
+    additionalDescription: 'HINT: Trash Increment -10, Followers + 4 000'
     actions:
     - {fileID: 11400000, guid: 1b93fe6f616ee384d8ef321a928162b4, type: 2}
-    - {fileID: 11400000, guid: 997201db536c4ba40b2dfeb18ab391b4, type: 2}
-    - {fileID: 11400000, guid: 6d89670dc37218b4898bf7f03ab3b2fa, type: 2}
-    consequenceMessage: "The people of Shanghai are indebted to you and grateful
-      they can finally walk around the city without masks and without feeling like
-      they can\u2019t breathe!"
-  - description: Rouse the Shanghai population. - 5 000$
-    additionalDescription: 'HINT: Trash Increment +2 000, Followers +15 000, Illegality
+    - {fileID: 11400000, guid: 67d0cc56b5259844da48c366061c47b4, type: 2}
+    - {fileID: 11400000, guid: 735ad536ed66b8d4a9bf951721f49277, type: 2}
+    consequenceMessage: The people of Shanghai are indebted to you!
+  - description: Rouse the Shanghai population. - 8 000$
+    additionalDescription: 'HINT: Trash Increment +15, Followers +7 000, Illegality
       +40'
     actions:
     - {fileID: 11400000, guid: 24b63840c232b6b40988eaf3127a3899, type: 2}
-    - {fileID: 11400000, guid: 9a0709ae9d63d9a41a6cce822addef51, type: 2}
+    - {fileID: 11400000, guid: 57d6ba77b1d852c46a33208a930ff13d, type: 2}
     - {fileID: 11400000, guid: e0a375cac5bc56445934211415debe20, type: 2}
-    - {fileID: 11400000, guid: ee450c8a11893b442bcae8cbc3e99e2e, type: 2}
+    - {fileID: 11400000, guid: 76f39640be5df194c89b827b37cebad1, type: 2}
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
       but at least you gained a lot of new followers!"
-  - description: Online negotiations with the management of companies that produce
-      smog and contracts to adjust their production. - 6 000$
-    additionalDescription: 'HINT: Trash Increment +2 000, Followers -10 000'
+  - description: Negotiations with the management of companies that produce smog.
+      - 6 000$
+    additionalDescription: 'HINT: Trash Increment +15, Followers -4 000'
     actions:
     - {fileID: 11400000, guid: 24b63840c232b6b40988eaf3127a3899, type: 2}
-    - {fileID: 11400000, guid: 8828e5e68a05fde40b8f19f29842ef7e, type: 2}
+    - {fileID: 11400000, guid: fc05dd6c007a34248a44852e40e63e58, type: 2}
     - {fileID: 11400000, guid: 00d9277a3aef6b549b4417b999bb3d1d, type: 2}
     consequenceMessage: "Negotiating with the highest is fine as long as our followers
-      don\u2019t know about it. This time, however, they found out and were not exactly
-      thrilled."
+      don\u2019t know about it."
   ignoreConsequences:
   - {fileID: 11400000, guid: 24b63840c232b6b40988eaf3127a3899, type: 2}
   eventDescription: A huge amount of smog in Shanghai due to coal consumption.

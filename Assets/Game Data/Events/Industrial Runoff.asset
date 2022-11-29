@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: e58000457a5517c4195b0f552961e1a2, type: 3}
   time: 350
-  repeatInterval: 0
-  repeatTimes: 0
+  repeatInterval: 500
+  repeatTimes: 1
   reactions:
   - description: A hacker attack on the factory with the threat of a complete shutdown
       of the factory. - 2 000$
@@ -27,8 +27,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: c6ce4426384c0464f82986169e413910, type: 2}
     - {fileID: 11400000, guid: dcc5ef84bd1eeb34084d199af4d99fa6, type: 2}
     consequenceMessage: "Hacking can solve many problems, but as an illegal activity
-      it has its disadvantages. People don\u2019t like this approach and made it
-      clear to us."
+      it has its disadvantages. People don\u2019t like this approach."
   - description: Bribing the head of the company to support a more ecological solution.
       - 5 000$
     additionalDescription: 'HINT: Trash Increment -10, Illegality +15'
@@ -39,12 +38,13 @@ MonoBehaviour:
     consequenceMessage: "You can\u2019t write a media post about bribing, but it\u2019s
       important that it solved the problem!"
   - description: Public protests in the given areas. - 3 000$
-    additionalDescription: 'HINT: Trash Increment +5, Followers +7 000'
+    additionalDescription: 'HINT: Trash Increment +5, Followers +1 500'
     actions:
     - {fileID: 11400000, guid: 1816f15b9180fb640a6473da5d0b82f9, type: 2}
-    - {fileID: 11400000, guid: 57d6ba77b1d852c46a33208a930ff13d, type: 2}
+    - {fileID: 11400000, guid: 539f30ea3ac6edd4984d2793532068fb, type: 2}
     - {fileID: 11400000, guid: 1cda4c076a78052428c5f786b633d9c2, type: 2}
-    consequenceMessage: 
+    consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
+      but at least you gained more followers!"
   ignoreConsequences:
   - {fileID: 11400000, guid: 1816f15b9180fb640a6473da5d0b82f9, type: 2}
   eventDescription: Increased pollution of groundwater and seas.

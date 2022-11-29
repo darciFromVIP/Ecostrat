@@ -20,6 +20,6 @@ MonoBehaviour:
     to create a team that can work with them. For that you\u2019ll need an even bigger
     budget, because no famous influencer will promote something without a fat amount
     of cash."
-  benefits: More followers. +5 000 followers
+  benefits: More followers. +4 000 followers
   actions:
-  - {fileID: 11400000, guid: 8f02263a2629c1e4599243c86ef75d9c, type: 2}
+  - {fileID: 11400000, guid: 67d0cc56b5259844da48c366061c47b4, type: 2}

@@ -23,8 +23,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 2c451700aca233a48bcfd0437c1720f2, type: 2}
     - {fileID: 11400000, guid: b81fcee334151874f9640c0f39e9c224, type: 2}
     - {fileID: 11400000, guid: 0cc634446587a6f41a7541e6edbe5dd5, type: 2}
-    consequenceMessage: Residents are happy about your garbage collection event,
-      they can finally live in a clean environment!
+    consequenceMessage: Residents are happy about your garbage collection event!
   - description: Bribe the mayor to procure cleaning services. - 3 000$
     additionalDescription: 'HINT: Trash -350, Illegality +10'
     actions:
@@ -34,7 +33,7 @@ MonoBehaviour:
     consequenceMessage: "You can\u2019t write a media post about bribing, but it\u2019s
       important that it solved the problem!"
   - description: "Hacking the city office with threatening messages and demanding
-      immediate correction of this unfavorable situation.\r - 1 300$\n"
+      immediate correction.\r - 1 300$\n"
     additionalDescription: 'HINT: Trash +350, Followers -500, Illegality +15'
     actions:
     - {fileID: 11400000, guid: 39d31053d0a2d134fbbe95344891f662, type: 2}
@@ -42,8 +41,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: b8258e368a6602d45ba3e4a33b17a24f, type: 2}
     - {fileID: 11400000, guid: 4a1ca20032124f947a70f2dc4af77086, type: 2}
     consequenceMessage: "Hacking can solve many problems, but as an illegal activity
-      it has its disadvantages. People don\u2019t like this approach and made it
-      clear to us."
+      it has its disadvantages. People don\u2019t like this approach."
   ignoreConsequences:
   - {fileID: 11400000, guid: b8258e368a6602d45ba3e4a33b17a24f, type: 2}
   eventDescription: There is too much trash in the streets!
