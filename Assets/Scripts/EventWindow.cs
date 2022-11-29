@@ -24,8 +24,8 @@ public class EventWindow : MonoBehaviour
         labelText.text = eventData.name;
         descriptionText.text = eventData.eventDescription;
         reactions.SetNewReactions(eventData.reactions);
+        reactions.AddListenerToReactions(EventResolved);
         ignoreButton.onClick.RemoveAllListeners();
-        ignoreButton.onClick.AddListener(eventData.ExecuteIgnoreConsequences);
         ignoreButton.onClick.AddListener(Hide);
     }
     public void Show()
@@ -36,8 +36,12 @@ public class EventWindow : MonoBehaviour
     public void Hide()
     {
         gameObject.SetActive(false);
+        GameManager.instance.PauseGameToggle(false);
+    }
+    public void EventResolved()
+    {
         if (currentEvent)
             currentEvent.Destroy();
-        GameManager.instance.PauseGameToggle(false);
+        Hide();
     }
 }

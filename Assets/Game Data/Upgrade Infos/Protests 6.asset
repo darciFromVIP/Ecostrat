@@ -16,5 +16,5 @@ MonoBehaviour:
   upgradeType: 2
   price: 0
   description: Level MAX
-  benefits: Followers but at a price of more trash. +5 000 followers +2 000 trash
+  benefits: 
   actions: []

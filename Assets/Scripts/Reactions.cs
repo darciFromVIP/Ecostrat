@@ -17,6 +17,13 @@ public class Reactions : MonoBehaviour
         }
         GameManager.instance.ChangeStats(PlayerStat.Hint, -1);
     }
+    public void AddListenerToReactions(UnityAction listener)
+    {
+        foreach (var item in transform.GetComponentsInChildren<Reaction>())
+        {
+            item.GetComponent<Button>().onClick.AddListener(listener);
+        }
+    }
     private void ClearContainer()
     {
         foreach (var item in transform.GetComponentsInChildren<Reaction>())

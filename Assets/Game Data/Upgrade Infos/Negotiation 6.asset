@@ -16,5 +16,5 @@ MonoBehaviour:
   upgradeType: 0
   price: 0
   description: Level MAX
-  benefits: Gives you more time to save the planet Earth. +10 minutes
+  benefits: 
   actions: []

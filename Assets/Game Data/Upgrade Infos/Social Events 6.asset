@@ -16,5 +16,5 @@ MonoBehaviour:
   upgradeType: 3
   price: 0
   description: Level MAX
-  benefits: Cleansing trash. -3 000 trash
+  benefits: 
   actions: []
