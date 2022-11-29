@@ -766,6 +766,7 @@ MonoBehaviour:
   trash: 0
   trashIncrementAmount: 10
   trashIncrementInterval: 3
+  paused: 0
   hints: 0
   mapSprite: {fileID: 2800000, guid: 26351b75dc6ce9148a63b60d591ec706, type: 3}
   bubblePrefab: {fileID: 6920311472419885847, guid: b0007dfa7e649864ba8260b195b79df6, type: 3}
@@ -3883,9 +3884,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 3600
+  m_MaxValue: 1800
   m_WholeNumbers: 0
-  m_Value: 3600
+  m_Value: 1800
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -7371,7 +7372,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: adgadgdagherhjhshjrgjrtjjsghdshafgaggfgfgrtertgefgfhgehfghgfhghghghghghghghghghththtthththgfhasfhahghahghfr
+  m_text: sdgagdgdfgag
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 170e9641f4d0e584081b213fd9f68be4, type: 2}
   m_sharedMaterial: {fileID: -8679532801254439334, guid: 170e9641f4d0e584081b213fd9f68be4, type: 2}
@@ -7398,13 +7399,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 30
-  m_fontSizeBase: 30
+  m_fontSize: 40
+  m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 0
-  m_fontSizeMin: 18
+  m_fontSizeMin: 30
   m_fontSizeMax: 72
-  m_fontStyle: 2
+  m_fontStyle: 3
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535

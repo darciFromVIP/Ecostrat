@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int trashIncrementAmount = 10;
     [SerializeField] private int trashIncrementInterval = 3;
     private List<GameObject> trashBubbles = new();
-    private bool paused = false;
+    public bool paused = false;
     private float oneDayInSec;
     private float dayTimer = 0;
     private int days = 0;
@@ -106,7 +106,7 @@ public class GameManager : MonoBehaviour
             illegalityTimer = 0;
         }
         followerIncomeTimer += Time.deltaTime * speed;
-        if (followerIncomeTimer >= 30)
+        if (followerIncomeTimer >= 60)
         {
             followerIncomeTimer = 0;
             ChangeStats(PlayerStat.Money, followers + income);
@@ -373,6 +373,7 @@ public class GameManager : MonoBehaviour
     }
     public bool LegalUltimatePerkUnlocked()
     {
+        Debug.Log("Negotiation: " + negotiationLevel + " Social Sites: " + socialSitesLevel + " Riots: " + riotsLevel + " Social Events: " + socialEventsLevel);
         return negotiationLevel == 5 && socialSitesLevel == 5 && riotsLevel == 5 && socialEventsLevel == 5;
     }
     public bool IllegalUltimatePerkUnlocked()
