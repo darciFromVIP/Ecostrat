@@ -15,10 +15,6 @@ MonoBehaviour:
   artwork: {fileID: 21300000, guid: de37408f2254341418635e87c807395d, type: 3}
   upgradeType: 1
   price: 0
-  description: Level MAX
-<<<<<<< HEAD
-  benefits: More followers. +4 000 followers
-=======
+  description: 
   benefits: 
->>>>>>> 80b4b4d9caadb3959dbbb6037b4811f75876c16a
   actions: []
