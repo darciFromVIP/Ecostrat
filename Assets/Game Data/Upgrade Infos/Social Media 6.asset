@@ -15,6 +15,6 @@ MonoBehaviour:
   artwork: {fileID: 21300000, guid: de37408f2254341418635e87c807395d, type: 3}
   upgradeType: 1
   price: 0
-  description: 
+  description: Level MAX
   benefits: 
   actions: []

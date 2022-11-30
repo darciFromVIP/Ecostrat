@@ -20,7 +20,7 @@ MonoBehaviour:
   - description: Electrical solution design. - 18 000$
     additionalDescription: 'HINT: Trash Increment -10, Followers + 4 000'
     actions:
-    - {fileID: 11400000, guid: 1b93fe6f616ee384d8ef321a928162b4, type: 2}
+    - {fileID: 11400000, guid: 07e7db6c4c9466d40b9a1a4cbb4d496f, type: 2}
     - {fileID: 11400000, guid: 67d0cc56b5259844da48c366061c47b4, type: 2}
     - {fileID: 11400000, guid: 735ad536ed66b8d4a9bf951721f49277, type: 2}
     consequenceMessage: The people of Shanghai are indebted to you!
