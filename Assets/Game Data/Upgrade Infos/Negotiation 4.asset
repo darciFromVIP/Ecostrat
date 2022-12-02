@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 9cc5f5b0e1c04f14bb78559b6536c24a, type: 3}
   upgradeType: 0
-  price: 15000
+  price: 8000
   description: "Shawn Diaz is great, but still he\u2019s just a single unit. And
     for big negotiation sessions he won\u2019t be enough. You found a group of lawyers
     from Harvard, who are willing to fight for your needs for a bigger sum of money."
-  benefits: Gives you more time to save the planet Earth. Donation (money per bubble)
-    +40
+  benefits: The more you can negotiate with companies, the more are people willing
+    to give you in their donations. Money per bubble +40
   actions:
   - {fileID: 11400000, guid: fe9c6e548ef6d404b83bc72fbfbe79f3, type: 2}

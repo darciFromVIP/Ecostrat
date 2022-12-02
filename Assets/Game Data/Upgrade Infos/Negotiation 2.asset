@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: da50c106b9f0f2e46a9b3828ec955810, type: 3}
   upgradeType: 0
-  price: 2500
+  price: 1000
   description: "Cynthia helped you with your stuttering and also taught you how to
     write grammatically correct letters. Although, if you want to learn how to negotiate
     with corporations for real, you will need more than that. Luckily, you know a
     police investigator, who will reveal some of his tips and tricks, but it\u2019s
     not going to be for free."
-  benefits: Gives you more time to save the planet Earth. Donation (money per bubble)
-    +20
+  benefits: The more you can negotiate with companies, the more are people willing
+    to give you in their donations. Money per bubble +20
   actions:
   - {fileID: 11400000, guid: 3374b3bc0c1e0244f93c4c4e373aa586, type: 2}

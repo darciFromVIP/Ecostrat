@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: Dangerous gases in the air! Level 1
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
-  time: 750
-  repeatInterval: 300
-  repeatTimes: 1
+  time: 820
+  repeatInterval: 500
+  repeatTimes: 2
   reactions:
   - description: Creating a vandalism protest where we can clearly state what we
-      think about it. - 8 000$
-    additionalDescription: 'HINT: Trash +1 000, Illegality +30'
+      think about it. - 0$
+    additionalDescription: 'HINT: Trash +1 000, Illegality +30, Followers +3 000'
     actions:
     - {fileID: 11400000, guid: 49363572ae0b54f4b92791e49d1f4782, type: 2}
     - {fileID: 11400000, guid: d2eeba675124b28439f3353adff85879, type: 2}
-    - {fileID: 11400000, guid: 76f39640be5df194c89b827b37cebad1, type: 2}
+    - {fileID: 11400000, guid: f4e9b49b71194ee4dae3207f6aa1ea1f, type: 2}
     consequenceMessage: Sadly, your chosen option did not work well. The problem
       should have been solved in a different way.
   - description: Agreement with local companies for the creation of a joint campaign

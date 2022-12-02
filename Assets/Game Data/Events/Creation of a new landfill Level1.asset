@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Creation of a new landfill Level1
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
-  time: 70
-  repeatInterval: 50
+  time: 150
+  repeatInterval: 200
   repeatTimes: 2
   reactions:
   - description: Organize a protest - 1 500$
-    additionalDescription: 'HINT: Trash Increment -1, Followers +500, $ -500'
+    additionalDescription: 'HINT: Trash Increment -1, Followers +600'
     actions:
     - {fileID: 11400000, guid: 62bbcddaf7d884345931bfc4dc48ae0a, type: 2}
-    - {fileID: 11400000, guid: d2b0cdd206f105f4caaee109340bb4de, type: 2}
+    - {fileID: 11400000, guid: 6f2ea3817e9b7854cadca9c3d766576d, type: 2}
     - {fileID: 11400000, guid: f4810ef93bf84cb4aa35ec74a9df5346, type: 2}
     consequenceMessage: Great! Your protest against the newest landfill was successful
       and the council rejected the proposal of creating a new landfill.
