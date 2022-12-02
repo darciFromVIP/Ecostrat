@@ -19,6 +19,7 @@ MonoBehaviour:
     This is the highest political game about saving our planet, and if we want to
     influence the decisions of countries, we need to financially support political
     campaigns to gain influence over politicians and to gain their trust as well."
-  benefits: Gives you more time to save the planet Earth. +10 minutes
+  benefits: Gives you more time to save the planet Earth. Donation (money per bubble)
+    +50
   actions:
-  - {fileID: 11400000, guid: 264096afd08f0ca43a9b080cac4f2bf4, type: 2}
+  - {fileID: 11400000, guid: afee0baea42cdf34aa03f4f6facf74f6, type: 2}

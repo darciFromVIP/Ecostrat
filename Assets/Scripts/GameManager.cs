@@ -20,12 +20,11 @@ public class GameManager : MonoBehaviour
     private List<GameObject> trashBubbles = new();
     public bool paused = false;
     private float oneDayInSec;
-    private float dayTimer = 0;
-    private int days = 0;
     public int hints = 0;
     private int speed = 1;
     private float trashIncrementAmountIncreaseTimer = 0;
     private int income = 0;
+    private int donation = 0;
 
     private int negotiationLevel = 0;
     private int socialSitesLevel = 0;
@@ -85,6 +84,7 @@ public class GameManager : MonoBehaviour
             return;
         gameTimer -= Time.deltaTime * speed;
         gameTimerSlider.value = gameTimer;
+        dayText.text = (int)(gameTimer / oneDayInSec) + " days left";
         if (gameTimer <= 0)
             GameOver("Not enough time...", "Unfortunately, your operations have been too slow and weren't sufficient to save the planet in time.");
         bubbleTimer += Time.deltaTime * speed;
@@ -110,13 +110,6 @@ public class GameManager : MonoBehaviour
         {
             followerIncomeTimer = 0;
             ChangeStats(PlayerStat.Money, followers + income);
-        }
-        dayTimer += Time.deltaTime * speed;
-        if (dayTimer >= oneDayInSec)
-        {
-            dayTimer = 0;
-            days++;
-            dayText.text = "Day " + days;
         }
         trashIncrementAmountIncreaseTimer += Time.deltaTime;
         if (trashIncrementAmountIncreaseTimer >= 60)
@@ -178,7 +171,7 @@ public class GameManager : MonoBehaviour
     }
     public void AddMoney()
     {
-        ChangeStats(PlayerStat.Money, (int)(Random.Range(10, 51) * 1800 / gameTimer));
+        ChangeStats(PlayerStat.Money, Random.Range(10, 51) + donation);
     }
     public void ChangeStats(PlayerStat stat, int modifier)
     {
@@ -240,6 +233,9 @@ public class GameManager : MonoBehaviour
                 if (hints < 0)
                     hints = 0;
                 break;
+            case PlayerStat.Donation:
+                donation += modifier;
+                break;
             default:
                 break;
         }
@@ -255,19 +251,9 @@ public class GameManager : MonoBehaviour
     {
         switch (stat)
         {
-            case PlayerStat.Followers:
-                break;
             case PlayerStat.Money:
                 if (money + modifier < 0)
                     return false;
-                break;
-            case PlayerStat.Timer:
-                break;
-            case PlayerStat.Trash:
-                break;
-            case PlayerStat.TrashIncrement:
-                break;
-            case PlayerStat.TrashIncrementInterval:
                 break;
             default:
                 break;
