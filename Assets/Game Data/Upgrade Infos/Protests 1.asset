@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 43e0da3ab1003ae44afb507876cd7d8d, type: 3}
   upgradeType: 2
-  price: 1000
+  price: 500
   description: "Our skills with social networks and the number of our subscribers
     are primarily related to organising protests. But that doesn\u2019t mean we can\u2019t
     improve. Learning how to write petitions is not particularly difficult, but in

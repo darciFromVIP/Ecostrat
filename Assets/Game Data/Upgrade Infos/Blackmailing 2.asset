@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 9210bb717f94e994ba7518078dfa908d, type: 3}
   upgradeType: 7
-  price: 4000
+  price: 3000
   description: "You have already learned to use pressure on those who try to pretend
     that no climate change is happening and that humanity is progressing as it should.
     It becomes a problem if someone finds your name at the end of an email or letter

@@ -19,6 +19,6 @@ MonoBehaviour:
     relationships and speech, so she offered to help you with your inexperience for
     some money. '
   benefits: The more you can negotiate with companies, the more are people willing
-    to give you in their donations. Money per bubble +10
+    to give you in their donations. Money per bubble +15
   actions:
   - {fileID: 11400000, guid: 34a5ae574646a3843bd2044d1a5cd82e, type: 2}

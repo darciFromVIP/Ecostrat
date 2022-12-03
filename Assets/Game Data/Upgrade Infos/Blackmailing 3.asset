@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: b7a176ae7126ff2409f0eace7872677e, type: 3}
   upgradeType: 7
-  price: 8000
+  price: 7000
   description: "With great power there must also come great responsibility. And with
     great responsibility comes great caution. Relying on one person will no longer
     be possible if we want to remain completely anonymous. The team of 3 college

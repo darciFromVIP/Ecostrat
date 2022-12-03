@@ -20,6 +20,6 @@ MonoBehaviour:
     influence the decisions of countries, we need to financially support political
     campaigns to gain influence over politicians and to gain their trust as well."
   benefits: The more you can negotiate with companies, the more are people willing
-    to give you in their donations. Money per bubble +50
+    to give you in their donations. Money per bubble +250
   actions:
   - {fileID: 11400000, guid: afee0baea42cdf34aa03f4f6facf74f6, type: 2}

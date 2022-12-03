@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 0f16c297505554b4386ffb9e04b71cd9, type: 3}
   upgradeType: 2
-  price: 10000
+  price: 6000
   description: Activists are great, especially those who cooperate with us. However,
     the main idea was not only to hang some kind of graphic on the social media with
     an invitation to the protest, but to be part of the protest. You found a much

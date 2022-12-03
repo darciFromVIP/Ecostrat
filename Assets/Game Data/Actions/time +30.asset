@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: time +30
   m_EditorClassIdentifier: 
   stat: 2
-  modifier: 30
+  modifier: 90
