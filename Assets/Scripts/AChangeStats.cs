@@ -6,7 +6,7 @@ using UnityEngine;
 public class AChangeStats : Action
 {
     public PlayerStat stat;
-    public int modifier;
+    public float modifier;
     public override void Execute()
     {
         GameManager.instance.ChangeStats(stat, modifier);

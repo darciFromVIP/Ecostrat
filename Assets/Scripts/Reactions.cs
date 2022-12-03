@@ -12,7 +12,7 @@ public class Reactions : MonoBehaviour
         ClearContainer();
         for (int i = 0; i < reactionData.Count; i++)
         {
-            Reaction reaction = Instantiate(reactionPrefab, reactionPrefab.transform.position, reactionPrefab.transform.rotation, transform);
+            Reaction reaction = Instantiate(reactionPrefab, transform);
             reaction.UpdateReaction(reactionData[i]);
         }
         GameManager.instance.ChangeStats(PlayerStat.Hint, -1);

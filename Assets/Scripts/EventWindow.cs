@@ -17,7 +17,7 @@ public class EventWindow : MonoBehaviour
         instance = this;
         Hide();
     }
-    public void UpdateEvent(EventDataScriptable eventData, Event currentEvent)
+    public void UpdateEvent(EventDataScriptable eventData, Event currentEvent = null)
     {
         Show();
         this.currentEvent = currentEvent;
