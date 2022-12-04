@@ -20,6 +20,6 @@ MonoBehaviour:
     and dead suffocated fish. That\u2019s why we create a team of experts and analysts
     to research ideal solutions for this problem. REQUIRES ALL OTHER LEGAL PERKS
     ON LEVEL 5"
-  benefits: Cleansing trash increment. -500 trash increment
+  benefits: Cleansing trash increment. -5 trash increment
   actions:
-  - {fileID: 11400000, guid: 7a3505f90f720be47a50e31071ffbf04, type: 2}
+  - {fileID: 11400000, guid: 5a910878b3d275e4193ae6583db25b67, type: 2}

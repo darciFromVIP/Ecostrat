@@ -13,37 +13,34 @@ MonoBehaviour:
   m_Name: Area Pollution Level 2
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
-  time: 150
+  time: 250
   repeatInterval: 180
   repeatTimes: 2
   reactions:
-  - description: "Organize trash collection with our followers.\r - 700$\n"
+  - description: "Organize trash collection with our followers.\r - 800$\n"
     additionalDescription: 'HINT: Trash -350, Followers +300'
     actions:
     - {fileID: 11400000, guid: 2c451700aca233a48bcfd0437c1720f2, type: 2}
     - {fileID: 11400000, guid: b81fcee334151874f9640c0f39e9c224, type: 2}
-    - {fileID: 11400000, guid: 0cc634446587a6f41a7541e6edbe5dd5, type: 2}
-    consequenceMessage: Residents are happy about your garbage collection event,
-      they can finally live in a clean environment!
-  - description: Bribe the mayor to procure cleaning services. - 3 000$
-    additionalDescription: 'HINT: Trash -350, Illegality +10'
+    - {fileID: 11400000, guid: 57ac0c7c268791d46beabdf596938ddd, type: 2}
+    consequenceMessage: Residents are happy about your garbage collection event!
+  - description: Bribe the mayor to procure cleaning services. - 2 500$
+    additionalDescription: 'HINT: Trash -400, Illegality +15'
     actions:
-    - {fileID: 11400000, guid: ac15418341863b1499fd03e1caf96aad, type: 2}
-    - {fileID: 11400000, guid: b81fcee334151874f9640c0f39e9c224, type: 2}
-    - {fileID: 11400000, guid: 1cda4c076a78052428c5f786b633d9c2, type: 2}
+    - {fileID: 11400000, guid: 6ad33248fb674c6468974514ba3714bf, type: 2}
+    - {fileID: 11400000, guid: 9feb916535d23c94fa726ed1e7f0aac3, type: 2}
+    - {fileID: 11400000, guid: 75fd2671ce01f48469b0eb5ab5b0d326, type: 2}
     consequenceMessage: "You can\u2019t write a media post about bribing, but it\u2019s
       important that it solved the problem!"
   - description: "Hacking the city office with threatening messages and demanding
-      immediate correction of this unfavorable situation.\r - 1 300$\n"
-    additionalDescription: 'HINT: Trash +350, Followers -500, Illegality +15'
+      immediate correction.\r - 0$\n"
+    additionalDescription: 'HINT: Trash +350, Followers -300, Illegality +15'
     actions:
-    - {fileID: 11400000, guid: 39d31053d0a2d134fbbe95344891f662, type: 2}
+    - {fileID: 11400000, guid: 8fe8670e373e0b94e8941616f6f03561, type: 2}
     - {fileID: 11400000, guid: 6ad33248fb674c6468974514ba3714bf, type: 2}
     - {fileID: 11400000, guid: b8258e368a6602d45ba3e4a33b17a24f, type: 2}
-    - {fileID: 11400000, guid: 4a1ca20032124f947a70f2dc4af77086, type: 2}
     consequenceMessage: "Hacking can solve many problems, but as an illegal activity
-      it has its disadvantages. People don\u2019t like this approach and made it
-      clear to us."
+      it has its disadvantages. People don\u2019t like this approach."
   ignoreConsequences:
   - {fileID: 11400000, guid: b8258e368a6602d45ba3e4a33b17a24f, type: 2}
   eventDescription: There is too much trash in the streets!

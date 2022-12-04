@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 0528f6dd725514d428235f73d2d24216, type: 3}
   upgradeType: 2
-  price: 70000
+  price: 55000
   description: "We need more familiar faces to speak for the population in their
     given region. If we want to create a global movement, we can\u2019t just focus
     on American companies and politicians. We need to expand worldwide. That\u2019s
     why you get in contact with similar organisations like us all over the world.
     With our knowledge, money and their people, we will be able to respond through
     protests all around the world.\r\n"
-  benefits: Followers but at a price of more trash. +5 000 followers +2 000 trash
+  benefits: Followers but at a price of more trash. +6 000 followers +2 000 trash
   actions:
-  - {fileID: 11400000, guid: 8f02263a2629c1e4599243c86ef75d9c, type: 2}
+  - {fileID: 11400000, guid: 78546a9cd5a02504ba5810e5ad2ffe4f, type: 2}
   - {fileID: 11400000, guid: 6415401738fa56e458d611a0445a05c7, type: 2}

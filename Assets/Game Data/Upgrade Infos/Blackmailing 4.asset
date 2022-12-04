@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 9be6174ba4646d2439a4d634b6e22102, type: 3}
   upgradeType: 7
-  price: 20000
+  price: 15000
   description: "Sometimes it\u2019s really sad where a person has to go to be able
     to make a change. If we want to influence the decisions of the members of the
     National Council, it is necessary to be tougher. Mafia may be a strong word,

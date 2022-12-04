@@ -22,6 +22,6 @@ MonoBehaviour:
     secret organised group which has a lot of experience with bribing. They present
     themselves under the name ProBribers, which definitely suggests they are highly
     professional."
-  benefits: Gives you more time to save the planet Earth. +7 minutes
+  benefits: Gives you more time to save the planet Earth. +135 days
   actions:
   - {fileID: 11400000, guid: cc323a18520cbf34a8b92c5aa92cbc75, type: 2}

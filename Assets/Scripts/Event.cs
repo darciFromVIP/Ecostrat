@@ -2,16 +2,31 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 public class Event : MonoBehaviour
 {
     private Button btn;
     private Image image;
     private EventDataScriptable eventData;
+    [SerializeField] private TextMeshProUGUI timerText;
+    private float timer = 60;
     private void Awake()
     {
         image = GetComponent<Image>();
         btn = GetComponent<Button>();
         btn.onClick.AddListener(ShowEventWindow);
+    }
+    private void Update()
+    {
+        if (GameManager.instance.paused)
+            return;
+        timer -= Time.deltaTime;
+        timerText.text = ((int)timer).ToString();
+        if (timer <= 0)
+        {
+            eventData.ExecuteIgnoreConsequences();
+            Destroy();
+        }
     }
     public void UpdateEvent(EventDataScriptable eventData)
     {

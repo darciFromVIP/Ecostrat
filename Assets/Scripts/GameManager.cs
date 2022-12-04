@@ -6,26 +6,26 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    public int money = 500;
-    private int followers = 0;
+    public float money = 500;
+    private float followers = 0;
     private float followerIncomeTimer = 0;
-    private int illegality = 0;
-    [SerializeField] private int trash = 0;
+    private float illegality = 0;
+    [SerializeField] private float trash = 0;
     private float gameTimer = 1800;
-    private float bubbleTimer = 0;
+    private float donationTimer = 0;
     private float trashTimer = 0;
     private float illegalityTimer = 0;
-    [SerializeField] private int trashIncrementAmount = 10;
-    [SerializeField] private int trashIncrementInterval = 3;
+    [SerializeField] private float trashIncrementAmount = 10;
+    [SerializeField] private float trashIncrementInterval = 3;
     private List<GameObject> trashBubbles = new();
-    private bool paused = false;
+    public bool paused = false;
     private float oneDayInSec;
-    private float dayTimer = 0;
-    private int days = 0;
-    public int hints = 0;
+    public float hints = 0;
     private int speed = 1;
     private float trashIncrementAmountIncreaseTimer = 0;
-    private int income = 0;
+    private float income = 0;
+    private float donation = 0;
+    private float donationIntensity = 5;
 
     private int negotiationLevel = 0;
     private int socialSitesLevel = 0;
@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     public Event eventPrefab;
     public EventDatabase eventDatabase;
     public FloatingText floatingTextPrefab;
+    public GameObject illegalityGameOverEvent;
 
     [Header("UI References")]
     public TextMeshProUGUI moneyText;
@@ -77,6 +78,8 @@ public class GameManager : MonoBehaviour
         StartCoroutine(GameNewsCoroutine());
         StartCoroutine(IllegalityNewsCoroutine());
         oneDayInSec = gameTimer / 365;
+        ChangeStats(PlayerStat.Illegality, 100);
+
         UpdateUI();
     }
     private void Update()
@@ -85,12 +88,13 @@ public class GameManager : MonoBehaviour
             return;
         gameTimer -= Time.deltaTime * speed;
         gameTimerSlider.value = gameTimer;
+        dayText.text = (int)(gameTimer / oneDayInSec) + " days left";
         if (gameTimer <= 0)
             GameOver("Not enough time...", "Unfortunately, your operations have been too slow and weren't sufficient to save the planet in time.");
-        bubbleTimer += Time.deltaTime * speed;
-        if (bubbleTimer >= 5)
+        donationTimer += Time.deltaTime * speed;
+        if (donationTimer >= donationIntensity)
         {
-            bubbleTimer = 0;
+            donationTimer = 0;
             CreateBubble();
         }
         trashTimer += Time.deltaTime * speed;
@@ -106,17 +110,10 @@ public class GameManager : MonoBehaviour
             illegalityTimer = 0;
         }
         followerIncomeTimer += Time.deltaTime * speed;
-        if (followerIncomeTimer >= 30)
+        if (followerIncomeTimer >= 60)
         {
             followerIncomeTimer = 0;
             ChangeStats(PlayerStat.Money, followers + income);
-        }
-        dayTimer += Time.deltaTime * speed;
-        if (dayTimer >= oneDayInSec)
-        {
-            dayTimer = 0;
-            days++;
-            dayText.text = "Day " + days;
         }
         trashIncrementAmountIncreaseTimer += Time.deltaTime;
         if (trashIncrementAmountIncreaseTimer >= 60)
@@ -178,9 +175,9 @@ public class GameManager : MonoBehaviour
     }
     public void AddMoney()
     {
-        ChangeStats(PlayerStat.Money, (int)(Random.Range(10, 51) * 1800 / gameTimer));
+        ChangeStats(PlayerStat.Money, Random.Range(10, 51) + donation);
     }
-    public void ChangeStats(PlayerStat stat, int modifier)
+    public void ChangeStats(PlayerStat stat, float modifier)
     {
         FloatingText text;
         switch (stat)
@@ -190,19 +187,19 @@ public class GameManager : MonoBehaviour
                 if (followers < 0)
                     followers = 0;
                 text = Instantiate(floatingTextPrefab, followersFloatingText);
-                text.UpdateText(modifier.ToString("+#;-#;0"), modifier > 0, true);
+                text.UpdateText(((int)modifier).ToString("+#;-#;0"), modifier > 0, true);
                 break;
             case PlayerStat.Money:
                 money += modifier;
                 if (money < 0)
                     money = 0;
                 text = Instantiate(floatingTextPrefab, moneyFloatingText);
-                text.UpdateText(modifier.ToString("+#;-#;0"), modifier > 0, true);
+                text.UpdateText(((int)modifier).ToString("+#;-#;0"), modifier > 0, true);
                 break;
             case PlayerStat.Timer:
                 gameTimer += modifier;
                 text = Instantiate(floatingTextPrefab, timeFloatingText);
-                text.UpdateText(modifier.ToString("+#;-#;0") + " seconds", modifier > 0, false);
+                text.UpdateText(((int)modifier).ToString("+#;-#;0") + " seconds", modifier > 0, false);
                 break;
             case PlayerStat.Trash:
                 trash += modifier;
@@ -217,7 +214,7 @@ public class GameManager : MonoBehaviour
                         RemoveTrashBubble();
                     }
                 text = Instantiate(floatingTextPrefab, trashFloatingText);
-                text.UpdateText(modifier.ToString("+#;-#;0"), modifier < 0, true);
+                text.UpdateText(((int)modifier).ToString("+#;-#;0"), modifier < 0, true);
                 if (trash < 0)
                     trash = 0;
                 break;
@@ -233,41 +230,45 @@ public class GameManager : MonoBehaviour
                     illegality = 0;
                 illegalityTimer = 0;
                 text = Instantiate(floatingTextPrefab, illegalityFloatingText);
-                text.UpdateText(modifier.ToString("+#;-#;0"), modifier < 0, true);
+                text.UpdateText(((int)modifier).ToString("+#;-#;0"), modifier < 0, true);
                 break;
             case PlayerStat.Hint:
                 hints += modifier;
                 if (hints < 0)
                     hints = 0;
                 break;
+            case PlayerStat.Donation:
+                donation += modifier;
+                break;
+            case PlayerStat.DonationIntensity:
+                donationIntensity += modifier;
+                if (donationIntensity < 0.1)
+                    donationIntensity = 0.1f;
+                break;
             default:
                 break;
         }
         if (illegality >= 100)
-            GameOver("You are summoned to court!", "The police have found you.");
+        {
+            if (!illegalityGameOverEvent.activeInHierarchy)
+            {
+                illegalityGameOverEvent.SetActive(true);
+                PauseGameToggle(true);
+            }
+        }
         if (trash >= 20000)
             GameOver("Too much garbage!", "People have been really good in polluting the planet even more... The planet is unable to bear such amount of trash and it will soon be unable to be inhabited by humans.");
         if (trash <= 0)
             GameOver("All Clean!", "Congratulations! All the trash on this planet has been taken care of, which means we have nothing to fear anymore!");
         UpdateUI();
     }
-    public bool TestChangeStats(PlayerStat stat, int modifier)
+    public bool TestChangeStats(PlayerStat stat, float modifier)
     {
         switch (stat)
         {
-            case PlayerStat.Followers:
-                break;
             case PlayerStat.Money:
                 if (money + modifier < 0)
                     return false;
-                break;
-            case PlayerStat.Timer:
-                break;
-            case PlayerStat.Trash:
-                break;
-            case PlayerStat.TrashIncrement:
-                break;
-            case PlayerStat.TrashIncrementInterval:
                 break;
             default:
                 break;
@@ -373,6 +374,7 @@ public class GameManager : MonoBehaviour
     }
     public bool LegalUltimatePerkUnlocked()
     {
+        Debug.Log("Negotiation: " + negotiationLevel + " Social Sites: " + socialSitesLevel + " Riots: " + riotsLevel + " Social Events: " + socialEventsLevel);
         return negotiationLevel == 5 && socialSitesLevel == 5 && riotsLevel == 5 && socialEventsLevel == 5;
     }
     public bool IllegalUltimatePerkUnlocked()
@@ -383,8 +385,9 @@ public class GameManager : MonoBehaviour
     {
         this.speed = speed;
     }
-    private void GameOver(string label, string description)
+    public void GameOver(string label, string description)
     {
         gameoverScreen.UpdateTexts(label, description);
+        PauseGameToggle(true);
     }
 }

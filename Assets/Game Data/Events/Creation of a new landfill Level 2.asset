@@ -13,37 +13,36 @@ MonoBehaviour:
   m_Name: Creation of a new landfill Level 2
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
-  time: 450
+  time: 500
   repeatInterval: 250
-  repeatTimes: 1
+  repeatTimes: 2
   reactions:
   - description: 'Making a video for social networks to point out the new landfill.
-      - 2 000$ '
-    additionalDescription: 'HINT: Trash +400, Followers + 1 000'
+      - 2 500$ '
+    additionalDescription: 'HINT: Trash +400, Followers + 800'
     actions:
-    - {fileID: 11400000, guid: 7cd9a0868562dc04ab0e5be98508ff29, type: 2}
+    - {fileID: 11400000, guid: 79d034ea81520a34cadd89ea8b10bf79, type: 2}
     - {fileID: 11400000, guid: 87aa984b03d8f2d488696644fc862458, type: 2}
-    - {fileID: 11400000, guid: dcc5ef84bd1eeb34084d199af4d99fa6, type: 2}
+    - {fileID: 11400000, guid: 75fd2671ce01f48469b0eb5ab5b0d326, type: 2}
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
       but at least you gained more followers!"
-  - description: Hacking the management of the landfill with the threat of a complete
-      shutdown of the landfill. - 3 500$
-    additionalDescription: 'HINT: Trash -400, Illegality +20'
+  - description: Hacking the landfill with the threat of a complete shutdown of the
+      landfill. - 0$
+    additionalDescription: 'HINT: Trash -400, Illegality +25'
     actions:
-    - {fileID: 11400000, guid: cbea1d0188bb1764cbed38ecaae48313, type: 2}
+    - {fileID: 11400000, guid: c0acd878a7076444faf448cc37e506a8, type: 2}
     - {fileID: 11400000, guid: 9feb916535d23c94fa726ed1e7f0aac3, type: 2}
-    - {fileID: 11400000, guid: 342040239e8a5744fb22e9d88b07f0f7, type: 2}
     consequenceMessage: Even though you risked your freedom, you still earned exactly
       what you wanted!
   - description: "Negotiation with the management of the landfill to cancel the landfill.\r
       - 1 500$"
-    additionalDescription: 'HINT: Trash +400, Followers -1 000'
+    additionalDescription: 'HINT: Trash +400, Followers -300'
     actions:
-    - {fileID: 11400000, guid: 9eea74686d74a874ab5d0a0a35559be8, type: 2}
+    - {fileID: 11400000, guid: 8fe8670e373e0b94e8941616f6f03561, type: 2}
     - {fileID: 11400000, guid: 87aa984b03d8f2d488696644fc862458, type: 2}
     - {fileID: 11400000, guid: f4810ef93bf84cb4aa35ec74a9df5346, type: 2}
-    consequenceMessage: Negotiations do not always go well in our favor and management
-      is not always interested in our environmental problems.
+    consequenceMessage: Negotiations do not always go well and management is not
+      interested in our environmental problems.
   ignoreConsequences:
   - {fileID: 11400000, guid: 87aa984b03d8f2d488696644fc862458, type: 2}
   eventDescription: An additional place for collecting waste.

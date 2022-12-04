@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: aaff9d47f4bb24d4abca2f1cd76c0978, type: 3}
   upgradeType: 1
-  price: 6000
+  price: 5500
   description: "One thing is to have the paid advertisement activated, the other
     is to have it purposefully targeted on your desired audience. Sam was skilled
     enough just to create the advertisement for you, so you need to find someone
