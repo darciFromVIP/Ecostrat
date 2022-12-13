@@ -78,8 +78,6 @@ public class GameManager : MonoBehaviour
         StartCoroutine(GameNewsCoroutine());
         StartCoroutine(IllegalityNewsCoroutine());
         oneDayInSec = gameTimer / 365;
-        ChangeStats(PlayerStat.Illegality, 100);
-
         UpdateUI();
     }
     private void Update()
