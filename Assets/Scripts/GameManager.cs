@@ -123,12 +123,12 @@ public class GameManager : MonoBehaviour
     private void CreateBubble()
     {
         Button bubbleInstance = Instantiate(bubblePrefab, interactiveCanvas.transform);
-        bubbleInstance.GetComponent<RectTransform>().anchoredPosition = GetPointOnTerrain();
+        bubbleInstance.GetComponent<RectTransform>().anchoredPosition = GetPointOnTerrain(false);
     }
     private void CreateTrashBubble()
     {
         GameObject bubbleInstance = Instantiate(trashBubblePrefab, mapCanvas.transform);
-        bubbleInstance.GetComponent<RectTransform>().anchoredPosition = GetPointOnTerrain();
+        bubbleInstance.GetComponent<RectTransform>().anchoredPosition = GetPointOnTerrain(true);
         float random = Random.Range(0.8f, 1.5f);
         bubbleInstance.GetComponent<RectTransform>().localScale = new Vector3(random, random, random);
         trashBubbles.Add(bubbleInstance);
@@ -142,13 +142,21 @@ public class GameManager : MonoBehaviour
             Destroy(obj);
         }
     }
-    private Vector2 GetPointOnTerrain()
+    private Vector2 GetPointOnTerrain(bool isTrashBubble)
     {
-        Vector2 targetPos = new Vector2(Random.Range(0, mapCanvas.pixelRect.width), Random.Range(0, mapCanvas.pixelRect.height));
+        Vector2 targetPos;
+        if (isTrashBubble)
+            targetPos = new Vector2(Random.Range(0, mapCanvas.pixelRect.width), Random.Range(0, mapCanvas.pixelRect.height));
+        else
+            targetPos = new Vector2(Random.Range(0, mapCanvas.pixelRect.width - 164), Random.Range(0, mapCanvas.pixelRect.height - 253));
+
         Color color = mapSprite.GetPixel((int)targetPos.x * 4, (int)targetPos.y * 4);
         while (color.r >= 0.202 && color.r <= 0.206 && color.g >= 0.410 && color.g <= 0.414 && color.b >= 0.578 && color.b <= 0.582)    // Sea Color: R 204 G 412 B 480
         {
-            targetPos = new Vector2(Random.Range(0, mapCanvas.pixelRect.width), Random.Range(0, mapCanvas.pixelRect.height));
+            if (isTrashBubble)
+                targetPos = new Vector2(Random.Range(0, mapCanvas.pixelRect.width), Random.Range(0, mapCanvas.pixelRect.height));
+            else
+                targetPos = new Vector2(Random.Range(0, mapCanvas.pixelRect.width - 164), Random.Range(0, mapCanvas.pixelRect.height - 253));
             color = mapSprite.GetPixel((int)targetPos.x * 4, (int)targetPos.y * 4);
         }
         return targetPos;
@@ -284,7 +292,7 @@ public class GameManager : MonoBehaviour
         }
         Event tempEvent = Instantiate(eventPrefab, interactiveCanvas.transform);
         if (eventData.mapPosition == Vector2.zero)
-            tempEvent.GetComponent<RectTransform>().anchoredPosition = GetPointOnTerrain();
+            tempEvent.GetComponent<RectTransform>().anchoredPosition = GetPointOnTerrain(false);
         else
             tempEvent.GetComponent<RectTransform>().anchoredPosition = eventData.mapPosition / 4;
         tempEvent.UpdateEvent(eventData);
