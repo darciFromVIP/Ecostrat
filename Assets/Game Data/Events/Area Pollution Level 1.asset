@@ -17,13 +17,13 @@ MonoBehaviour:
   repeatInterval: 30
   repeatTimes: 2
   reactions:
-  - description: Organize trash collection with our followers. - 200$
+  - description: Organize trash collection with our followers.
     additionalDescription: 'HINT: Trash -100'
     actions:
     - {fileID: 11400000, guid: 0d4173e35cb1f4343942d01e1ec67cb5, type: 2}
     - {fileID: 11400000, guid: fc2243922fa3ae24c8857913d9cfa923, type: 2}
     consequenceMessage: Residents are happy about your garbage collection event!
-  - description: Send a letter to the local authority. - 100$
+  - description: Send a letter to the local authority.
     additionalDescription: 'HINT: Trash +100, Followers +250'
     actions:
     - {fileID: 11400000, guid: 9c9afe97304d2e74a9c82cc30436074e, type: 2}

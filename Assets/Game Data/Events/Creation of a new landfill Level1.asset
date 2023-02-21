@@ -17,7 +17,7 @@ MonoBehaviour:
   repeatInterval: 200
   repeatTimes: 2
   reactions:
-  - description: Organize a protest - 1 500$
+  - description: Organize a protest.
     additionalDescription: 'HINT: Trash Increment -1, Followers +600'
     actions:
     - {fileID: 11400000, guid: 62bbcddaf7d884345931bfc4dc48ae0a, type: 2}
@@ -25,7 +25,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: f4810ef93bf84cb4aa35ec74a9df5346, type: 2}
     consequenceMessage: Great! Your protest against the newest landfill was successful
       and the council rejected the proposal of creating a new landfill.
-  - description: Post on social networks. - 500$
+  - description: Post on social networks.
     additionalDescription: 'HINT: Trash Increment +3, Followers -300'
     actions:
     - {fileID: 11400000, guid: b7d9995dfffd230418f528ec8a5dac45, type: 2}

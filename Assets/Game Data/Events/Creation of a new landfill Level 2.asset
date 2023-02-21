@@ -17,8 +17,7 @@ MonoBehaviour:
   repeatInterval: 250
   repeatTimes: 2
   reactions:
-  - description: 'Making a video for social networks to point out the new landfill.
-      - 2 500$ '
+  - description: Making a video for social networks to point out the new landfill.
     additionalDescription: 'HINT: Trash +400, Followers + 800'
     actions:
     - {fileID: 11400000, guid: 79d034ea81520a34cadd89ea8b10bf79, type: 2}
@@ -27,15 +26,14 @@ MonoBehaviour:
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
       but at least you gained more followers!"
   - description: Hacking the landfill with the threat of a complete shutdown of the
-      landfill. - 0$
+      landfill.
     additionalDescription: 'HINT: Trash -400, Illegality +25'
     actions:
     - {fileID: 11400000, guid: c0acd878a7076444faf448cc37e506a8, type: 2}
     - {fileID: 11400000, guid: 9feb916535d23c94fa726ed1e7f0aac3, type: 2}
     consequenceMessage: Even though you risked your freedom, you still earned exactly
       what you wanted!
-  - description: "Negotiation with the management of the landfill to cancel the landfill.\r
-      - 1 500$"
+  - description: "Negotiation with the management of the landfill to cancel the landfill.\r"
     additionalDescription: 'HINT: Trash +400, Followers -300'
     actions:
     - {fileID: 11400000, guid: 8fe8670e373e0b94e8941616f6f03561, type: 2}

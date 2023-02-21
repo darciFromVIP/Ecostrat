@@ -18,7 +18,7 @@ MonoBehaviour:
   repeatTimes: 1
   reactions:
   - description: Protests against throwing plastics into the sea and non-recycling
-      of waste. - 30 000$
+      of waste.
     additionalDescription: 'HINT: Trash Increment +25. Followers +6 000'
     actions:
     - {fileID: 11400000, guid: fc40fc52acb8d2d459a6137d4f63e16e, type: 2}
@@ -27,7 +27,7 @@ MonoBehaviour:
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
       but at least you gained more followers!"
   - description: Purchase of special equipment and personnel for the removal of marine
-      waste. - 65 000$
+      waste.
     additionalDescription: 'HINT: Trash -3 000, Followers +4 000'
     actions:
     - {fileID: 11400000, guid: 43c97e6e6c9855145b1a456befb6690d, type: 2}
@@ -35,7 +35,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 417d95e78aa626e4495bf2eab3a81b1a, type: 2}
     consequenceMessage: You managed to remove a huge part of the ocean waste and
       thus extended the life of our planet!
-  - description: Hacker shutdown of transport ships that produce waste. - 0$
+  - description: Hacker shutdown of transport ships that produce waste.
     additionalDescription: 'HINT: Trash Increment -25, Illegality +40'
     actions:
     - {fileID: 11400000, guid: 07e7db6c4c9466d40b9a1a4cbb4d496f, type: 2}
