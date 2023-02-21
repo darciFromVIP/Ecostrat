@@ -3525,6 +3525,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1603926995}
     m_Modifications:
+    - target: {fileID: 287552283043347294, guid: 79af67361840b324ebdc8fcccdfb1d21, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000030517578
+      objectReference: {fileID: 0}
     - target: {fileID: 5874524189731995013, guid: 79af67361840b324ebdc8fcccdfb1d21, type: 3}
       propertyPath: m_text
       value: Bail Out - $50000
@@ -4634,6 +4638,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1603926995}
     m_Modifications:
+    - target: {fileID: 287552283043347294, guid: 79af67361840b324ebdc8fcccdfb1d21, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.000030517578
+      objectReference: {fileID: 0}
     - target: {fileID: 5874524189731995013, guid: 79af67361840b324ebdc8fcccdfb1d21, type: 3}
       propertyPath: m_text
       value: Game Over
@@ -5628,7 +5636,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!223 &1602654878
 Canvas:
   m_ObjectHideFlags: 0

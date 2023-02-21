@@ -17,14 +17,14 @@ MonoBehaviour:
   repeatInterval: 100
   repeatTimes: 2
   reactions:
-  - description: Organize trash collection with our followers. - 1 400$
+  - description: Organize trash collection with our followers.
     additionalDescription: 'HINT: Trash -300'
     actions:
     - {fileID: 11400000, guid: 99d85beae6bdf024c856f769e41cb8f7, type: 2}
     - {fileID: 11400000, guid: 6dbea55d1c068124fbc50b9d8c4c1ce4, type: 2}
     consequenceMessage: Congratulations! You managed to clean the pollution from
       the river. Keep up the good work!
-  - description: Make a post on social sites. - 1 000$
+  - description: Make a post on social sites.
     additionalDescription: 'HINT: Trash +300, Followers +800'
     actions:
     - {fileID: 11400000, guid: 79d034ea81520a34cadd89ea8b10bf79, type: 2}

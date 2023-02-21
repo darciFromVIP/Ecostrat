@@ -17,8 +17,7 @@ MonoBehaviour:
   repeatInterval: 300
   repeatTimes: 2
   reactions:
-  - description: Bribing MPs to increase emissions for non-electronic vehicles. -
-      8 000$
+  - description: Bribing MPs to increase emissions for non-electronic vehicles.
     additionalDescription: 'HINT: Trash Increment -15, Illegality +25'
     actions:
     - {fileID: 11400000, guid: 20f56ffd831ada84a847916ee59318cb, type: 2}
@@ -27,7 +26,7 @@ MonoBehaviour:
     consequenceMessage: "You can\u2019t write a media post about bribing, but it\u2019s
       important that it solved the problem!"
   - description: Online campaign in the given location for more frequent use of city
-      transport, bicycles and walking. - 13 500$
+      transport, bicycles and walking.
     additionalDescription: 'HINT: Trash Increment +10, Followers +4 000'
     actions:
     - {fileID: 11400000, guid: 24b63840c232b6b40988eaf3127a3899, type: 2}
@@ -36,7 +35,7 @@ MonoBehaviour:
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
       but at least you gained more followers!"
   - description: Agreement with local companies for the creation of electric bicycles
-      in the given area. - 25 000$
+      in the given area.
     additionalDescription: 'HINT: Trash Increment -15, Followers +5 000'
     actions:
     - {fileID: 11400000, guid: 20f56ffd831ada84a847916ee59318cb, type: 2}

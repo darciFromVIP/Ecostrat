@@ -40,4 +40,14 @@ public class ReactionData
         }
         return valid;
     }
+    public int GetPrice()
+    {
+        foreach (var item in actions)
+        {
+            if (item is AChangeStats)
+                if ((item as AChangeStats).stat == PlayerStat.Money)
+                    return (int)(item as AChangeStats).modifier * -1;
+        }
+        return 0;
+    }
 }

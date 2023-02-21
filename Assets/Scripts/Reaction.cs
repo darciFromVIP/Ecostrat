@@ -8,6 +8,8 @@ using System;
 public class Reaction : MonoBehaviour
 {
     public TextMeshProUGUI description;
+    public TextMeshProUGUI price;
+    public TextMeshProUGUI hint;
 
     private Button btn;
     private void Awake()
@@ -17,12 +19,12 @@ public class Reaction : MonoBehaviour
     public void UpdateReaction(ReactionData data)
     {
         btn.interactable = true;
+        price.text = data.GetPrice().ToString() + "$";
         btn.onClick.AddListener(data.ExecuteActions);
         btn.onClick.AddListener(EventWindow.instance.Hide);
+        description.text = data.description;
         if (GameManager.instance.hints > 0)
-            description.text = data.description + "\n" + data.additionalDescription;
-        else
-            description.text = data.description;
+            hint.text = data.additionalDescription;
         if (!data.TestExecute())
             btn.interactable = false;
     }
