@@ -15,6 +15,7 @@ public class Event : MonoBehaviour
         image = GetComponent<Image>();
         btn = GetComponent<Button>();
         btn.onClick.AddListener(ShowEventWindow);
+        btn.onClick.AddListener(SoundManager.instance.EventOpen);
     }
     private void Update()
     {

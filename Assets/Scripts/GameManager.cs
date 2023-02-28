@@ -88,7 +88,8 @@ public class GameManager : MonoBehaviour
         gameTimerSlider.value = gameTimer;
         dayText.text = (int)(gameTimer / oneDayInSec) + " days left";
         if (gameTimer <= 0)
-            GameOver("Not enough time...", "Unfortunately, your operations have been too slow and weren't sufficient to save the planet in time.");
+            GameOver("Your time to save planet Earth has just run out.", 
+                "Climate changes in the world are already so critical that it is impossible to continue your saving journey of planet Earth. PRO TIP: Gotta be faster next time! (Try to buy out some of Negotiation Perks to get more time!)");
         donationTimer += Time.deltaTime * speed;
         if (donationTimer >= donationIntensity)
         {
@@ -263,9 +264,11 @@ public class GameManager : MonoBehaviour
             }
         }
         if (trash >= 20000)
-            GameOver("Too much garbage!", "People have been really good in polluting the planet even more... The planet is unable to bear such amount of trash and it will soon be unable to be inhabited by humans.");
+            GameOver("DOOMSDAY - The world is flooded with garbage!", 
+                "The seas and oceans have returned to us what we have thrown into them all these years. People swim in the garbage that has flooded the streets of human dwellings. PRO TIP: It is important to make decisions that do not increase our garbage per interval too much, because that way we will get into a too large increase of garbage per day, which we will not be able to get rid of afterwards.");
         if (trash <= 0)
-            GameOver("All Clean!", "Congratulations! All the trash on this planet has been taken care of, which means we have nothing to fear anymore!");
+            GameOver("All Clean!", 
+                "You managed to clear all the trash and made our planet a clean place again, where we can live together in harmony with nature as one complete humanity! Now is the time to rest and enjoy the success of your deeds for our planet!");
         UpdateUI();
     }
     public bool TestChangeStats(PlayerStat stat, float modifier)
@@ -370,9 +373,11 @@ public class GameManager : MonoBehaviour
                 break;
         }
         if (oceanCleansingLevel == 5)
-            GameOver("Planet Earth is saved!", "You managed to cleanse the oceans, which has been the biggest problem of all! Great job!");
+            GameOver("Planet Earth is saved!", 
+                "You unlocked the last level of the ultimate perk Ocean Cleansing, through which you were able to get as many people necessary to clean all the nooks and crannies of the mixture of garbage in the seas and oceans, which was the biggest problem of the human race in the fight against garbage. Now is the time to rest and enjoy the success of your deeds for our planet!");
         if (vandalismLevel == 5)
-            GameOver("Planet Earth is saved!", "You vandal! :)");
+            GameOver("Planet Earth is saved!", 
+                "You have such a great influence on a huge group of your supporters that even the largest manufacturing companies are prying from your hand and are ready to submit to any measures that will help reduce their part of the blame for the pollution of our planet Earth.");
     }
     public void PauseGameToggle(bool value)
     {

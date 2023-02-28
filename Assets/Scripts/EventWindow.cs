@@ -10,6 +10,7 @@ public class EventWindow : MonoBehaviour
     public Reactions reactions;
     private Event currentEvent;
     public Button ignoreButton;
+    public Image eventPicture;
 
     public static EventWindow instance;
     private void Awake()
@@ -20,6 +21,7 @@ public class EventWindow : MonoBehaviour
     public void UpdateEvent(EventDataScriptable eventData, Event currentEvent = null)
     {
         Show();
+        eventPicture.sprite = eventData.eventPicture;
         this.currentEvent = currentEvent;
         labelText.text = eventData.name;
         descriptionText.text = eventData.eventDescription;
