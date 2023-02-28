@@ -26,7 +26,7 @@ public class News : MonoBehaviour
     {
         if (scrollingText.text != "")
         {
-            scrollPosition += Time.deltaTime * 40;
+            scrollPosition += Time.deltaTime * 50 * GameManager.instance.speed;
             scrollingText.rectTransform.anchoredPosition = new Vector3(-scrollPosition, startingPosition.y);
             if (scrollPosition > width)
             {
@@ -39,6 +39,7 @@ public class News : MonoBehaviour
 
     public void AddMessage(string message)
     {
+        SoundManager.instance.RadioTalk();
         messages.Enqueue(message);
         if (scrollingText.text == "")
             NextMessage();

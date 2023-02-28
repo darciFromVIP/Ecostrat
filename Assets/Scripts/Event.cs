@@ -8,20 +8,21 @@ public class Event : MonoBehaviour
     private Button btn;
     private Image image;
     private EventDataScriptable eventData;
-    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] private Slider slider;
     private float timer = 60;
     private void Awake()
     {
         image = GetComponent<Image>();
         btn = GetComponent<Button>();
         btn.onClick.AddListener(ShowEventWindow);
+        btn.onClick.AddListener(SoundManager.instance.EventOpen);
     }
     private void Update()
     {
         if (GameManager.instance.paused)
             return;
         timer -= Time.deltaTime;
-        timerText.text = ((int)timer).ToString();
+        slider.value = timer;
         if (timer <= 0)
         {
             eventData.ExecuteIgnoreConsequences();

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Great Pacific Garbage patch
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: e58000457a5517c4195b0f552961e1a2, type: 3}
+  eventPicture: {fileID: 21300000, guid: 8fb23618af8e3eb4598f7a4279a33ed9, type: 3}
   time: 1500
   repeatInterval: 500
   repeatTimes: 1

@@ -11,6 +11,7 @@ public class Bubble : MonoBehaviour
     {
         button = GetComponent<Button>();
         button.onClick.AddListener(GameManager.instance.AddMoney);
+        button.onClick.AddListener(SoundManager.instance.Click);
         button.onClick.AddListener(DestroySelf);
     }
 
