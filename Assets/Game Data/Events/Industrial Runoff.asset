@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Industrial Runoff
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: e58000457a5517c4195b0f552961e1a2, type: 3}
+  eventPicture: {fileID: 21300000, guid: a0f28c45b1e71814cbe7fe31cdabdcc5, type: 3}
   time: 650
   repeatInterval: 550
   repeatTimes: 2

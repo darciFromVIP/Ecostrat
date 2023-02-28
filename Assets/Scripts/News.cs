@@ -26,7 +26,7 @@ public class News : MonoBehaviour
     {
         if (scrollingText.text != "")
         {
-            scrollPosition += Time.deltaTime * 50;
+            scrollPosition += Time.deltaTime * 50 * GameManager.instance.speed;
             scrollingText.rectTransform.anchoredPosition = new Vector3(-scrollPosition, startingPosition.y);
             if (scrollPosition > width)
             {

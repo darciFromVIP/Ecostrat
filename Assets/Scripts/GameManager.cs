@@ -21,7 +21,7 @@ public class GameManager : MonoBehaviour
     public bool paused = false;
     private float oneDayInSec;
     public float hints = 0;
-    private int speed = 1;
+    public int speed = 1;
     private float trashIncrementAmountIncreaseTimer = 0;
     private float income = 0;
     private float donation = 0;
@@ -385,7 +385,6 @@ public class GameManager : MonoBehaviour
     }
     public bool LegalUltimatePerkUnlocked()
     {
-        Debug.Log("Negotiation: " + negotiationLevel + " Social Sites: " + socialSitesLevel + " Riots: " + riotsLevel + " Social Events: " + socialEventsLevel);
         return negotiationLevel == 5 && socialSitesLevel == 5 && riotsLevel == 5 && socialEventsLevel == 5;
     }
     public bool IllegalUltimatePerkUnlocked()

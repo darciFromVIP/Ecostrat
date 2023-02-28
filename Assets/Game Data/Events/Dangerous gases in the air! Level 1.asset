@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Dangerous gases in the air! Level 1
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
+  eventPicture: {fileID: 21300000, guid: a0f28c45b1e71814cbe7fe31cdabdcc5, type: 3}
   time: 820
   repeatInterval: 500
   repeatTimes: 2
