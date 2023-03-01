@@ -14,18 +14,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
   eventPicture: {fileID: 21300000, guid: 276dcf0b1d264414e8c867fc4285bd8d, type: 3}
+  eventSound: {fileID: 8300000, guid: 9832ab8f751686b4fb938a5124076c47, type: 3}
   time: 15
   repeatInterval: 30
   repeatTimes: 2
   reactions:
   - description: Organize trash collection with our followers.
-    additionalDescription: 'HINT: Trash -100'
+    additionalDescription: <sprite=0>-100
     actions:
     - {fileID: 11400000, guid: 0d4173e35cb1f4343942d01e1ec67cb5, type: 2}
     - {fileID: 11400000, guid: fc2243922fa3ae24c8857913d9cfa923, type: 2}
     consequenceMessage: Residents are happy about your garbage collection event!
   - description: Send a letter to the local authority.
-    additionalDescription: 'HINT: Trash +100, Followers +250'
+    additionalDescription: <sprite=0>+100<sprite=3>+250
     actions:
     - {fileID: 11400000, guid: 9c9afe97304d2e74a9c82cc30436074e, type: 2}
     - {fileID: 11400000, guid: 0657bc9c82aafb54cb44d3acb1c2b6ea, type: 2}

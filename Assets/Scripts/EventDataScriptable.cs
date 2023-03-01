@@ -8,6 +8,7 @@ public class EventDataScriptable : ScriptableObject
 {
     public Sprite artwork;
     public Sprite eventPicture;
+    public AudioClip eventSound;
     [Tooltip("How many seconds until the event appears?")]
     public int time;
     [Tooltip("Does the event repeat after its first appearance? If yes, insert periodic duration in seconds. If not, insert 0.")]

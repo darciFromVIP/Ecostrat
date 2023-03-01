@@ -11,7 +11,7 @@ public class GameManager : MonoBehaviour
     private float followerIncomeTimer = 0;
     private float illegality = 0;
     [SerializeField] private float trash = 0;
-    private float gameTimer = 1800;
+    private float gameTimer = 1825;
     private float donationTimer = 0;
     private float trashTimer = 0;
     private float illegalityTimer = 0;
@@ -194,14 +194,14 @@ public class GameManager : MonoBehaviour
                 if (followers < 0)
                     followers = 0;
                 text = Instantiate(floatingTextPrefab, followersFloatingText);
-                text.UpdateText(((int)modifier).ToString("+#;-#;0"), modifier > 0, true);
+                text.UpdateText("<sprite=3>" + ((int)modifier).ToString("+#;-#;0"), modifier > 0, true);
                 break;
             case PlayerStat.Money:
                 money += modifier;
                 if (money < 0)
                     money = 0;
                 text = Instantiate(floatingTextPrefab, moneyFloatingText);
-                text.UpdateText(((int)modifier).ToString("+#;-#;0"), modifier > 0, true);
+                text.UpdateText("<sprite=1>" + ((int)modifier).ToString("+#;-#;0"), modifier > 0, true);
                 break;
             case PlayerStat.Timer:
                 gameTimer += modifier;
@@ -221,12 +221,14 @@ public class GameManager : MonoBehaviour
                         RemoveTrashBubble();
                     }
                 text = Instantiate(floatingTextPrefab, trashFloatingText);
-                text.UpdateText(((int)modifier).ToString("+#;-#;0"), modifier < 0, true);
+                text.UpdateText("<sprite=0>" + ((int)modifier).ToString("+#;-#;0"), modifier < 0, true);
                 if (trash < 0)
                     trash = 0;
                 break;
             case PlayerStat.TrashIncrement:
                 trashIncrementAmount += modifier;
+                text = Instantiate(floatingTextPrefab, trashFloatingText);
+                text.UpdateText("<sprite=2>" + ((int)modifier).ToString("+#;-#;0"), modifier < 0, true);
                 break;
             case PlayerStat.TrashIncrementInterval:
                 trashIncrementInterval += modifier;
@@ -237,7 +239,7 @@ public class GameManager : MonoBehaviour
                     illegality = 0;
                 illegalityTimer = 0;
                 text = Instantiate(floatingTextPrefab, illegalityFloatingText);
-                text.UpdateText(((int)modifier).ToString("+#;-#;0"), modifier < 0, true);
+                text.UpdateText("<sprite=4>" + ((int)modifier).ToString("+#;-#;0"), modifier < 0, true);
                 break;
             case PlayerStat.Hint:
                 hints += modifier;

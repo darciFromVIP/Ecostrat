@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: e58000457a5517c4195b0f552961e1a2, type: 3}
   eventPicture: {fileID: 21300000, guid: a0f28c45b1e71814cbe7fe31cdabdcc5, type: 3}
+  eventSound: {fileID: 8300000, guid: 29b2fc53904828b4590e18f138a7a62c, type: 3}
   time: 650
   repeatInterval: 550
   repeatTimes: 2
   reactions:
   - description: A hacker attack on the factory with the threat of a complete shutdown
       of the factory.
-    additionalDescription: 'HINT: Trash Increment +3, Followers -1 000, Illegality
-      +25'
+    additionalDescription: <sprite=2>+3<sprite=3>-1000<sprite=4>+25
     actions:
     - {fileID: 11400000, guid: b7d9995dfffd230418f528ec8a5dac45, type: 2}
     - {fileID: 11400000, guid: c0acd878a7076444faf448cc37e506a8, type: 2}
@@ -30,7 +30,7 @@ MonoBehaviour:
     consequenceMessage: "Hacking can solve many problems, but as an illegal activity
       it has its disadvantages. People don\u2019t like this approach."
   - description: Bribing the head of the company to support a more ecological solution.
-    additionalDescription: 'HINT: Trash Increment -3, Illegality +20'
+    additionalDescription: <sprite=2>-3<sprite=4>+20
     actions:
     - {fileID: 11400000, guid: cbea1d0188bb1764cbed38ecaae48313, type: 2}
     - {fileID: 11400000, guid: 7a3505f90f720be47a50e31071ffbf04, type: 2}
@@ -38,7 +38,7 @@ MonoBehaviour:
     consequenceMessage: "You can\u2019t write a media post about bribing, but it\u2019s
       important that it solved the problem!"
   - description: Public protests in the given areas.
-    additionalDescription: 'HINT: Trash Increment +3, Followers +2 500'
+    additionalDescription: <sprite=2>+3<sprite=3>+2500
     actions:
     - {fileID: 11400000, guid: b7d9995dfffd230418f528ec8a5dac45, type: 2}
     - {fileID: 11400000, guid: 78fae729bf7330b4e81779a6167f4e56, type: 2}

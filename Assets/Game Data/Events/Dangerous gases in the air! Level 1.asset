@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
   eventPicture: {fileID: 21300000, guid: a0f28c45b1e71814cbe7fe31cdabdcc5, type: 3}
+  eventSound: {fileID: 8300000, guid: 29b2fc53904828b4590e18f138a7a62c, type: 3}
   time: 820
   repeatInterval: 500
   repeatTimes: 2
   reactions:
   - description: Creating a vandalism protest where we can clearly state what we
       think about it.
-    additionalDescription: 'HINT: Trash +1 000, Illegality +30, Followers +3 000'
+    additionalDescription: <sprite=0>+1000<sprite=4>+30<sprite=3>+3000
     actions:
     - {fileID: 11400000, guid: 49363572ae0b54f4b92791e49d1f4782, type: 2}
     - {fileID: 11400000, guid: d2eeba675124b28439f3353adff85879, type: 2}
@@ -29,7 +30,7 @@ MonoBehaviour:
       should have been solved in a different way.
   - description: Agreement with local companies for the creation of a joint campaign
       for more frequent use of city transport, bicycles and walking.
-    additionalDescription: 'HINT: Trash Increment +10, Followers +5 000'
+    additionalDescription: <sprite=2>+10<sprite=3>+5000
     actions:
     - {fileID: 11400000, guid: e35cf0a47b9159047a9da026d7fab3f5, type: 2}
     - {fileID: 11400000, guid: 8f02263a2629c1e4599243c86ef75d9c, type: 2}
@@ -38,7 +39,7 @@ MonoBehaviour:
       but at least you gained more followers!"
   - description: Negotiations with politicians for the creation of special benefits
       for owners of electronic vehicles.
-    additionalDescription: 'HINT: Trash Increment -10'
+    additionalDescription: <sprite=2>-10
     actions:
     - {fileID: 11400000, guid: 1b93fe6f616ee384d8ef321a928162b4, type: 2}
     - {fileID: 11400000, guid: abb6a522f1e0c564b943e82f5be5bf7c, type: 2}

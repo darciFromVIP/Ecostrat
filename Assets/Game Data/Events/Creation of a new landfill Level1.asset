@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
   eventPicture: {fileID: 21300000, guid: a5b8adb1872113d41ac7dc374cec6fe3, type: 3}
+  eventSound: {fileID: 8300000, guid: 29b2fc53904828b4590e18f138a7a62c, type: 3}
   time: 150
   repeatInterval: 200
   repeatTimes: 2
   reactions:
   - description: Organize a protest.
-    additionalDescription: 'HINT: Trash Increment -1, Followers +600'
+    additionalDescription: <sprite=2>-1<sprite=3>+600
     actions:
     - {fileID: 11400000, guid: 62bbcddaf7d884345931bfc4dc48ae0a, type: 2}
     - {fileID: 11400000, guid: 6f2ea3817e9b7854cadca9c3d766576d, type: 2}
@@ -27,7 +28,7 @@ MonoBehaviour:
     consequenceMessage: Great! Your protest against the newest landfill was successful
       and the council rejected the proposal of creating a new landfill.
   - description: Post on social networks.
-    additionalDescription: 'HINT: Trash Increment +3, Followers -300'
+    additionalDescription: <sprite=2>+3<sprite=3>-300
     actions:
     - {fileID: 11400000, guid: b7d9995dfffd230418f528ec8a5dac45, type: 2}
     - {fileID: 11400000, guid: 8fe8670e373e0b94e8941616f6f03561, type: 2}

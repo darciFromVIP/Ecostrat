@@ -24,6 +24,6 @@ MonoBehaviour:
     is always annoyed with the system, and a few nasty letters have already passed
     through his hands. Based on his police record, he should be an easy victim, but
     for a decent financial reward he will take the risk for you."
-  benefits: Less detection of illegal activities. -10 illegality
+  benefits: <sprite=4>-10
   actions:
   - {fileID: 11400000, guid: 133655c75c4c01e459fc4a9bc519bae7, type: 2}

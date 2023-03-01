@@ -22,6 +22,6 @@ MonoBehaviour:
     but also reliable and up-to-date. La Familia, a mafia organisation originally
     from Spain, has its roots firmly rooted in the political scene not only in the
     US, but in most of the world."
-  benefits: Less detection of illegal activities. -30 illegality
+  benefits: <sprite=4>-30
   actions:
   - {fileID: 11400000, guid: 0e84a58de3c2c7741821e5cf3ee725c4, type: 2}

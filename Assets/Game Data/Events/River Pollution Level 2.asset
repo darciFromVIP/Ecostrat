@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
   eventPicture: {fileID: 21300000, guid: 308bc612919a3504cb74acc49cc79182, type: 3}
+  eventSound: {fileID: 8300000, guid: 3852a732caadba941b1cc7c79264c742, type: 3}
   time: 700
   repeatInterval: 350
   repeatTimes: 2
   reactions:
   - description: Organize a protest.
-    additionalDescription: 'HINT: Trash +400, Followers +2 500'
+    additionalDescription: <sprite=0>+400<sprite=3>+2 500
     actions:
     - {fileID: 11400000, guid: 78fae729bf7330b4e81779a6167f4e56, type: 2}
     - {fileID: 11400000, guid: 87aa984b03d8f2d488696644fc862458, type: 2}
@@ -27,7 +28,7 @@ MonoBehaviour:
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
       but at least you gained more followers!"
   - description: Negotiate with the city council for a remedy.
-    additionalDescription: 'HINT: Trash Increment -5'
+    additionalDescription: <sprite=2>-5
     actions:
     - {fileID: 11400000, guid: 5a910878b3d275e4193ae6583db25b67, type: 2}
     - {fileID: 11400000, guid: 75fd2671ce01f48469b0eb5ab5b0d326, type: 2}
@@ -35,8 +36,7 @@ MonoBehaviour:
       the river. Keep up the good work!
   - description: Talk to graffiti artists and let them move the message of pollution
       to the streets.
-    additionalDescription: 'HINT:  Trash Increment -1, Followers +800, Illegality
-      +20'
+    additionalDescription: <sprite=2>-1<sprite=3>+800<sprite=4>+20
     actions:
     - {fileID: 11400000, guid: 5a910878b3d275e4193ae6583db25b67, type: 2}
     - {fileID: 11400000, guid: 79d034ea81520a34cadd89ea8b10bf79, type: 2}

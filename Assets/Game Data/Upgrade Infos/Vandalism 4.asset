@@ -21,8 +21,7 @@ MonoBehaviour:
     run by the people, and if you get more people into every major state in the world,
     a change in more than one of them will be inevitable. That\u2019s why you need
     more people, more organisers and as many followers as possible."
-  benefits: Cleansing trash for the price of your own followers. - 4 000 trash -
-    8 000 followers
+  benefits: <sprite=0>-4000<sprite=3>-8000
   actions:
   - {fileID: 11400000, guid: 6807dc6c4b3fa2249a12185fb4bf2b1a, type: 2}
   - {fileID: 11400000, guid: e68d6768dad72444ab3917802a9102fc, type: 2}

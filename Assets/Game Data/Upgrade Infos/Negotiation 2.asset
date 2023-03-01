@@ -20,7 +20,6 @@ MonoBehaviour:
     with corporations for real, you will need more than that. Luckily, you know a
     police investigator, who will reveal some of his tips and tricks, but it\u2019s
     not going to be for free."
-  benefits: The more you can negotiate with companies, the more are people willing
-    to give you in their donations. Money per bubble +30
+  benefits: <sprite=1>per donation +30
   actions:
   - {fileID: 11400000, guid: 2a221a778e0bff84a991730a3e7eff69, type: 2}

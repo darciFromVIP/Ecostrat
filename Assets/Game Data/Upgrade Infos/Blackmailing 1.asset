@@ -21,6 +21,6 @@ MonoBehaviour:
     books on persuasion techniques and threat tactics, for less pleasant situations,
     for less friendly people. It\u2019s no glory, but it\u2019s important to understand
     this persuasive method first."
-  benefits: Less detection of illegal activities. -5 illegality
+  benefits: <sprite=4>-5
   actions:
   - {fileID: 11400000, guid: 02edac20010d6454f814d5b019d1caa1, type: 2}

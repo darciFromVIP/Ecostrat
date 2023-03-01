@@ -20,8 +20,7 @@ MonoBehaviour:
     bigger. And your idea is.. Graffiti! Buying sprays and getting reliable sprayers
     won\u2019t be a cheap shopping spree, but that wouldn\u2019t be you if you didn\u2019t
     try to fix and save the planet."
-  benefits: Cleansing trash for the price of your own followers. - 1 000 trash -
-    2 000 followers
+  benefits: <sprite=0>-1000<sprite=3>-2000
   actions:
   - {fileID: 11400000, guid: c6ce4426384c0464f82986169e413910, type: 2}
   - {fileID: 11400000, guid: 4542596d049d4994785c6e0941a4f7b2, type: 2}

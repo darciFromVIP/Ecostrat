@@ -30,4 +30,8 @@ public class SoundManager : MonoBehaviour
     {
         audioSource.PlayOneShot(FindSoundByName("radiotalk"));
     }
+    public void PlaySound(AudioClip sound)
+    {
+        audioSource.PlayOneShot(sound);
+    }
 }

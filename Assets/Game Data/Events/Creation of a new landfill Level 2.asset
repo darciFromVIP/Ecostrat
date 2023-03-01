@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
   eventPicture: {fileID: 21300000, guid: a5b8adb1872113d41ac7dc374cec6fe3, type: 3}
+  eventSound: {fileID: 8300000, guid: 29b2fc53904828b4590e18f138a7a62c, type: 3}
   time: 500
   repeatInterval: 250
   repeatTimes: 2
   reactions:
   - description: Making a video for social networks to point out the new landfill.
-    additionalDescription: 'HINT: Trash +400, Followers + 800'
+    additionalDescription: <sprite=0>+400<sprite=3>+800
     actions:
     - {fileID: 11400000, guid: 79d034ea81520a34cadd89ea8b10bf79, type: 2}
     - {fileID: 11400000, guid: 87aa984b03d8f2d488696644fc862458, type: 2}
@@ -28,14 +29,14 @@ MonoBehaviour:
       but at least you gained more followers!"
   - description: Hacking the landfill with the threat of a complete shutdown of the
       landfill.
-    additionalDescription: 'HINT: Trash -400, Illegality +25'
+    additionalDescription: <sprite=0>-400<sprite=4>+25
     actions:
     - {fileID: 11400000, guid: c0acd878a7076444faf448cc37e506a8, type: 2}
     - {fileID: 11400000, guid: 9feb916535d23c94fa726ed1e7f0aac3, type: 2}
     consequenceMessage: Even though you risked your freedom, you still earned exactly
       what you wanted!
   - description: "Negotiation with the management of the landfill to cancel the landfill.\r"
-    additionalDescription: 'HINT: Trash +400, Followers -300'
+    additionalDescription: <sprite=0>+400<sprite=3>-300
     actions:
     - {fileID: 11400000, guid: 8fe8670e373e0b94e8941616f6f03561, type: 2}
     - {fileID: 11400000, guid: 87aa984b03d8f2d488696644fc862458, type: 2}

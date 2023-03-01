@@ -18,6 +18,6 @@ MonoBehaviour:
   description: As a real show of love for our followers, we have decided to create
     a small financial stipend for everyone who supports our cause and helps to restore
     order with their own hands.
-  benefits: Cleansing trash. -1 000 trash
+  benefits: <sprite=0>-1000
   actions:
   - {fileID: 11400000, guid: 4542596d049d4994785c6e0941a4f7b2, type: 2}

@@ -16,6 +16,7 @@ public class Event : MonoBehaviour
         btn = GetComponent<Button>();
         btn.onClick.AddListener(ShowEventWindow);
         btn.onClick.AddListener(SoundManager.instance.EventOpen);
+        btn.onClick.AddListener(PlayEventSound);
     }
     private void Update()
     {
@@ -41,5 +42,9 @@ public class Event : MonoBehaviour
     public void Destroy()
     {
         Destroy(gameObject);
+    }
+    private void PlayEventSound()
+    {
+        SoundManager.instance.PlaySound(eventData.eventSound);
     }
 }
