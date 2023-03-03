@@ -35,6 +35,15 @@ MonoBehaviour:
     - {fileID: 11400000, guid: a5b7aff7062308e4f9e5102770373d04, type: 2}
     consequenceMessage: A social media post is not ideal when action is needed. Thus,
       we did not win any support of the people.
+  - description: Bribe the commission to close the landfill due to non-compliance
+      with hygiene standards.
+    additionalDescription: <sprite=2>-3<sprite=4>+20
+    actions:
+    - {fileID: 11400000, guid: 7a3505f90f720be47a50e31071ffbf04, type: 2}
+    - {fileID: 11400000, guid: 57ac0c7c268791d46beabdf596938ddd, type: 2}
+    - {fileID: 11400000, guid: cbea1d0188bb1764cbed38ecaae48313, type: 2}
+    consequenceMessage: "You can\u2019t write a media post about bribing, but it\u2019s
+      important that it solved the problem!"
   ignoreConsequences:
   - {fileID: 11400000, guid: b7d9995dfffd230418f528ec8a5dac45, type: 2}
   eventDescription: An additional place for collecting waste.

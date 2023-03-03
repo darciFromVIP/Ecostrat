@@ -22,7 +22,7 @@ MonoBehaviour:
   - description: Organize trash collection with our followers.
     additionalDescription: <sprite=0>-100
     actions:
-    - {fileID: 11400000, guid: 0d4173e35cb1f4343942d01e1ec67cb5, type: 2}
+    - {fileID: 11400000, guid: 3e54d9e0c381b1146901eadf5efa09b7, type: 2}
     - {fileID: 11400000, guid: fc2243922fa3ae24c8857913d9cfa923, type: 2}
     consequenceMessage: Residents are happy about your garbage collection event!
   - description: Send a letter to the local authority.
@@ -30,9 +30,19 @@ MonoBehaviour:
     actions:
     - {fileID: 11400000, guid: 9c9afe97304d2e74a9c82cc30436074e, type: 2}
     - {fileID: 11400000, guid: 0657bc9c82aafb54cb44d3acb1c2b6ea, type: 2}
-    - {fileID: 11400000, guid: 3e54d9e0c381b1146901eadf5efa09b7, type: 2}
+    - {fileID: 11400000, guid: 0d4173e35cb1f4343942d01e1ec67cb5, type: 2}
     consequenceMessage: The letter could work if the council feels pressure from
       a collective of people, not an individual.
+  - description: Draw graffiti on the city hall building and express your displeasure
+      - Can't live in a mess!
+    additionalDescription: <sprite=3>+400<sprite=0>+200<sprite=4>+15
+    actions:
+    - {fileID: 11400000, guid: 8d815377ac0fbd74ba78cee705408a43, type: 2}
+    - {fileID: 11400000, guid: 8b8b91ac5dd57a3438af07a6be78f71b, type: 2}
+    - {fileID: 11400000, guid: 5077e90bc5a46a64ca62f66cea00ab47, type: 2}
+    - {fileID: 11400000, guid: 6ad33248fb674c6468974514ba3714bf, type: 2}
+    consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
+      but at least you gained more followers!"
   ignoreConsequences:
   - {fileID: 11400000, guid: 0657bc9c82aafb54cb44d3acb1c2b6ea, type: 2}
   eventDescription: There is too much trash in the streets!

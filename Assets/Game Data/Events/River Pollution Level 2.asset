@@ -36,9 +36,9 @@ MonoBehaviour:
       the river. Keep up the good work!
   - description: Talk to graffiti artists and let them move the message of pollution
       to the streets.
-    additionalDescription: <sprite=2>-1<sprite=3>+800<sprite=4>+20
+    additionalDescription: <sprite=2>-3<sprite=3>+800<sprite=4>+20
     actions:
-    - {fileID: 11400000, guid: 5a910878b3d275e4193ae6583db25b67, type: 2}
+    - {fileID: 11400000, guid: 7a3505f90f720be47a50e31071ffbf04, type: 2}
     - {fileID: 11400000, guid: 79d034ea81520a34cadd89ea8b10bf79, type: 2}
     - {fileID: 11400000, guid: cbea1d0188bb1764cbed38ecaae48313, type: 2}
     consequenceMessage: Even though you risked your freedom, you still earned exactly

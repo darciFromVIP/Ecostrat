@@ -15,6 +15,11 @@ MonoBehaviour:
   artwork: {fileID: 0}
   upgradeType: 0
   price: 0
-  description: 
-  benefits: 
-  actions: []
+  description: Once again we found ourselves in a precarious situation and don't
+    know what to do next. That's why we came up with the idea of introducing the
+    waste somewhere far into the ocean, where no one would look for it. At least
+    until it washes up somewhere else.
+  benefits: +10 trash increment + 5 000 trash capacity
+  actions:
+  - {fileID: 11400000, guid: e35cf0a47b9159047a9da026d7fab3f5, type: 2}
+  - {fileID: 0}

@@ -15,6 +15,11 @@ MonoBehaviour:
   artwork: {fileID: 0}
   upgradeType: 0
   price: 0
-  description: 
-  benefits: 
-  actions: []
+  description: Our last landfill is starting to raise suspicions about the connection
+    to our name, so it's best to burn all the trash and get rid of all evidence of
+    our connection. It won't do much good for the atmosphere, but at least we'll
+    increase a capacity for the next inflow of waste.
+  benefits: +7 trash increment +3 000 trash capacity
+  actions:
+  - {fileID: 11400000, guid: ecb65d59010fc1740ba457359ec6939c, type: 2}
+  - {fileID: 0}
