@@ -26,6 +26,9 @@ public class GameManager : MonoBehaviour
     private float income = 0;
     private float donation = 0;
     private float donationIntensity = 5;
+    public float priceModifier = 1;
+    private float monthlySalaryTimer = 0;
+    private float monthlySalary = 0;
 
     private int negotiationLevel = 0;
     private int socialSitesLevel = 0;
@@ -37,6 +40,7 @@ public class GameManager : MonoBehaviour
     private int blackmailLevel = 0;
     private int vandalismLevel = 0;
 
+    public SpecialEventDatabase specialEventDatabase;
     public Texture2D mapSprite;
     public Button bubblePrefab;
     public GameObject trashBubblePrefab;
@@ -77,6 +81,7 @@ public class GameManager : MonoBehaviour
         }
         StartCoroutine(GameNewsCoroutine());
         StartCoroutine(IllegalityNewsCoroutine());
+        StartCoroutine(SpecialEventsCoroutine());
         oneDayInSec = gameTimer / 365;
         UpdateUI();
     }
@@ -119,7 +124,14 @@ public class GameManager : MonoBehaviour
         {
             trashIncrementAmountIncreaseTimer = 0;
             ChangeStats(PlayerStat.TrashIncrement, 5);
-        }     
+        }
+        monthlySalaryTimer += Time.deltaTime;
+        if (monthlySalaryTimer >= 150)
+        {
+            monthlySalaryTimer = 0;
+            if (monthlySalary != 0)
+                ChangeStats(PlayerStat.Money, monthlySalary);
+        }
     }
     private void CreateBubble()
     {
@@ -254,6 +266,9 @@ public class GameManager : MonoBehaviour
                 if (donationIntensity < 0.1)
                     donationIntensity = 0.1f;
                 break;
+            case PlayerStat.PriceModifier:
+                priceModifier += modifier;
+                break;
             default:
                 break;
         }
@@ -278,7 +293,7 @@ public class GameManager : MonoBehaviour
         switch (stat)
         {
             case PlayerStat.Money:
-                if (money + modifier < 0)
+                if (money + (modifier * priceModifier) < 0)
                     return false;
                 break;
             default:
@@ -335,9 +350,29 @@ public class GameManager : MonoBehaviour
         yield return new WaitUntil(() => illegality >= 80);
         News.instance.AddMessage("Breaking News! The Green Inc. - helping the planet or a criminal organisation?!");
     }
+    private IEnumerator SpecialEventsCoroutine()
+    {
+        float timer = 0;
+        while (true)
+        {
+            timer += Time.deltaTime * speed;
+            if (timer >= 300)
+            {
+                Event tempEvent = Instantiate(eventPrefab, interactiveCanvas.transform);
+                EventDataScriptable eventData = specialEventDatabase.GetRandomEvent();
+                if (eventData.mapPosition == Vector2.zero)
+                    tempEvent.GetComponent<RectTransform>().anchoredPosition = GetPointOnTerrain(false);
+                else
+                    tempEvent.GetComponent<RectTransform>().anchoredPosition = eventData.mapPosition / 4;
+                tempEvent.UpdateEvent(eventData);
+                timer = 0;
+            }
+            yield return null;
+        }
+    }
     public void UpgradePerk(UpgradeInfo info)
     {
-        money -= info.price;
+        money -= info.price * priceModifier;
         foreach (var item in info.actions)
         {
             item.Execute();

@@ -20,7 +20,7 @@ public class Event : MonoBehaviour
     }
     private void Update()
     {
-        if (GameManager.instance.paused)
+        if (GameManager.instance.paused || eventData.name == "Amogus")
             return;
         timer -= Time.deltaTime;
         slider.value = timer;

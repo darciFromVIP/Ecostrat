@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
+  m_Name: Amogus
+  m_EditorClassIdentifier: 
+  artwork: {fileID: 21300000, guid: f1431d74b2eb63441a441b45ab4409c2, type: 3}
+  eventPicture: {fileID: 0}
+  eventSound: {fileID: 0}
+  time: 1
+  repeatInterval: 0
+  repeatTimes: 0
+  reactions:
+  - description: I'm not the killer!
+    additionalDescription: 
+    actions:
+    - {fileID: 11400000, guid: 6f2e118f3e3515843a0f117273065831, type: 2}
+    consequenceMessage: 
+  ignoreConsequences: []
+  eventDescription: You look kinda sus.
+  mapPosition: {x: 7360, y: 1112}

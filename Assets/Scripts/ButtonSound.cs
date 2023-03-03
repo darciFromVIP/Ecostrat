@@ -6,7 +6,7 @@ public class ButtonSound : MonoBehaviour
 {
     public AudioClip sound;
 
-    private void Awake()
+    private void Start()
     {
         GetComponent<Button>().onClick.AddListener(SoundManager.instance.Click);
     }
