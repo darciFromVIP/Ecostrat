@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Amogus
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: f1431d74b2eb63441a441b45ab4409c2, type: 3}
-  eventPicture: {fileID: 0}
+  eventPicture: {fileID: 21300000, guid: f1431d74b2eb63441a441b45ab4409c2, type: 3}
   eventSound: {fileID: 0}
   time: 1
   repeatInterval: 0
