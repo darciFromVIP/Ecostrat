@@ -20,6 +20,7 @@ MonoBehaviour:
     You don\u2019t know their name, all you know is that their name is WeirdJoe91
     and from the looks of his profile, he\u2019s going to be the best bet on bribing
     town officials, which could ease your way into solving some problems."
-  benefits: Gives you more time to save the planet Earth. +60 days
+  benefits: Gives you more time to save the planet Earth. +60 days All Prices -7.5%
   actions:
   - {fileID: 11400000, guid: 7a83acd6b770e924bad459ef47182591, type: 2}
+  - {fileID: 11400000, guid: dd50a7d33b3c74b499b7c13853e9eea5, type: 2}

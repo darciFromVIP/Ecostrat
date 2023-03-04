@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Landfills 6
   m_EditorClassIdentifier: 
   artwork: {fileID: 0}
-  upgradeType: 0
+  upgradeType: 9
   price: 0
   description: Level MAX
   benefits: 

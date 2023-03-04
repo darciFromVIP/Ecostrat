@@ -12,9 +12,9 @@ public class GameManager : MonoBehaviour
     private float illegality = 0;
     [SerializeField] private float trash = 0;
     private float gameTimer = 1825;
+    private float elapsedTime = 0;
     private float donationTimer = 0;
     private float trashTimer = 0;
-    private float illegalityTimer = 0;
     [SerializeField] private float trashIncrementAmount = 10;
     [SerializeField] private float trashIncrementInterval = 3;
     private List<GameObject> trashBubbles = new();
@@ -27,8 +27,10 @@ public class GameManager : MonoBehaviour
     private float donation = 0;
     private float donationIntensity = 5;
     public float priceModifier = 1;
-    private float monthlySalaryTimer = 0;
-    private float monthlySalary = 0;
+    private float trashCapacity = 20000;
+    private float illegalityTimer = 0;
+    private int illegalCapacity = 100;
+    private float illegalReductionInterval = 120;
 
     private int negotiationLevel = 0;
     private int socialSitesLevel = 0;
@@ -39,6 +41,7 @@ public class GameManager : MonoBehaviour
     private int bribeLevel = 0;
     private int blackmailLevel = 0;
     private int vandalismLevel = 0;
+    private int landfillsLevel = 0;
 
     public SpecialEventDatabase specialEventDatabase;
     public Texture2D mapSprite;
@@ -53,12 +56,17 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI followerText;
     public TextMeshProUGUI trashText;
+    public TextMeshProUGUI illegalityText;
     public Slider gameTimerSlider;
     public Slider illegalitySlider;
+    public Slider trashSlider;
+    public Slider followerIncomeSlider;
+    public Slider illegalityReductionSlider;
     public Canvas mapCanvas;
     public Canvas interactiveCanvas;
     public GameOverScreen gameoverScreen;
     public TextMeshProUGUI dayText;
+    public TextMeshProUGUI elapsedTimeText;
     public RectTransform followersFloatingText;
     public RectTransform moneyFloatingText;
     public RectTransform timeFloatingText;
@@ -89,6 +97,9 @@ public class GameManager : MonoBehaviour
     {
         if (paused)
             return;
+        elapsedTime += Time.deltaTime;
+        System.TimeSpan timeSpan = System.TimeSpan.FromSeconds(elapsedTime);
+        elapsedTimeText.text = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
         gameTimer -= Time.deltaTime * speed;
         gameTimerSlider.value = gameTimer;
         dayText.text = (int)(gameTimer / oneDayInSec) + " days left";
@@ -102,18 +113,27 @@ public class GameManager : MonoBehaviour
             CreateBubble();
         }
         trashTimer += Time.deltaTime * speed;
+        trashSlider.maxValue = trashIncrementInterval;
+        trashSlider.value = trashTimer;
         if (trashTimer >= trashIncrementInterval)
         {
             trashTimer = 0;
             ChangeStats(PlayerStat.Trash, trashIncrementAmount);
         }
-        illegalityTimer += Time.deltaTime * speed;
-        if (illegalityTimer >= 120)
+        if (illegality > 0)
         {
-            ChangeStats(PlayerStat.Illegality, -5);
-            illegalityTimer = 0;
+            illegalityTimer += Time.deltaTime * speed;
+            illegalityReductionSlider.maxValue = illegalReductionInterval;
+            illegalityReductionSlider.value = illegalityTimer;
+            if (illegalityTimer >= illegalReductionInterval)
+            {
+                ChangeStats(PlayerStat.Illegality, -5);
+                illegalityTimer = 0;
+            }
         }
         followerIncomeTimer += Time.deltaTime * speed;
+        followerIncomeSlider.maxValue = 60;
+        followerIncomeSlider.value = followerIncomeTimer;
         if (followerIncomeTimer >= 60)
         {
             followerIncomeTimer = 0;
@@ -125,13 +145,11 @@ public class GameManager : MonoBehaviour
             trashIncrementAmountIncreaseTimer = 0;
             ChangeStats(PlayerStat.TrashIncrement, 5);
         }
-        monthlySalaryTimer += Time.deltaTime;
-        if (monthlySalaryTimer >= 150)
-        {
-            monthlySalaryTimer = 0;
-            if (monthlySalary != 0)
-                ChangeStats(PlayerStat.Money, monthlySalary);
-        }
+    }
+    public string GetTimeStamp()
+    {
+        System.TimeSpan timeSpan = System.TimeSpan.FromSeconds(elapsedTime);
+        return string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
     }
     private void CreateBubble()
     {
@@ -189,8 +207,10 @@ public class GameManager : MonoBehaviour
     {
         moneyText.text = money.ToString();
         followerText.text = followers.ToString();
-        trashText.text = trash.ToString();
+        trashText.text = trash.ToString() + "/" + trashCapacity.ToString();
+        illegalitySlider.maxValue = illegalCapacity;
         illegalitySlider.value = illegality;
+        illegalityText.text = illegality + "/" + illegalCapacity;
     }
     public void AddMoney()
     {
@@ -269,10 +289,19 @@ public class GameManager : MonoBehaviour
             case PlayerStat.PriceModifier:
                 priceModifier += modifier;
                 break;
+            case PlayerStat.TrashCapacity:
+                trashCapacity += modifier;
+                break;
+            case PlayerStat.IlegalityCapacity:
+                illegalCapacity += (int)modifier;
+                break;
+            case PlayerStat.IlegalityReductionInterval:
+                illegalReductionInterval += modifier;
+                break;
             default:
                 break;
         }
-        if (illegality >= 100)
+        if (illegality >= illegalCapacity)
         {
             if (!illegalityGameOverEvent.activeInHierarchy)
             {
@@ -280,7 +309,7 @@ public class GameManager : MonoBehaviour
                 PauseGameToggle(true);
             }
         }
-        if (trash >= 20000)
+        if (trash >= trashCapacity)
             GameOver("DOOMSDAY - The world is flooded with garbage!", 
                 "The seas and oceans have returned to us what we have thrown into them all these years. People swim in the garbage that has flooded the streets of human dwellings. PRO TIP: It is important to make decisions that do not increase our garbage per interval too much, because that way we will get into a too large increase of garbage per day, which we will not be able to get rid of afterwards.");
         if (trash <= 0)
@@ -406,6 +435,9 @@ public class GameManager : MonoBehaviour
             case UpgradeType.Vandalism:
                 vandalismLevel++;
                 break;
+            case UpgradeType.Landfills:
+                landfillsLevel++;
+                break;
             default:
                 break;
         }
@@ -426,7 +458,7 @@ public class GameManager : MonoBehaviour
     }
     public bool IllegalUltimatePerkUnlocked()
     {
-        return hackingLevel == 5 && bribeLevel == 5 && blackmailLevel == 5;
+        return hackingLevel == 5 && bribeLevel == 5 && blackmailLevel == 5 && landfillsLevel == 5;
     }
     public void ChangeGameSpeed(int speed)
     {

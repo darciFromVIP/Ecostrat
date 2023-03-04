@@ -13,7 +13,4 @@ MonoBehaviour:
   m_Name: Special Event Database
   m_EditorClassIdentifier: 
   events:
-  - {fileID: 11400000, guid: fe09f0dd91a1a1f4bba63e905f5c73eb, type: 2}
-  - {fileID: 11400000, guid: 2ed4d5ddc7e404843bbcaaaf98656618, type: 2}
   - {fileID: 11400000, guid: cb930493068655e46a074f166dc7fc05, type: 2}
-  - {fileID: 11400000, guid: 128566f31038aad45b9c2c3419579dc7, type: 2}

@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: Millionaire Follower
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: d76c874f3a413ca4299e866f0426c15e, type: 3}
-  eventPicture: {fileID: 0}
+  eventPicture: {fileID: 21300000, guid: 102e952775057274e8a75886e9660d4c, type: 3}
   eventSound: {fileID: 8300000, guid: 1e33f610d9ed2384a88d1a9297fc5294, type: 3}
   time: 0
   repeatInterval: 0
   repeatTimes: 0
   reactions:
-  - description: He should've done something about it.
+  - description: He's very generous.
     additionalDescription: 
     actions:
     - {fileID: 11400000, guid: 4978de58496740c43a34a6dcf11c479b, type: 2}
@@ -27,5 +27,5 @@ MonoBehaviour:
   ignoreConsequences:
   - {fileID: 11400000, guid: 4978de58496740c43a34a6dcf11c479b, type: 2}
   eventDescription: You found a millionaire within your followers who has a feeling
-    for ecology. He contributed <sprite=2>10 000 to you.
+    for ecology. He contributed <sprite=1>10 000 to you.
   mapPosition: {x: 0, y: 0}
