@@ -24,7 +24,7 @@ MonoBehaviour:
     decided to contact a professional in this industry, John LaCante, who has a rich
     history in nationwide protests against presidents, terrorists and conglomerates.
     He\u2019s not cheap, but he offered us a full-time work with his entire team."
-  benefits: Followers but at a price of more trash.  +3 000 followers +1 500 trash
+  benefits: <sprite=3>+3000<sprite=0>+1500
   actions:
   - {fileID: 11400000, guid: f4e9b49b71194ee4dae3207f6aa1ea1f, type: 2}
   - {fileID: 11400000, guid: f5ac9f4843016ef41b2069e9adc88435, type: 2}

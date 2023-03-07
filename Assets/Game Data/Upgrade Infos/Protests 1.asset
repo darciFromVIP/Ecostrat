@@ -20,7 +20,7 @@ MonoBehaviour:
     improve. Learning how to write petitions is not particularly difficult, but in
     order to not miss a thing, we called in the help of a lawyer to help us with
     it."
-  benefits: Followers but at a price of more trash. +200 followers +100 trash
+  benefits: <sprite=3>+200<sprite=0>+100
   actions:
   - {fileID: 11400000, guid: 0975edb4bd5a9244d9264805dd90cc88, type: 2}
   - {fileID: 11400000, guid: 0657bc9c82aafb54cb44d3acb1c2b6ea, type: 2}

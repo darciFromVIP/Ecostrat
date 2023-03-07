@@ -19,6 +19,6 @@ MonoBehaviour:
     people collected was made anew from plastic cups and food garbage. That\u2019s
     why you decided to take it to another level and paid a gastro specialist to go
     with you to these events, but serve everything without the unnecessary packaging."
-  benefits: Cleansing trash. -400 trash
+  benefits: <sprite=0>-400
   actions:
   - {fileID: 11400000, guid: 9feb916535d23c94fa726ed1e7f0aac3, type: 2}

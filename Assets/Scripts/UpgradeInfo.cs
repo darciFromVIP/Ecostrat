@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum UpgradeType
 {
-    Negotiation, SocialSites, Riots, SocialEvents, OceanCleansing, Hacking, Bribe, Blackmail, Vandalism
+    Negotiation, SocialSites, Riots, SocialEvents, OceanCleansing, Hacking, Bribe, Blackmail, Vandalism, Landfills
 }
 
 [CreateAssetMenu(menuName = "Upgrade Info")]

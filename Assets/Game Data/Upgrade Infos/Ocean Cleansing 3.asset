@@ -20,6 +20,6 @@ MonoBehaviour:
     can\u2019t see it. The oceans are polluted and we need to stop it. That\u2019s
     why you decide to buy two submarines that can help with the difficult conditions
     on the bottom of the oceans."
-  benefits: Cleansing trash increment. -20 trash increment
+  benefits: <sprite=2>-20
   actions:
   - {fileID: 11400000, guid: 1d9ae9ddc7737b5468345db9349c5c45, type: 2}

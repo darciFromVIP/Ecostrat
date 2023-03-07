@@ -11,10 +11,10 @@ public class GameManager : MonoBehaviour
     private float followerIncomeTimer = 0;
     private float illegality = 0;
     [SerializeField] private float trash = 0;
-    private float gameTimer = 1800;
+    private float gameTimer = 1825;
+    private float elapsedTime = 0;
     private float donationTimer = 0;
     private float trashTimer = 0;
-    private float illegalityTimer = 0;
     [SerializeField] private float trashIncrementAmount = 10;
     [SerializeField] private float trashIncrementInterval = 3;
     private List<GameObject> trashBubbles = new();
@@ -26,6 +26,11 @@ public class GameManager : MonoBehaviour
     private float income = 0;
     private float donation = 0;
     private float donationIntensity = 5;
+    public float priceModifier = 1;
+    private float trashCapacity = 20000;
+    private float illegalityTimer = 0;
+    private int illegalCapacity = 100;
+    private float illegalReductionInterval = 120;
 
     private int negotiationLevel = 0;
     private int socialSitesLevel = 0;
@@ -36,7 +41,9 @@ public class GameManager : MonoBehaviour
     private int bribeLevel = 0;
     private int blackmailLevel = 0;
     private int vandalismLevel = 0;
+    private int landfillsLevel = 0;
 
+    public SpecialEventDatabase specialEventDatabase;
     public Texture2D mapSprite;
     public Button bubblePrefab;
     public GameObject trashBubblePrefab;
@@ -49,12 +56,17 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI moneyText;
     public TextMeshProUGUI followerText;
     public TextMeshProUGUI trashText;
+    public TextMeshProUGUI illegalityText;
     public Slider gameTimerSlider;
     public Slider illegalitySlider;
+    public Slider trashSlider;
+    public Slider followerIncomeSlider;
+    public Slider illegalityReductionSlider;
     public Canvas mapCanvas;
     public Canvas interactiveCanvas;
     public GameOverScreen gameoverScreen;
     public TextMeshProUGUI dayText;
+    public TextMeshProUGUI elapsedTimeText;
     public RectTransform followersFloatingText;
     public RectTransform moneyFloatingText;
     public RectTransform timeFloatingText;
@@ -77,6 +89,7 @@ public class GameManager : MonoBehaviour
         }
         StartCoroutine(GameNewsCoroutine());
         StartCoroutine(IllegalityNewsCoroutine());
+        StartCoroutine(SpecialEventsCoroutine());
         oneDayInSec = gameTimer / 365;
         UpdateUI();
     }
@@ -84,6 +97,9 @@ public class GameManager : MonoBehaviour
     {
         if (paused)
             return;
+        elapsedTime += Time.deltaTime;
+        System.TimeSpan timeSpan = System.TimeSpan.FromSeconds(elapsedTime);
+        elapsedTimeText.text = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
         gameTimer -= Time.deltaTime * speed;
         gameTimerSlider.value = gameTimer;
         dayText.text = (int)(gameTimer / oneDayInSec) + " days left";
@@ -97,18 +113,27 @@ public class GameManager : MonoBehaviour
             CreateBubble();
         }
         trashTimer += Time.deltaTime * speed;
+        trashSlider.maxValue = trashIncrementInterval;
+        trashSlider.value = trashTimer;
         if (trashTimer >= trashIncrementInterval)
         {
             trashTimer = 0;
             ChangeStats(PlayerStat.Trash, trashIncrementAmount);
         }
-        illegalityTimer += Time.deltaTime * speed;
-        if (illegalityTimer >= 120)
+        if (illegality > 0)
         {
-            ChangeStats(PlayerStat.Illegality, -5);
-            illegalityTimer = 0;
+            illegalityTimer += Time.deltaTime * speed;
+            illegalityReductionSlider.maxValue = illegalReductionInterval;
+            illegalityReductionSlider.value = illegalityTimer;
+            if (illegalityTimer >= illegalReductionInterval)
+            {
+                ChangeStats(PlayerStat.Illegality, -5);
+                illegalityTimer = 0;
+            }
         }
         followerIncomeTimer += Time.deltaTime * speed;
+        followerIncomeSlider.maxValue = 60;
+        followerIncomeSlider.value = followerIncomeTimer;
         if (followerIncomeTimer >= 60)
         {
             followerIncomeTimer = 0;
@@ -119,7 +144,12 @@ public class GameManager : MonoBehaviour
         {
             trashIncrementAmountIncreaseTimer = 0;
             ChangeStats(PlayerStat.TrashIncrement, 5);
-        }     
+        }
+    }
+    public string GetTimeStamp()
+    {
+        System.TimeSpan timeSpan = System.TimeSpan.FromSeconds(elapsedTime);
+        return string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
     }
     private void CreateBubble()
     {
@@ -177,8 +207,10 @@ public class GameManager : MonoBehaviour
     {
         moneyText.text = money.ToString();
         followerText.text = followers.ToString();
-        trashText.text = trash.ToString();
+        trashText.text = trash.ToString() + "/" + trashCapacity.ToString();
+        illegalitySlider.maxValue = illegalCapacity;
         illegalitySlider.value = illegality;
+        illegalityText.text = illegality + "/" + illegalCapacity;
     }
     public void AddMoney()
     {
@@ -194,14 +226,14 @@ public class GameManager : MonoBehaviour
                 if (followers < 0)
                     followers = 0;
                 text = Instantiate(floatingTextPrefab, followersFloatingText);
-                text.UpdateText(((int)modifier).ToString("+#;-#;0"), modifier > 0, true);
+                text.UpdateText("<sprite=3>" + ((int)modifier).ToString("+#;-#;0"), modifier > 0, true);
                 break;
             case PlayerStat.Money:
                 money += modifier;
                 if (money < 0)
                     money = 0;
                 text = Instantiate(floatingTextPrefab, moneyFloatingText);
-                text.UpdateText(((int)modifier).ToString("+#;-#;0"), modifier > 0, true);
+                text.UpdateText("<sprite=1>" + ((int)modifier).ToString("+#;-#;0"), modifier > 0, true);
                 break;
             case PlayerStat.Timer:
                 gameTimer += modifier;
@@ -221,12 +253,14 @@ public class GameManager : MonoBehaviour
                         RemoveTrashBubble();
                     }
                 text = Instantiate(floatingTextPrefab, trashFloatingText);
-                text.UpdateText(((int)modifier).ToString("+#;-#;0"), modifier < 0, true);
+                text.UpdateText("<sprite=0>" + ((int)modifier).ToString("+#;-#;0"), modifier < 0, true);
                 if (trash < 0)
                     trash = 0;
                 break;
             case PlayerStat.TrashIncrement:
                 trashIncrementAmount += modifier;
+                text = Instantiate(floatingTextPrefab, trashFloatingText);
+                text.UpdateText("<sprite=2>" + ((int)modifier).ToString("+#;-#;0"), modifier < 0, true);
                 break;
             case PlayerStat.TrashIncrementInterval:
                 trashIncrementInterval += modifier;
@@ -237,7 +271,7 @@ public class GameManager : MonoBehaviour
                     illegality = 0;
                 illegalityTimer = 0;
                 text = Instantiate(floatingTextPrefab, illegalityFloatingText);
-                text.UpdateText(((int)modifier).ToString("+#;-#;0"), modifier < 0, true);
+                text.UpdateText("<sprite=4>" + ((int)modifier).ToString("+#;-#;0"), modifier < 0, true);
                 break;
             case PlayerStat.Hint:
                 hints += modifier;
@@ -252,10 +286,22 @@ public class GameManager : MonoBehaviour
                 if (donationIntensity < 0.1)
                     donationIntensity = 0.1f;
                 break;
+            case PlayerStat.PriceModifier:
+                priceModifier += modifier;
+                break;
+            case PlayerStat.TrashCapacity:
+                trashCapacity += modifier;
+                break;
+            case PlayerStat.IlegalityCapacity:
+                illegalCapacity += (int)modifier;
+                break;
+            case PlayerStat.IlegalityReductionInterval:
+                illegalReductionInterval += modifier;
+                break;
             default:
                 break;
         }
-        if (illegality >= 100)
+        if (illegality >= illegalCapacity)
         {
             if (!illegalityGameOverEvent.activeInHierarchy)
             {
@@ -263,7 +309,7 @@ public class GameManager : MonoBehaviour
                 PauseGameToggle(true);
             }
         }
-        if (trash >= 20000)
+        if (trash >= trashCapacity)
             GameOver("DOOMSDAY - The world is flooded with garbage!", 
                 "The seas and oceans have returned to us what we have thrown into them all these years. People swim in the garbage that has flooded the streets of human dwellings. PRO TIP: It is important to make decisions that do not increase our garbage per interval too much, because that way we will get into a too large increase of garbage per day, which we will not be able to get rid of afterwards.");
         if (trash <= 0)
@@ -276,7 +322,7 @@ public class GameManager : MonoBehaviour
         switch (stat)
         {
             case PlayerStat.Money:
-                if (money + modifier < 0)
+                if (money + (modifier * priceModifier) < 0)
                     return false;
                 break;
             default:
@@ -333,9 +379,29 @@ public class GameManager : MonoBehaviour
         yield return new WaitUntil(() => illegality >= 80);
         News.instance.AddMessage("Breaking News! The Green Inc. - helping the planet or a criminal organisation?!");
     }
+    private IEnumerator SpecialEventsCoroutine()
+    {
+        float timer = 0;
+        while (true)
+        {
+            timer += Time.deltaTime * speed;
+            if (timer >= 300)
+            {
+                Event tempEvent = Instantiate(eventPrefab, interactiveCanvas.transform);
+                EventDataScriptable eventData = specialEventDatabase.GetRandomEvent();
+                if (eventData.mapPosition == Vector2.zero)
+                    tempEvent.GetComponent<RectTransform>().anchoredPosition = GetPointOnTerrain(false);
+                else
+                    tempEvent.GetComponent<RectTransform>().anchoredPosition = eventData.mapPosition / 4;
+                tempEvent.UpdateEvent(eventData);
+                timer = 0;
+            }
+            yield return null;
+        }
+    }
     public void UpgradePerk(UpgradeInfo info)
     {
-        money -= info.price;
+        money -= info.price * priceModifier;
         foreach (var item in info.actions)
         {
             item.Execute();
@@ -369,6 +435,9 @@ public class GameManager : MonoBehaviour
             case UpgradeType.Vandalism:
                 vandalismLevel++;
                 break;
+            case UpgradeType.Landfills:
+                landfillsLevel++;
+                break;
             default:
                 break;
         }
@@ -389,7 +458,7 @@ public class GameManager : MonoBehaviour
     }
     public bool IllegalUltimatePerkUnlocked()
     {
-        return hackingLevel == 5 && bribeLevel == 5 && blackmailLevel == 5;
+        return hackingLevel == 5 && bribeLevel == 5 && blackmailLevel == 5 && landfillsLevel == 5;
     }
     public void ChangeGameSpeed(int speed)
     {

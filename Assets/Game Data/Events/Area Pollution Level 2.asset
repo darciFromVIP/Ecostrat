@@ -14,19 +14,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
   eventPicture: {fileID: 21300000, guid: 276dcf0b1d264414e8c867fc4285bd8d, type: 3}
+  eventSound: {fileID: 8300000, guid: 9832ab8f751686b4fb938a5124076c47, type: 3}
   time: 250
   repeatInterval: 180
   repeatTimes: 2
   reactions:
   - description: "Organize trash collection with our followers.\r"
-    additionalDescription: 'HINT: Trash -350, Followers +300'
+    additionalDescription: <sprite=0>-350<sprite=3>+300
     actions:
     - {fileID: 11400000, guid: 2c451700aca233a48bcfd0437c1720f2, type: 2}
     - {fileID: 11400000, guid: b81fcee334151874f9640c0f39e9c224, type: 2}
     - {fileID: 11400000, guid: 57ac0c7c268791d46beabdf596938ddd, type: 2}
     consequenceMessage: Residents are happy about your garbage collection event!
   - description: Bribe the mayor to procure cleaning services.
-    additionalDescription: 'HINT: Trash -400, Illegality +15'
+    additionalDescription: <sprite=0>-400<sprite=4>+15
     actions:
     - {fileID: 11400000, guid: 6ad33248fb674c6468974514ba3714bf, type: 2}
     - {fileID: 11400000, guid: 9feb916535d23c94fa726ed1e7f0aac3, type: 2}
@@ -37,7 +38,7 @@ MonoBehaviour:
       immediate correction.
 
 '
-    additionalDescription: 'HINT: Trash +350, Followers -300, Illegality +15'
+    additionalDescription: <sprite=0>+350<sprite=3>-300<sprite=4>+15
     actions:
     - {fileID: 11400000, guid: 8fe8670e373e0b94e8941616f6f03561, type: 2}
     - {fileID: 11400000, guid: 6ad33248fb674c6468974514ba3714bf, type: 2}

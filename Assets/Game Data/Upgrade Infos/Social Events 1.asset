@@ -20,6 +20,6 @@ MonoBehaviour:
     to hold these social events. That\u2019s why you decided to create a stand at
     the places where garbage will be collected. And of course, everyone can buy a
     small snack for their hard work there as well."
-  benefits: Cleansing trash. -150 trash
+  benefits: <sprite=0>-150
   actions:
   - {fileID: 11400000, guid: 0e03bf45f33cafc46adfa7990a7f1d8c, type: 2}

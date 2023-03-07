@@ -23,6 +23,6 @@ MonoBehaviour:
     she\u2019s still just a human and that\u2019s why you decided to hire 15 more
     social media workers that can spread our message across all the social media
     to the entire world."
-  benefits: More followers. +3 000 followers
+  benefits: <sprite=3>+3000
   actions:
   - {fileID: 11400000, guid: f4e9b49b71194ee4dae3207f6aa1ea1f, type: 2}

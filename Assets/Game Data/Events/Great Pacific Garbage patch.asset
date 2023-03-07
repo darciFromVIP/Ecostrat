@@ -14,13 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: e58000457a5517c4195b0f552961e1a2, type: 3}
   eventPicture: {fileID: 21300000, guid: 8fb23618af8e3eb4598f7a4279a33ed9, type: 3}
+  eventSound: {fileID: 8300000, guid: 3852a732caadba941b1cc7c79264c742, type: 3}
   time: 1500
   repeatInterval: 500
   repeatTimes: 1
   reactions:
   - description: Protests against throwing plastics into the sea and non-recycling
       of waste.
-    additionalDescription: 'HINT: Trash Increment +25. Followers +6 000'
+    additionalDescription: <sprite=2>+25<sprite=3>+6000
     actions:
     - {fileID: 11400000, guid: fc40fc52acb8d2d459a6137d4f63e16e, type: 2}
     - {fileID: 11400000, guid: 78546a9cd5a02504ba5810e5ad2ffe4f, type: 2}
@@ -29,7 +30,7 @@ MonoBehaviour:
       but at least you gained more followers!"
   - description: Purchase of special equipment and personnel for the removal of marine
       waste.
-    additionalDescription: 'HINT: Trash -3 000, Followers +4 000'
+    additionalDescription: <sprite=0>-3000<sprite=3>+4000
     actions:
     - {fileID: 11400000, guid: 43c97e6e6c9855145b1a456befb6690d, type: 2}
     - {fileID: 11400000, guid: 67d0cc56b5259844da48c366061c47b4, type: 2}
@@ -37,7 +38,7 @@ MonoBehaviour:
     consequenceMessage: You managed to remove a huge part of the ocean waste and
       thus extended the life of our planet!
   - description: Hacker shutdown of transport ships that produce waste.
-    additionalDescription: 'HINT: Trash Increment -25, Illegality +40'
+    additionalDescription: <sprite=2>-25<sprite=4>+40
     actions:
     - {fileID: 11400000, guid: 07e7db6c4c9466d40b9a1a4cbb4d496f, type: 2}
     - {fileID: 11400000, guid: e0a375cac5bc56445934211415debe20, type: 2}

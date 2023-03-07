@@ -21,7 +21,7 @@ MonoBehaviour:
     on our planet. You\u2019ve put together a team of activists who will be happy
     to share our protests on their social networks and let their audience know that
     they\u2019re welcome to help us."
-  benefits: Followers but at a price of more trash. +600 followers +250 trash
+  benefits: <sprite=3>+600<sprite=0>+250
   actions:
   - {fileID: 11400000, guid: 6f2ea3817e9b7854cadca9c3d766576d, type: 2}
   - {fileID: 11400000, guid: d6e0462ffa119ba4c8e764a07f2e33bd, type: 2}

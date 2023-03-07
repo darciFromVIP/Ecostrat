@@ -22,8 +22,6 @@ MonoBehaviour:
     especially, the organisers can\u2019t be associated with it. You found a secret
     group on the dark web to help you with something like this, and you can only
     hope your followers will support you with their presence."
-  benefits: Cleansing trash for the price of your own followers. - 2 000 trash -
-    4 000 followers
+  benefits: <sprite=0>-5000
   actions:
-  - {fileID: 11400000, guid: fc05dd6c007a34248a44852e40e63e58, type: 2}
-  - {fileID: 11400000, guid: ec2fcafffd4ddb642b4f96755e363ccc, type: 2}
+  - {fileID: 11400000, guid: d61cd7d6f3f7a48488a283f016d020ad, type: 2}

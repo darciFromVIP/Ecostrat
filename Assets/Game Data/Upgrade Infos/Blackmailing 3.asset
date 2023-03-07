@@ -26,6 +26,7 @@ MonoBehaviour:
     one of the college group and introduced them with your own ideas. You finally
     came to the conclusion that they would be willing to lay their necks down for
     a good cause."
-  benefits: Less detection of illegal activities. -15 illegality
+  benefits: <sprite=4>-15 Illegality Reduction Interval -15
   actions:
   - {fileID: 11400000, guid: 4bf46463195f503479b92de978e846b7, type: 2}
+  - {fileID: 11400000, guid: 0c50fd1e74c17ce43afc20640afc0e8b, type: 2}

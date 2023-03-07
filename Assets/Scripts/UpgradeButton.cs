@@ -18,7 +18,7 @@ public class UpgradeButton : MonoBehaviour
     {
         btn.onClick.RemoveAllListeners();
         btn.onClick.AddListener(UpgradeEvent);
-        if (GameManager.instance.money < currentUpgradeInfo.price)
+        if (GameManager.instance.money < currentUpgradeInfo.price * GameManager.instance.priceModifier)
             btn.interactable = false;
         else
             btn.interactable = true;

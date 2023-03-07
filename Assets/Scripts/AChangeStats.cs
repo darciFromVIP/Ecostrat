@@ -9,7 +9,10 @@ public class AChangeStats : Action
     public float modifier;
     public override void Execute()
     {
-        GameManager.instance.ChangeStats(stat, modifier);
+        if (modifier < 0 && stat == PlayerStat.Money)
+            GameManager.instance.ChangeStats(stat, modifier * GameManager.instance.priceModifier);
+        else
+            GameManager.instance.ChangeStats(stat, modifier);
     }
 
     public override void SecondaryExecute()
