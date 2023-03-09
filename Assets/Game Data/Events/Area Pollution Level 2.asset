@@ -47,5 +47,6 @@ MonoBehaviour:
       it has its disadvantages. People don\u2019t like this approach."
   ignoreConsequences:
   - {fileID: 11400000, guid: b8258e368a6602d45ba3e4a33b17a24f, type: 2}
+  - {fileID: 11400000, guid: e70895fe39fffe14dbb72ec8aada5fe6, type: 2}
   eventDescription: There is too much trash in the streets!
   mapPosition: {x: 0, y: 0}

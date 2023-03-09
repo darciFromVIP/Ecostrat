@@ -45,6 +45,7 @@ MonoBehaviour:
       what you wanted!
   ignoreConsequences:
   - {fileID: 11400000, guid: edf234e8cd8bc2349be38f7c156fb79a, type: 2}
+  - {fileID: 11400000, guid: 9eea74686d74a874ab5d0a0a35559be8, type: 2}
   eventDescription: Pollution of the river of the given location - too much garbage
     in the river corridors!
   mapPosition: {x: 0, y: 0}

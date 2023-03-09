@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
+  m_Name: A truck with dangerous, toxic waste crashed into the river!
+  m_EditorClassIdentifier: 
+  artwork: {fileID: 0}
+  eventPicture: {fileID: 0}
+  eventSound: {fileID: 0}
+  time: 1450
+  repeatInterval: 500
+  repeatTimes: 2
+  reactions:
+  - description: Hiring an outside cleaning company to remove waste, even if it is
+      dangerous for the company's workers.
+    additionalDescription: <sprite=0>-1500<sprite=3>-2000
+    actions:
+    - {fileID: 11400000, guid: 5245d0579a6e8f14aba86ea15a3f5488, type: 2}
+    - {fileID: 11400000, guid: c6ce4426384c0464f82986169e413910, type: 2}
+    - {fileID: 11400000, guid: fd22956f93c454c4cb16d9c700c3d376, type: 2}
+    consequenceMessage: You managed to solve the problem, yet some of workers are
+      now sick for the rest of their lives due to toxic substances they had to clean
+      up and your followers do not like this at all.
+  - description: Bribe the deputies at the Ministry of Environmental Protection,
+      let them solve it their way.
+    additionalDescription: <sprite=0>-1500<sprite=4>+30
+    actions:
+    - {fileID: 11400000, guid: d2eeba675124b28439f3353adff85879, type: 2}
+    - {fileID: 11400000, guid: abb6a522f1e0c564b943e82f5be5bf7c, type: 2}
+    - {fileID: 11400000, guid: fd22956f93c454c4cb16d9c700c3d376, type: 2}
+    consequenceMessage: "You can\u2019t write a media post about bribing, but it\u2019s
+      important that it solved the problem!"
+  - description: Address journalists to warn citizens about the pollution of tributaries
+      and river rafts
+    additionalDescription: <sprite=0>+1500<sprite=3>+2500
+    actions:
+    - {fileID: 11400000, guid: 6d89670dc37218b4898bf7f03ab3b2fa, type: 2}
+    - {fileID: 11400000, guid: 78fae729bf7330b4e81779a6167f4e56, type: 2}
+    - {fileID: 11400000, guid: f5ac9f4843016ef41b2069e9adc88435, type: 2}
+    consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
+      but at least you gained more followers!"
+  ignoreConsequences:
+  - {fileID: 11400000, guid: fc05dd6c007a34248a44852e40e63e58, type: 2}
+  - {fileID: 11400000, guid: f5ac9f4843016ef41b2069e9adc88435, type: 2}
+  eventDescription: Unfortunately, it fell straight into the river, spilling all
+    the toxic waste it was carrying. If something is not done about it immediately,
+    this waste will enter the seas and cause a lot of pollution!
+  mapPosition: {x: 0, y: 0}

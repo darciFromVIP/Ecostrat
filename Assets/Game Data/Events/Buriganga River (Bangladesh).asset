@@ -46,5 +46,6 @@ MonoBehaviour:
       you a few thousand followers.
   ignoreConsequences:
   - {fileID: 11400000, guid: e35cf0a47b9159047a9da026d7fab3f5, type: 2}
+  - {fileID: 11400000, guid: c6ce4426384c0464f82986169e413910, type: 2}
   eventDescription: Buriganga River (Bangladesh) is polluted by industry and people!
   mapPosition: {x: 0, y: 0}

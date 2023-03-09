@@ -45,5 +45,6 @@ MonoBehaviour:
       interested in our environmental problems.
   ignoreConsequences:
   - {fileID: 11400000, guid: 87aa984b03d8f2d488696644fc862458, type: 2}
+  - {fileID: 11400000, guid: 39d31053d0a2d134fbbe95344891f662, type: 2}
   eventDescription: An additional place for collecting waste.
   mapPosition: {x: 0, y: 0}

@@ -46,5 +46,6 @@ MonoBehaviour:
       important that it solved the problem!"
   ignoreConsequences:
   - {fileID: 11400000, guid: b7d9995dfffd230418f528ec8a5dac45, type: 2}
+  - {fileID: 11400000, guid: 8fe8670e373e0b94e8941616f6f03561, type: 2}
   eventDescription: An additional place for collecting waste.
   mapPosition: {x: 0, y: 0}

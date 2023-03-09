@@ -22,7 +22,7 @@ MonoBehaviour:
   - description: Electrical solution design.
     additionalDescription: <sprite=2>-10<sprite=3>+4 000
     actions:
-    - {fileID: 11400000, guid: 07e7db6c4c9466d40b9a1a4cbb4d496f, type: 2}
+    - {fileID: 11400000, guid: 1b93fe6f616ee384d8ef321a928162b4, type: 2}
     - {fileID: 11400000, guid: 67d0cc56b5259844da48c366061c47b4, type: 2}
     - {fileID: 11400000, guid: 735ad536ed66b8d4a9bf951721f49277, type: 2}
     consequenceMessage: The people of Shanghai are indebted to you!
@@ -43,5 +43,6 @@ MonoBehaviour:
       interested in our environmental problems.
   ignoreConsequences:
   - {fileID: 11400000, guid: 24b63840c232b6b40988eaf3127a3899, type: 2}
+  - {fileID: 11400000, guid: fc05dd6c007a34248a44852e40e63e58, type: 2}
   eventDescription: A huge amount of smog in Shanghai due to coal consumption.
   mapPosition: {x: 0, y: 0}

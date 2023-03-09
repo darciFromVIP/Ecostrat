@@ -46,6 +46,7 @@ MonoBehaviour:
     consequenceMessage: Well done! Your solution was perfect!
   ignoreConsequences:
   - {fileID: 11400000, guid: ac00acdd5697a2b4fb06fb94b682a477, type: 2}
+  - {fileID: 11400000, guid: c6ce4426384c0464f82986169e413910, type: 2}
   eventDescription: Too many cars in the area are emitting dangerous gases into the
     air!
   mapPosition: {x: 0, y: 0}

@@ -45,5 +45,6 @@ MonoBehaviour:
       but at least you gained more followers!"
   ignoreConsequences:
   - {fileID: 11400000, guid: 0657bc9c82aafb54cb44d3acb1c2b6ea, type: 2}
+  - {fileID: 11400000, guid: e2d8f8b07f4400841a34221092a14524, type: 2}
   eventDescription: There is too much trash in the streets!
   mapPosition: {x: 0, y: 0}

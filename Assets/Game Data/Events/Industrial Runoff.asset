@@ -21,12 +21,12 @@ MonoBehaviour:
   reactions:
   - description: A hacker attack on the factory with the threat of a complete shutdown
       of the factory.
-    additionalDescription: <sprite=2>+3<sprite=3>-1000<sprite=4>+25
+    additionalDescription: <sprite=2>-3<sprite=3>-1000<sprite=4>+25
     actions:
-    - {fileID: 11400000, guid: b7d9995dfffd230418f528ec8a5dac45, type: 2}
+    - {fileID: 11400000, guid: 7a3505f90f720be47a50e31071ffbf04, type: 2}
     - {fileID: 11400000, guid: c0acd878a7076444faf448cc37e506a8, type: 2}
     - {fileID: 11400000, guid: 9eea74686d74a874ab5d0a0a35559be8, type: 2}
-    - {fileID: 11400000, guid: dcc5ef84bd1eeb34084d199af4d99fa6, type: 2}
+    - {fileID: 11400000, guid: f4810ef93bf84cb4aa35ec74a9df5346, type: 2}
     consequenceMessage: "Hacking can solve many problems, but as an illegal activity
       it has its disadvantages. People don\u2019t like this approach."
   - description: Bribing the head of the company to support a more ecological solution.
@@ -47,5 +47,6 @@ MonoBehaviour:
       but at least you gained more followers!"
   ignoreConsequences:
   - {fileID: 11400000, guid: 1816f15b9180fb640a6473da5d0b82f9, type: 2}
+  - {fileID: 11400000, guid: 55aac9298a6becc4d86f4468779b1213, type: 2}
   eventDescription: Increased pollution of groundwater and seas.
   mapPosition: {x: 0, y: 0}

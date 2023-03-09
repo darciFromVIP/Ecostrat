@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 950498fb3f5a01a44b7958155cc03d56, type: 3}
-  m_Name: Illegality-15
+  m_Name: Illegality +20
   m_EditorClassIdentifier: 
   stat: 6
-  modifier: -15
+  modifier: 20

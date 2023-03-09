@@ -47,6 +47,7 @@ MonoBehaviour:
       our cause! Well Done!
   ignoreConsequences:
   - {fileID: 11400000, guid: 49363572ae0b54f4b92791e49d1f4782, type: 2}
+  - {fileID: 11400000, guid: 55aac9298a6becc4d86f4468779b1213, type: 2}
   eventDescription: Too many cars in the area are emitting dangerous gases into the
     air!
   mapPosition: {x: 0, y: 0}
