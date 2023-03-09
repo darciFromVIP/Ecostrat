@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
   m_Name: A huge amount of smog in Shanghai!
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: e58000457a5517c4195b0f552961e1a2, type: 3}
-  eventPicture: {fileID: 21300000, guid: 75a4edb617f877a4ebbdde5f611753bb, type: 3}
-  eventSound: {fileID: 8300000, guid: b63a2fd59ae67ca44baa1a7fa2fe0611, type: 3}
+  artwork: {fileID: 21300000, guid: af8ad386f4303724a8173559e518dee2, type: 3}
+  eventPicture: {fileID: 21300000, guid: a0f28c45b1e71814cbe7fe31cdabdcc5, type: 3}
+  eventSound: {fileID: 8300000, guid: 29b2fc53904828b4590e18f138a7a62c, type: 3}
   time: 1130
   repeatInterval: 770
   repeatTimes: 1

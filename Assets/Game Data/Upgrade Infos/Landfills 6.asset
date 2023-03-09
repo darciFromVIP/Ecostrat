@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Landfills 6
   m_EditorClassIdentifier: 
-  artwork: {fileID: 0}
+  artwork: {fileID: 21300000, guid: ee1d45c140abe8d45a7a08019dbbcf22, type: 3}
   upgradeType: 9
   price: 0
   description: Level MAX

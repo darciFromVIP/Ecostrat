@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
   m_Name: Dangerous gases in the air! Level 1
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
-  eventPicture: {fileID: 21300000, guid: a0f28c45b1e71814cbe7fe31cdabdcc5, type: 3}
-  eventSound: {fileID: 8300000, guid: 29b2fc53904828b4590e18f138a7a62c, type: 3}
+  artwork: {fileID: 21300000, guid: 206024eac822d7f418221e9031831db0, type: 3}
+  eventPicture: {fileID: 21300000, guid: 75a4edb617f877a4ebbdde5f611753bb, type: 3}
+  eventSound: {fileID: 8300000, guid: b63a2fd59ae67ca44baa1a7fa2fe0611, type: 3}
   time: 820
   repeatInterval: 500
   repeatTimes: 2
   reactions:
-  - description: Creating a vandalism protest where we can clearly state what we
-      think about it.
+  - description: Create a vandalism protest where we can clearly state what we think
+      about it.
     additionalDescription: <sprite=0>+1000<sprite=4>+30<sprite=3>+3000
     actions:
     - {fileID: 11400000, guid: 49363572ae0b54f4b92791e49d1f4782, type: 2}

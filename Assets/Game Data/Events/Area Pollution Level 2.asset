@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
   m_Name: Area Pollution Level 2
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
+  artwork: {fileID: 21300000, guid: 477e0fec0daba9641b7940a0b555d331, type: 3}
   eventPicture: {fileID: 21300000, guid: 276dcf0b1d264414e8c867fc4285bd8d, type: 3}
   eventSound: {fileID: 8300000, guid: 9832ab8f751686b4fb938a5124076c47, type: 3}
   time: 250

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
   m_Name: Great Pacific Garbage patch
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: e58000457a5517c4195b0f552961e1a2, type: 3}
+  artwork: {fileID: 21300000, guid: 98fd62f3c519dfd4a90c16841f4bdf83, type: 3}
   eventPicture: {fileID: 21300000, guid: 8fb23618af8e3eb4598f7a4279a33ed9, type: 3}
   eventSound: {fileID: 8300000, guid: 3852a732caadba941b1cc7c79264c742, type: 3}
   time: 1500

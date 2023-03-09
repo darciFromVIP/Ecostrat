@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
   m_Name: Industrial Runoff
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: e58000457a5517c4195b0f552961e1a2, type: 3}
+  artwork: {fileID: 21300000, guid: 38543634c99d79045b885122d22c797d, type: 3}
   eventPicture: {fileID: 21300000, guid: a0f28c45b1e71814cbe7fe31cdabdcc5, type: 3}
   eventSound: {fileID: 8300000, guid: 29b2fc53904828b4590e18f138a7a62c, type: 3}
   time: 650
