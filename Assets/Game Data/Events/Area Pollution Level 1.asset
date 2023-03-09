@@ -16,7 +16,7 @@ MonoBehaviour:
   eventPicture: {fileID: 21300000, guid: 276dcf0b1d264414e8c867fc4285bd8d, type: 3}
   eventSound: {fileID: 8300000, guid: 9832ab8f751686b4fb938a5124076c47, type: 3}
   time: 15
-  repeatInterval: 30
+  repeatInterval: 45
   repeatTimes: 2
   reactions:
   - description: Organize trash collection with our followers.
