@@ -27,5 +27,5 @@ MonoBehaviour:
   ignoreConsequences:
   - {fileID: 11400000, guid: 4978de58496740c43a34a6dcf11c479b, type: 2}
   eventDescription: You found a millionaire within your followers who has a feeling
-    for ecology. He contributed <sprite=1>10 000 to you.
+    for ecology. He contributed <sprite=1>10000 to you.
   mapPosition: {x: 0, y: 0}

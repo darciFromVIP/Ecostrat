@@ -19,9 +19,12 @@ public class Reaction : MonoBehaviour
     public void UpdateReaction(ReactionData data)
     {
         btn.interactable = true;
-        int priceValue = (int)(data.GetPrice() * GameManager.instance.priceModifier);
+        int priceValue = data.GetPrice();
         if (priceValue > 0)
+        {
+            priceValue = (int)(priceValue * GameManager.instance.priceModifier);
             price.text = "<sprite=1>" + priceValue.ToString();
+        }
         else
             price.text = "<sprite=1>+" + (priceValue * -1).ToString();
         btn.onClick.AddListener(data.ExecuteActions);
