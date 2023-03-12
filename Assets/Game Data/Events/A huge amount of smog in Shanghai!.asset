@@ -25,24 +25,23 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1b93fe6f616ee384d8ef321a928162b4, type: 2}
     - {fileID: 11400000, guid: 67d0cc56b5259844da48c366061c47b4, type: 2}
     - {fileID: 11400000, guid: 735ad536ed66b8d4a9bf951721f49277, type: 2}
-    consequenceMessage: <sprite=2>-10<sprite=3>+4 000 The people of Shanghai are
-      indebted to you!
+    consequenceMessage: The people of Shanghai are indebted to you! <sprite=2>-10<sprite=3>+4
+      000
   - description: Rouse the Shanghai population.
     additionalDescription: <sprite=2>+25<sprite=3>+7000<sprite=4>+40
     actions:
     - {fileID: 11400000, guid: fc40fc52acb8d2d459a6137d4f63e16e, type: 2}
     - {fileID: 11400000, guid: 57d6ba77b1d852c46a33208a930ff13d, type: 2}
     - {fileID: 11400000, guid: e0a375cac5bc56445934211415debe20, type: 2}
-    consequenceMessage: "<sprite=2>+25<sprite=3>+7000<sprite=4>+40 Unfortunately,
-      you didn\u2019t manage to solve the pollution, but at least you gained a lot
-      of new followers!"
+    consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
+      but at least you gained a lot of new followers!"
   - description: Negotiations with the management of companies that produce smog.
     additionalDescription: <sprite=2>+15
     actions:
     - {fileID: 11400000, guid: 24b63840c232b6b40988eaf3127a3899, type: 2}
     - {fileID: 11400000, guid: 00d9277a3aef6b549b4417b999bb3d1d, type: 2}
-    consequenceMessage: <sprite=2>+15 Negotiations do not always go well and management
-      is not interested in our environmental problems.
+    consequenceMessage: Negotiations do not always go well and management is not
+      interested in our environmental problems. <sprite=2>+15
   ignoreConsequences:
   - {fileID: 11400000, guid: 24b63840c232b6b40988eaf3127a3899, type: 2}
   - {fileID: 11400000, guid: fc05dd6c007a34248a44852e40e63e58, type: 2}

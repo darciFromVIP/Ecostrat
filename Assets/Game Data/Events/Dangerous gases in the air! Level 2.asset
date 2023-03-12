@@ -26,7 +26,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: c0acd878a7076444faf448cc37e506a8, type: 2}
     - {fileID: 11400000, guid: 76f39640be5df194c89b827b37cebad1, type: 2}
     consequenceMessage: "You can\u2019t write a media post about bribing, but it\u2019s
-      important that it solved the problem!"
+      important that it solved the problem! <sprite=2>-15<sprite=4>+25"
   - description: Online campaign in the given location for more frequent use of city
       transport, bicycles and walking.
     additionalDescription: <sprite=2>+10<sprite=3>+4000
@@ -35,7 +35,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 67d0cc56b5259844da48c366061c47b4, type: 2}
     - {fileID: 11400000, guid: 330b68308a21f214d8923f941c5e3503, type: 2}
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
-      but at least you gained more followers!"
+      but at least you gained more followers! <sprite=2>+10<sprite=3>+4000"
   - description: Agreement with local companies for the creation of electric bicycles
       in the given area.
     additionalDescription: <sprite=2>-15<sprite=3>+5000
@@ -43,7 +43,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 20f56ffd831ada84a847916ee59318cb, type: 2}
     - {fileID: 11400000, guid: ff29a2752a2038449b5f55336122629c, type: 2}
     - {fileID: 11400000, guid: 8f02263a2629c1e4599243c86ef75d9c, type: 2}
-    consequenceMessage: Well done! Your solution was perfect!
+    consequenceMessage: Well done! Your solution was perfect! <sprite=2>-15<sprite=3>+5000
   ignoreConsequences:
   - {fileID: 11400000, guid: ac00acdd5697a2b4fb06fb94b682a477, type: 2}
   - {fileID: 11400000, guid: c6ce4426384c0464f82986169e413910, type: 2}

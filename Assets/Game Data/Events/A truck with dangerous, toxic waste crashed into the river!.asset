@@ -28,7 +28,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: fd22956f93c454c4cb16d9c700c3d376, type: 2}
     consequenceMessage: You managed to solve the problem, yet some of workers are
       now sick for the rest of their lives due to toxic substances they had to clean
-      up and your followers do not like this at all.
+      up and your followers do not like this at all. <sprite=0>-1500<sprite=3>-2000
   - description: Bribe the deputies at the Ministry of Environmental Protection,
       let them solve it their way.
     additionalDescription: <sprite=0>-1500<sprite=4>+30
@@ -37,7 +37,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: abb6a522f1e0c564b943e82f5be5bf7c, type: 2}
     - {fileID: 11400000, guid: fd22956f93c454c4cb16d9c700c3d376, type: 2}
     consequenceMessage: "You can\u2019t write a media post about bribing, but it\u2019s
-      important that it solved the problem!"
+      important that it solved the problem! <sprite=0>-1500<sprite=4>+30"
   - description: Address journalists to warn citizens about the pollution of tributaries
       and river rafts
     additionalDescription: <sprite=0>+1500<sprite=3>+2500
@@ -46,7 +46,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 78fae729bf7330b4e81779a6167f4e56, type: 2}
     - {fileID: 11400000, guid: f5ac9f4843016ef41b2069e9adc88435, type: 2}
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
-      but at least you gained more followers!"
+      but at least you gained more followers! <sprite=0>+1500<sprite=3>+2500"
   ignoreConsequences:
   - {fileID: 11400000, guid: fc05dd6c007a34248a44852e40e63e58, type: 2}
   - {fileID: 11400000, guid: f5ac9f4843016ef41b2069e9adc88435, type: 2}

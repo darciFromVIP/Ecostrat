@@ -26,13 +26,14 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 57d6ba77b1d852c46a33208a930ff13d, type: 2}
     - {fileID: 11400000, guid: 735ad536ed66b8d4a9bf951721f49277, type: 2}
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
-      but at least you gained more followers!"
+      but at least you gained more followers! <sprite=2>+20<sprite=3>+7 000"
   - description: Purchase of special cleaning works.
     additionalDescription: <sprite=0>-3000
     actions:
     - {fileID: 11400000, guid: 43c97e6e6c9855145b1a456befb6690d, type: 2}
     - {fileID: 11400000, guid: 8f1ff4d1715166b4dad1e78d91c38e97, type: 2}
     consequenceMessage: Residents are happy about your garbage collection event!
+      <sprite=0>-3000
   - description: 'A viral video on social networks where we scold people who throw
       garbage into the river.
 
@@ -43,7 +44,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: c6ce4426384c0464f82986169e413910, type: 2}
     - {fileID: 11400000, guid: 3aebc6318d9a3b544918d43f2312a528, type: 2}
     consequenceMessage: Your video was viral, but not exactly popular. It will cost
-      you a few thousand followers.
+      you a few thousand followers. <sprite=0>+3000<sprite=3>-2000
   ignoreConsequences:
   - {fileID: 11400000, guid: e35cf0a47b9159047a9da026d7fab3f5, type: 2}
   - {fileID: 11400000, guid: c6ce4426384c0464f82986169e413910, type: 2}
