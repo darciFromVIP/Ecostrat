@@ -26,7 +26,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 87aa984b03d8f2d488696644fc862458, type: 2}
     - {fileID: 11400000, guid: 75fd2671ce01f48469b0eb5ab5b0d326, type: 2}
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
-      but at least you gained more followers!"
+      but at least you gained more followers! <sprite=0>+400<sprite=3>+800"
   - description: Hacking the landfill with the threat of a complete shutdown of the
       landfill.
     additionalDescription: <sprite=0>-400<sprite=4>+25
@@ -34,7 +34,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: c0acd878a7076444faf448cc37e506a8, type: 2}
     - {fileID: 11400000, guid: 9feb916535d23c94fa726ed1e7f0aac3, type: 2}
     consequenceMessage: Even though you risked your freedom, you still earned exactly
-      what you wanted!
+      what you wanted! <sprite=0>-400<sprite=4>+25
   - description: "Negotiation with the management of the landfill to cancel the landfill.\r"
     additionalDescription: <sprite=0>+400<sprite=3>-300
     actions:
@@ -42,7 +42,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 87aa984b03d8f2d488696644fc862458, type: 2}
     - {fileID: 11400000, guid: f4810ef93bf84cb4aa35ec74a9df5346, type: 2}
     consequenceMessage: Negotiations do not always go well and management is not
-      interested in our environmental problems.
+      interested in our environmental problems. <sprite=0>+400<sprite=3>-300
   ignoreConsequences:
   - {fileID: 11400000, guid: 87aa984b03d8f2d488696644fc862458, type: 2}
   - {fileID: 11400000, guid: 39d31053d0a2d134fbbe95344891f662, type: 2}
