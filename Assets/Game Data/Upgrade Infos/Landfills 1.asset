@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Landfills 1
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 75c8c384e1b0e154e9430e66a83df4ed, type: 3}
+  artwork: {fileID: 21300000, guid: 6837f16682f585347bf9dd5a4c94fb64, type: 3}
   upgradeType: 9
   price: 400
   description: The creation of a small landfill is not exactly an illegal matter,

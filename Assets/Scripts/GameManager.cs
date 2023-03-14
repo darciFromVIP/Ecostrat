@@ -18,12 +18,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float trashIncrementAmount = 10;
     [SerializeField] private float trashIncrementInterval = 3;
     private List<GameObject> trashBubbles = new();
-    public bool paused = false;
+    public bool paused = true;
     private float oneDayInSec;
     public float hints = 0;
     public int speed = 1;
     private float trashIncrementAmountIncreaseTimer = 0;
-    private float income = 0;
     private float donation = 0;
     private float donationIntensity = 5;
     public float priceModifier = 1;
@@ -85,13 +84,14 @@ public class GameManager : MonoBehaviour
         ChangeStats(PlayerStat.Trash, 10000);
         foreach (var item in eventDatabase.events)
         {
-            StartCoroutine(StartEventTimer(item, item.repeatTimes));
+            StartCoroutine(StartEventTimer(item, item.repeatTimes, false));
         }
         StartCoroutine(GameNewsCoroutine());
         StartCoroutine(IllegalityNewsCoroutine());
         StartCoroutine(SpecialEventsCoroutine());
         oneDayInSec = gameTimer / 365;
         UpdateUI();
+        paused = true;
     }
     private void Update()
     {
@@ -137,7 +137,7 @@ public class GameManager : MonoBehaviour
         if (followerIncomeTimer >= 60)
         {
             followerIncomeTimer = 0;
-            ChangeStats(PlayerStat.Money, followers + income);
+            ChangeStats(PlayerStat.Money, followers);
         }
         trashIncrementAmountIncreaseTimer += Time.deltaTime;
         if (trashIncrementAmountIncreaseTimer >= 60)
@@ -330,9 +330,13 @@ public class GameManager : MonoBehaviour
         }
         return true;
     }
-    public IEnumerator StartEventTimer(EventDataScriptable eventData, int repeatTimes)
+    public IEnumerator StartEventTimer(EventDataScriptable eventData, int repeatTimes, bool isRepeating)
     {
-        float time = eventData.time;
+        float time;
+        if (isRepeating)
+            time = eventData.repeatInterval;
+        else
+            time = eventData.time;
         while (time > 0)
         {
             if (!paused)
@@ -346,7 +350,7 @@ public class GameManager : MonoBehaviour
             tempEvent.GetComponent<RectTransform>().anchoredPosition = eventData.mapPosition / 4;
         tempEvent.UpdateEvent(eventData);
         if (eventData.repeatInterval > 0 && repeatTimes > 0)
-            StartCoroutine(StartEventTimer(eventData, repeatTimes - 1));
+            StartCoroutine(StartEventTimer(eventData, repeatTimes - 1, true));
     }
     private IEnumerator GameNewsCoroutine()
     {
@@ -357,8 +361,7 @@ public class GameManager : MonoBehaviour
         yield return new WaitUntil(() => gameTimer < 450);
         News.instance.AddMessage("There are 91 days remaining. I don’t care how you want to calculate it, the important thing is that you understand we don’t have any time to waste anymore!");
         yield return new WaitUntil(() => gameTimer < 300);
-        News.instance.AddMessage("You have 60 days left, i.e. 2 months. You received a letter from work that your branch office is closing. Although you are quite happy because of all the corruption, but you lose your monthly income of $1 500.");
-        income -= 1500;
+        News.instance.AddMessage("You have 60 days left, i.e. 2 months. Don't forget to check the upgrades for some more time, if needed.");
         yield return new WaitUntil(() => gameTimer < 150);
         News.instance.AddMessage("One month remaining! Get moving, otherwise it will be not only Game Over, but also forget about the future of humanity on the Earth.");
         yield return new WaitUntil(() => gameTimer < 90);
@@ -384,8 +387,9 @@ public class GameManager : MonoBehaviour
         float timer = 0;
         while (true)
         {
-            timer += Time.deltaTime * speed;
-            if (timer >= 300)
+            if (!paused)
+                timer += Time.deltaTime * speed;
+            if (timer >= 400)
             {
                 Event tempEvent = Instantiate(eventPrefab, interactiveCanvas.transform);
                 EventDataScriptable eventData = specialEventDatabase.GetRandomEvent();

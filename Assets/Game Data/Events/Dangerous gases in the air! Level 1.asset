@@ -12,22 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
   m_Name: Dangerous gases in the air! Level 1
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
-  eventPicture: {fileID: 21300000, guid: a0f28c45b1e71814cbe7fe31cdabdcc5, type: 3}
-  eventSound: {fileID: 8300000, guid: 29b2fc53904828b4590e18f138a7a62c, type: 3}
+  artwork: {fileID: 21300000, guid: 206024eac822d7f418221e9031831db0, type: 3}
+  eventPicture: {fileID: 21300000, guid: 75a4edb617f877a4ebbdde5f611753bb, type: 3}
+  eventSound: {fileID: 8300000, guid: b63a2fd59ae67ca44baa1a7fa2fe0611, type: 3}
   time: 820
   repeatInterval: 500
   repeatTimes: 2
   reactions:
-  - description: Creating a vandalism protest where we can clearly state what we
-      think about it.
+  - description: Create a vandalism protest where we can clearly state what we think
+      about it.
     additionalDescription: <sprite=0>+1000<sprite=4>+30<sprite=3>+3000
     actions:
     - {fileID: 11400000, guid: 49363572ae0b54f4b92791e49d1f4782, type: 2}
     - {fileID: 11400000, guid: d2eeba675124b28439f3353adff85879, type: 2}
     - {fileID: 11400000, guid: f4e9b49b71194ee4dae3207f6aa1ea1f, type: 2}
     consequenceMessage: Sadly, your chosen option did not work well. The problem
-      should have been solved in a different way.
+      should have been solved in a different way. <sprite=0>+1000<sprite=4>+30<sprite=3>+3000
   - description: Agreement with local companies for the creation of a joint campaign
       for more frequent use of city transport, bicycles and walking.
     additionalDescription: <sprite=2>+10<sprite=3>+5000
@@ -36,7 +36,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8f02263a2629c1e4599243c86ef75d9c, type: 2}
     - {fileID: 11400000, guid: 6d89670dc37218b4898bf7f03ab3b2fa, type: 2}
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
-      but at least you gained more followers!"
+      but at least you gained more followers! <sprite=2>+10<sprite=3>+5000"
   - description: Negotiations with politicians for the creation of special benefits
       for owners of electronic vehicles.
     additionalDescription: <sprite=2>-10
@@ -44,9 +44,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 1b93fe6f616ee384d8ef321a928162b4, type: 2}
     - {fileID: 11400000, guid: abb6a522f1e0c564b943e82f5be5bf7c, type: 2}
     consequenceMessage: You fought for the people and the people are fighting for
-      our cause! Well Done!
+      our cause! Well Done! <sprite=2>-10
   ignoreConsequences:
   - {fileID: 11400000, guid: 49363572ae0b54f4b92791e49d1f4782, type: 2}
+  - {fileID: 11400000, guid: 55aac9298a6becc4d86f4468779b1213, type: 2}
   eventDescription: Too many cars in the area are emitting dangerous gases into the
     air!
   mapPosition: {x: 0, y: 0}

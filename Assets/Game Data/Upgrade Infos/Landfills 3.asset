@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Landfills 3
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: b7a176ae7126ff2409f0eace7872677e, type: 3}
+  artwork: {fileID: 21300000, guid: 2133445ccdfbf8f46a86b8c2bbb5df06, type: 3}
   upgradeType: 9
   price: 4100
   description: Our last landfill is starting to raise suspicions about the connection

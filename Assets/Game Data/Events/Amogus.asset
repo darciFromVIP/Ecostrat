@@ -23,7 +23,7 @@ MonoBehaviour:
     additionalDescription: 
     actions:
     - {fileID: 11400000, guid: 6f2e118f3e3515843a0f117273065831, type: 2}
-    consequenceMessage: 
+    consequenceMessage: You found the SUS island! +3000$
   ignoreConsequences: []
   eventDescription: You look kinda sus.
-  mapPosition: {x: 7360, y: 1112}
+  mapPosition: {x: 7360, y: 1100}

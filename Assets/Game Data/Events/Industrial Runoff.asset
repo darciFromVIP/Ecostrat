@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
   m_Name: Industrial Runoff
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: e58000457a5517c4195b0f552961e1a2, type: 3}
+  artwork: {fileID: 21300000, guid: 38543634c99d79045b885122d22c797d, type: 3}
   eventPicture: {fileID: 21300000, guid: a0f28c45b1e71814cbe7fe31cdabdcc5, type: 3}
   eventSound: {fileID: 8300000, guid: 29b2fc53904828b4590e18f138a7a62c, type: 3}
   time: 650
@@ -21,14 +21,14 @@ MonoBehaviour:
   reactions:
   - description: A hacker attack on the factory with the threat of a complete shutdown
       of the factory.
-    additionalDescription: <sprite=2>+3<sprite=3>-1000<sprite=4>+25
+    additionalDescription: <sprite=2>-3<sprite=3>-1000<sprite=4>+25
     actions:
-    - {fileID: 11400000, guid: b7d9995dfffd230418f528ec8a5dac45, type: 2}
+    - {fileID: 11400000, guid: 7a3505f90f720be47a50e31071ffbf04, type: 2}
     - {fileID: 11400000, guid: c0acd878a7076444faf448cc37e506a8, type: 2}
     - {fileID: 11400000, guid: 9eea74686d74a874ab5d0a0a35559be8, type: 2}
-    - {fileID: 11400000, guid: dcc5ef84bd1eeb34084d199af4d99fa6, type: 2}
+    - {fileID: 11400000, guid: f4810ef93bf84cb4aa35ec74a9df5346, type: 2}
     consequenceMessage: "Hacking can solve many problems, but as an illegal activity
-      it has its disadvantages. People don\u2019t like this approach."
+      it has its disadvantages. People don\u2019t like this approach. <sprite=2>-3<sprite=3>-1000<sprite=4>+25"
   - description: Bribing the head of the company to support a more ecological solution.
     additionalDescription: <sprite=2>-3<sprite=4>+20
     actions:
@@ -36,7 +36,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 7a3505f90f720be47a50e31071ffbf04, type: 2}
     - {fileID: 11400000, guid: ee450c8a11893b442bcae8cbc3e99e2e, type: 2}
     consequenceMessage: "You can\u2019t write a media post about bribing, but it\u2019s
-      important that it solved the problem!"
+      important that it solved the problem! <sprite=2>-3<sprite=4>+20"
   - description: Public protests in the given areas.
     additionalDescription: <sprite=2>+3<sprite=3>+2500
     actions:
@@ -44,8 +44,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 78fae729bf7330b4e81779a6167f4e56, type: 2}
     - {fileID: 11400000, guid: 1cda4c076a78052428c5f786b633d9c2, type: 2}
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
-      but at least you gained more followers!"
+      but at least you gained more followers! <sprite=2>+3<sprite=3>+2500"
   ignoreConsequences:
   - {fileID: 11400000, guid: 1816f15b9180fb640a6473da5d0b82f9, type: 2}
+  - {fileID: 11400000, guid: 55aac9298a6becc4d86f4468779b1213, type: 2}
   eventDescription: Increased pollution of groundwater and seas.
   mapPosition: {x: 0, y: 0}

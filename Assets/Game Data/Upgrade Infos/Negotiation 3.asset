@@ -21,4 +21,4 @@ MonoBehaviour:
     but he\u2019s not really cheap. However, he\u2019s surely worth it!"
   benefits: <sprite=1>per donation +50
   actions:
-  - {fileID: 11400000, guid: afee0baea42cdf34aa03f4f6facf74f6, type: 2}
+  - {fileID: 11400000, guid: 2a221a778e0bff84a991730a3e7eff69, type: 2}

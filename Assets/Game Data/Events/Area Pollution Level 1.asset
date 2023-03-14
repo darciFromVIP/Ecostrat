@@ -12,19 +12,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
   m_Name: Area Pollution Level 1
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
+  artwork: {fileID: 21300000, guid: 477e0fec0daba9641b7940a0b555d331, type: 3}
   eventPicture: {fileID: 21300000, guid: 276dcf0b1d264414e8c867fc4285bd8d, type: 3}
   eventSound: {fileID: 8300000, guid: 9832ab8f751686b4fb938a5124076c47, type: 3}
   time: 15
-  repeatInterval: 30
+  repeatInterval: 45
   repeatTimes: 2
   reactions:
   - description: Organize trash collection with our followers.
-    additionalDescription: <sprite=0>-100
+    additionalDescription: <sprite=0>-100<sprite=3>+100
     actions:
     - {fileID: 11400000, guid: 3e54d9e0c381b1146901eadf5efa09b7, type: 2}
     - {fileID: 11400000, guid: fc2243922fa3ae24c8857913d9cfa923, type: 2}
+    - {fileID: 11400000, guid: fde736824ae6f0e4ab4404a68be07350, type: 2}
     consequenceMessage: Residents are happy about your garbage collection event!
+      <sprite=0>-100
   - description: Send a letter to the local authority.
     additionalDescription: <sprite=0>+100<sprite=3>+250
     actions:
@@ -32,9 +34,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 0657bc9c82aafb54cb44d3acb1c2b6ea, type: 2}
     - {fileID: 11400000, guid: 0d4173e35cb1f4343942d01e1ec67cb5, type: 2}
     consequenceMessage: The letter could work if the council feels pressure from
-      a collective of people, not an individual.
-  - description: Draw graffiti on the city hall building and express your displeasure
-      - Can't live in a mess!
+      a collective of people, not an individual. <sprite=0>+100<sprite=3>+250
+  - description: 'Draw graffiti on the city hall building and express your displeasure
+      - Can''t live in a mess! '
     additionalDescription: <sprite=3>+400<sprite=0>+200<sprite=4>+15
     actions:
     - {fileID: 11400000, guid: 8d815377ac0fbd74ba78cee705408a43, type: 2}
@@ -42,8 +44,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 5077e90bc5a46a64ca62f66cea00ab47, type: 2}
     - {fileID: 11400000, guid: 6ad33248fb674c6468974514ba3714bf, type: 2}
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
-      but at least you gained more followers!"
+      but at least you gained more followers! <sprite=3>+400<sprite=0>+200<sprite=4>+15"
   ignoreConsequences:
   - {fileID: 11400000, guid: 0657bc9c82aafb54cb44d3acb1c2b6ea, type: 2}
+  - {fileID: 11400000, guid: e2d8f8b07f4400841a34221092a14524, type: 2}
   eventDescription: There is too much trash in the streets!
   mapPosition: {x: 0, y: 0}

@@ -10,7 +10,7 @@ public class GameOverOnClick : MonoBehaviour
     }
     private void GameOver()
     {
-        GameManager.instance.GameOver("Can't outrun justice", 
-            "You've reached 100 illegality points, which means you've been found guilty in court and your buyout bid is set at $100,000.");
+        GameManager.instance.GameOver("Can't outrun justice",
+            "You filled your illegal bar to the max and didn't have enough money for the auction. The hand of the law has reached you for this time, but you will definitely avoid it next time!");
     }
 }

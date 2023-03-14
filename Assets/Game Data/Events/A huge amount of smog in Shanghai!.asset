@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
   m_Name: A huge amount of smog in Shanghai!
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: e58000457a5517c4195b0f552961e1a2, type: 3}
-  eventPicture: {fileID: 21300000, guid: 75a4edb617f877a4ebbdde5f611753bb, type: 3}
-  eventSound: {fileID: 8300000, guid: b63a2fd59ae67ca44baa1a7fa2fe0611, type: 3}
+  artwork: {fileID: 21300000, guid: af8ad386f4303724a8173559e518dee2, type: 3}
+  eventPicture: {fileID: 21300000, guid: a0f28c45b1e71814cbe7fe31cdabdcc5, type: 3}
+  eventSound: {fileID: 8300000, guid: 29b2fc53904828b4590e18f138a7a62c, type: 3}
   time: 1130
   repeatInterval: 770
   repeatTimes: 1
@@ -22,10 +22,11 @@ MonoBehaviour:
   - description: Electrical solution design.
     additionalDescription: <sprite=2>-10<sprite=3>+4 000
     actions:
-    - {fileID: 11400000, guid: 07e7db6c4c9466d40b9a1a4cbb4d496f, type: 2}
+    - {fileID: 11400000, guid: 1b93fe6f616ee384d8ef321a928162b4, type: 2}
     - {fileID: 11400000, guid: 67d0cc56b5259844da48c366061c47b4, type: 2}
     - {fileID: 11400000, guid: 735ad536ed66b8d4a9bf951721f49277, type: 2}
-    consequenceMessage: The people of Shanghai are indebted to you!
+    consequenceMessage: The people of Shanghai are indebted to you! <sprite=2>-10<sprite=3>+4
+      000
   - description: Rouse the Shanghai population.
     additionalDescription: <sprite=2>+25<sprite=3>+7000<sprite=4>+40
     actions:
@@ -40,8 +41,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 24b63840c232b6b40988eaf3127a3899, type: 2}
     - {fileID: 11400000, guid: 00d9277a3aef6b549b4417b999bb3d1d, type: 2}
     consequenceMessage: Negotiations do not always go well and management is not
-      interested in our environmental problems.
+      interested in our environmental problems. <sprite=2>+15
   ignoreConsequences:
   - {fileID: 11400000, guid: 24b63840c232b6b40988eaf3127a3899, type: 2}
+  - {fileID: 11400000, guid: fc05dd6c007a34248a44852e40e63e58, type: 2}
   eventDescription: A huge amount of smog in Shanghai due to coal consumption.
   mapPosition: {x: 0, y: 0}

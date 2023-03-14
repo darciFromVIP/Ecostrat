@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4a4b2c085cccb2a448abaa2b7ec756a5, type: 3}
   m_Name: Landfills 2
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 9210bb717f94e994ba7518078dfa908d, type: 3}
+  artwork: {fileID: 21300000, guid: 0bb8491faf60e5a48ad9e4561d6b240e, type: 3}
   upgradeType: 9
   price: 1900
   description: When a small landfill is not enough, we have to build something bigger,

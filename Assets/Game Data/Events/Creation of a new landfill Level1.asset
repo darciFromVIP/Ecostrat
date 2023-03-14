@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
   m_Name: Creation of a new landfill Level1
   m_EditorClassIdentifier: 
-  artwork: {fileID: 21300000, guid: 77608a28e88a95a4c809699ade8948d6, type: 3}
+  artwork: {fileID: 21300000, guid: d2639b4b618fd7a42b7c86c9b39aa5b7, type: 3}
   eventPicture: {fileID: 21300000, guid: a5b8adb1872113d41ac7dc374cec6fe3, type: 3}
   eventSound: {fileID: 8300000, guid: 29b2fc53904828b4590e18f138a7a62c, type: 3}
   time: 150
@@ -26,7 +26,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 6f2ea3817e9b7854cadca9c3d766576d, type: 2}
     - {fileID: 11400000, guid: f4810ef93bf84cb4aa35ec74a9df5346, type: 2}
     consequenceMessage: Great! Your protest against the newest landfill was successful
-      and the council rejected the proposal of creating a new landfill.
+      and the council rejected the proposal of creating a new landfill. <sprite=2>-1<sprite=3>+600
   - description: Post on social networks.
     additionalDescription: <sprite=2>+3<sprite=3>-300
     actions:
@@ -34,7 +34,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 8fe8670e373e0b94e8941616f6f03561, type: 2}
     - {fileID: 11400000, guid: a5b7aff7062308e4f9e5102770373d04, type: 2}
     consequenceMessage: A social media post is not ideal when action is needed. Thus,
-      we did not win any support of the people.
+      we did not win any support of the people. <sprite=2>+3<sprite=3>-300
   - description: Bribe the commission to close the landfill due to non-compliance
       with hygiene standards.
     additionalDescription: <sprite=2>-3<sprite=4>+20
@@ -43,8 +43,9 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 57ac0c7c268791d46beabdf596938ddd, type: 2}
     - {fileID: 11400000, guid: cbea1d0188bb1764cbed38ecaae48313, type: 2}
     consequenceMessage: "You can\u2019t write a media post about bribing, but it\u2019s
-      important that it solved the problem!"
+      important that it solved the problem! <sprite=2>-3<sprite=4>+20"
   ignoreConsequences:
   - {fileID: 11400000, guid: b7d9995dfffd230418f528ec8a5dac45, type: 2}
+  - {fileID: 11400000, guid: 8fe8670e373e0b94e8941616f6f03561, type: 2}
   eventDescription: An additional place for collecting waste.
   mapPosition: {x: 0, y: 0}

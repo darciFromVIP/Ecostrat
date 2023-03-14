@@ -1,0 +1,54 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
+  m_Name: Draft of the new decree from the UN
+  m_EditorClassIdentifier: 
+  artwork: {fileID: 0}
+  eventPicture: {fileID: 0}
+  eventSound: {fileID: 0}
+  time: 2100
+  repeatInterval: 250
+  repeatTimes: 2
+  reactions:
+  - description: Support this decree through a massive campaign, even though many
+      may not like it.
+    additionalDescription: <sprite=2>-15<sprite=3>-10000
+    actions:
+    - {fileID: 11400000, guid: 20f56ffd831ada84a847916ee59318cb, type: 2}
+    - {fileID: 11400000, guid: 8828e5e68a05fde40b8f19f29842ef7e, type: 2}
+    - {fileID: 11400000, guid: 26ea4c5acfdafe34aaf7077830e9eff7, type: 2}
+    consequenceMessage: The decree was accepted and it indeed reduced a lot of trash,
+      but it also pissed off a lot of people which means many of your followers.
+      <sprite=2>-15<sprite=3>-10000 stopped following you.
+  - description: I am asking for the amendment of the decree on quotas for production
+      factories and thus the reduction of their waste and smog.
+    additionalDescription: <sprite=2>-5<sprite=3>+5000
+    actions:
+    - {fileID: 11400000, guid: 8f02263a2629c1e4599243c86ef75d9c, type: 2}
+    - {fileID: 11400000, guid: 5a910878b3d275e4193ae6583db25b67, type: 2}
+    - {fileID: 11400000, guid: 26ea4c5acfdafe34aaf7077830e9eff7, type: 2}
+    consequenceMessage: The Amendment of the decree was accepted and people appreciated
+      your approach. <sprite=2>-5<sprite=3>+5000
+  - description: Absolutely do not agree with this decree, and show it through vandal
+      protests.
+    additionalDescription: <sprite=2>+15<sprite=3>+10000<sprite=4>+40
+    actions:
+    - {fileID: 11400000, guid: e0a375cac5bc56445934211415debe20, type: 2}
+    - {fileID: 11400000, guid: 997201db536c4ba40b2dfeb18ab391b4, type: 2}
+    - {fileID: 11400000, guid: 24b63840c232b6b40988eaf3127a3899, type: 2}
+    - {fileID: 11400000, guid: 26ea4c5acfdafe34aaf7077830e9eff7, type: 2}
+    consequenceMessage: People agree with you and follow you even when it comes to
+      vandal protests. On the other hand it does not help with pollution whatsoever.
+      <sprite=2>+15<sprite=3>+10000<sprite=4>+40
+  ignoreConsequences: []
+  eventDescription: Quotas for waste capacity per inhabitant of the planet Earth!
+  mapPosition: {x: 0, y: 0}
