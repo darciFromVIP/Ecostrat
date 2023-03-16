@@ -19,11 +19,11 @@ public class EventDataScriptable : ScriptableObject
     public List<ReactionData> reactions;
     [Tooltip("What happens if player chooses to ignore this event?")]
     public List<Action> ignoreConsequences;
+    public string ignoreMessage;
     [TextArea(3, 3)]
     public string eventDescription;
     [Tooltip("Insert 0 for a random location, otherwise this event will spawn on these coordinates.")]
     public Vector2 mapPosition;
-
     public void ExecuteIgnoreConsequences()
     {
         foreach (var item in ignoreConsequences)

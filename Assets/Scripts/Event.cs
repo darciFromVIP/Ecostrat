@@ -28,6 +28,7 @@ public class Event : MonoBehaviour
         {
             SoundManager.instance.Penalty();
             eventData.ExecuteIgnoreConsequences();
+            News.instance.AddMessage(eventData.ignoreMessage);
             Destroy();
         }
     }
