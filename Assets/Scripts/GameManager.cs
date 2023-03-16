@@ -104,8 +104,11 @@ public class GameManager : MonoBehaviour
         gameTimerSlider.value = gameTimer;
         dayText.text = (int)(gameTimer / oneDayInSec) + " days left";
         if (gameTimer <= 0)
-            GameOver("Your time to save planet Earth has just run out.", 
+        {
+            SoundManager.instance.Defeat();
+            GameOver("Your time to save planet Earth has just run out.",
                 "Climate changes in the world are already so critical that it is impossible to continue your saving journey of planet Earth. PRO TIP: Gotta be faster next time! (Try to buy out some of Negotiation Perks to get more time!)");
+        }
         donationTimer += Time.deltaTime * speed;
         if (donationTimer >= donationIntensity)
         {
@@ -136,6 +139,7 @@ public class GameManager : MonoBehaviour
         followerIncomeSlider.value = followerIncomeTimer;
         if (followerIncomeTimer >= 60)
         {
+            SoundManager.instance.Income();
             followerIncomeTimer = 0;
             ChangeStats(PlayerStat.Money, followers);
         }
@@ -272,6 +276,7 @@ public class GameManager : MonoBehaviour
                 illegalityTimer = 0;
                 text = Instantiate(floatingTextPrefab, illegalityFloatingText);
                 text.UpdateText("<sprite=4>" + ((int)modifier).ToString("+#;-#;0"), modifier < 0, true);
+                SoundManager.instance.Illegality();
                 break;
             case PlayerStat.Hint:
                 hints += modifier;
@@ -310,11 +315,17 @@ public class GameManager : MonoBehaviour
             }
         }
         if (trash >= trashCapacity)
-            GameOver("DOOMSDAY - The world is flooded with garbage!", 
+        {
+            SoundManager.instance.Defeat();
+            GameOver("DOOMSDAY - The world is flooded with garbage!",
                 "The seas and oceans have returned to us what we have thrown into them all these years. People swim in the garbage that has flooded the streets of human dwellings. PRO TIP: It is important to make decisions that do not increase our garbage per interval too much, because that way we will get into a too large increase of garbage per day, which we will not be able to get rid of afterwards.");
+        }
         if (trash <= 0)
-            GameOver("All Clean!", 
+        {
+            SoundManager.instance.Victory();
+            GameOver("All Clean!",
                 "You managed to clear all the trash and made our planet a clean place again, where we can live together in harmony with nature as one complete humanity! Now is the time to rest and enjoy the success of your deeds for our planet!");
+        }
         UpdateUI();
     }
     public bool TestChangeStats(PlayerStat stat, float modifier)
@@ -414,43 +425,59 @@ public class GameManager : MonoBehaviour
         {
             case UpgradeType.Negotiation:
                 negotiationLevel++;
+                SoundManager.instance.Upgrade(negotiationLevel);
                 break;
             case UpgradeType.SocialSites:
                 socialSitesLevel++;
+                SoundManager.instance.Upgrade(socialSitesLevel);
                 break;
             case UpgradeType.Riots:
                 riotsLevel++;
+                SoundManager.instance.Upgrade(riotsLevel);
                 break;
             case UpgradeType.SocialEvents:
                 socialEventsLevel++;
+                SoundManager.instance.Upgrade(socialEventsLevel);
                 break;
             case UpgradeType.OceanCleansing:
                 oceanCleansingLevel++;
+                SoundManager.instance.Upgrade(oceanCleansingLevel);
                 break;
             case UpgradeType.Hacking:
                 hackingLevel++;
+                SoundManager.instance.Upgrade(hackingLevel);
                 break;
             case UpgradeType.Bribe:
                 bribeLevel++;
+                SoundManager.instance.Upgrade(bribeLevel);
                 break;
             case UpgradeType.Blackmail:
                 blackmailLevel++;
+                SoundManager.instance.Upgrade(blackmailLevel);
                 break;
             case UpgradeType.Vandalism:
                 vandalismLevel++;
+                SoundManager.instance.Upgrade(vandalismLevel);
                 break;
             case UpgradeType.Landfills:
                 landfillsLevel++;
+                SoundManager.instance.Upgrade(landfillsLevel);
                 break;
             default:
                 break;
         }
         if (oceanCleansingLevel == 5)
-            GameOver("Planet Earth is saved!", 
+        {
+            SoundManager.instance.Victory();
+            GameOver("Planet Earth is saved!",
                 "You unlocked the last level of the ultimate perk Ocean Cleansing, through which you were able to get as many people necessary to clean all the nooks and crannies of the mixture of garbage in the seas and oceans, which was the biggest problem of the human race in the fight against garbage. Now is the time to rest and enjoy the success of your deeds for our planet!");
+        }
         if (vandalismLevel == 5)
-            GameOver("Planet Earth is saved!", 
+        {
+            SoundManager.instance.Victory();
+            GameOver("Planet Earth is saved!",
                 "You have such a great influence on a huge group of your supporters that even the largest manufacturing companies are prying from your hand and are ready to submit to any measures that will help reduce their part of the blame for the pollution of our planet Earth.");
+        }
     }
     public void PauseGameToggle(bool value)
     {
@@ -467,10 +494,15 @@ public class GameManager : MonoBehaviour
     public void ChangeGameSpeed(int speed)
     {
         this.speed = speed;
+        SoundManager.instance.Speed(speed);
     }
     public void GameOver(string label, string description)
     {
         gameoverScreen.UpdateTexts(label, description);
         PauseGameToggle(true);
+    }
+    public void MainMenu()
+    {
+        MySceneManager.instance.MainMenu();
     }
 }

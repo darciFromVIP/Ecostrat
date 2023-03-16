@@ -26,6 +26,7 @@ public class Event : MonoBehaviour
         slider.value = timer;
         if (timer <= 0)
         {
+            SoundManager.instance.Penalty();
             eventData.ExecuteIgnoreConsequences();
             Destroy();
         }
