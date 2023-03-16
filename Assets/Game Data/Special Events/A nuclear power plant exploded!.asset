@@ -26,6 +26,7 @@ MonoBehaviour:
     consequenceMessage: 
   ignoreConsequences:
   - {fileID: 11400000, guid: 1816f15b9180fb640a6473da5d0b82f9, type: 2}
+  ignoreMessage: A nuclear power plant exploded! <sprite=2>+5.
   eventDescription: Radioactivity spreads into the atmosphere, and although the rescue
     services saved who they could, they could not save the atmosphere <sprite=2>+5.
   mapPosition: {x: 0, y: 0}

@@ -48,5 +48,7 @@ MonoBehaviour:
   ignoreConsequences:
   - {fileID: 11400000, guid: e35cf0a47b9159047a9da026d7fab3f5, type: 2}
   - {fileID: 11400000, guid: c6ce4426384c0464f82986169e413910, type: 2}
+  ignoreMessage: 'You ignored to take an action for: Buriganga River (Bangladesh).
+    <sprite=2>+10 <sprite=3>-2000.'
   eventDescription: Buriganga River (Bangladesh) is polluted by industry and people!
   mapPosition: {x: 0, y: 0}

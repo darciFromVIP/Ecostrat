@@ -48,5 +48,7 @@ MonoBehaviour:
   ignoreConsequences:
   - {fileID: 11400000, guid: fc40fc52acb8d2d459a6137d4f63e16e, type: 2}
   - {fileID: 11400000, guid: 479976b26f5675b4f932d4bc77c863e8, type: 2}
+  ignoreMessage: 'You ignored to take an action for: Great Pacific Garbage patch.
+    <sprite=2>+25 <sprite=3>-5000.'
   eventDescription: Increased concentration of marine waste!
   mapPosition: {x: 0, y: 0}

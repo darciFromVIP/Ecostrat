@@ -50,5 +50,7 @@ MonoBehaviour:
       vandal protests. On the other hand it does not help with pollution whatsoever.
       <sprite=2>+15<sprite=3>+10000<sprite=4>+40
   ignoreConsequences: []
+  ignoreMessage: 'You ignored to take an action for: Draft of the new decree from
+    the UN. No consequences. '
   eventDescription: Quotas for waste capacity per inhabitant of the planet Earth!
   mapPosition: {x: 0, y: 0}

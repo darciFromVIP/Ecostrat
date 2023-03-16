@@ -50,6 +50,8 @@ MonoBehaviour:
   ignoreConsequences:
   - {fileID: 11400000, guid: fc05dd6c007a34248a44852e40e63e58, type: 2}
   - {fileID: 11400000, guid: f5ac9f4843016ef41b2069e9adc88435, type: 2}
+  ignoreMessage: 'You ignored to take an action for: A truck with dangerous, toxic
+    waste crashed into the river! <sprite=0>+1500 <sprite=3>-4000.'
   eventDescription: Unfortunately, it fell straight into the river, spilling all
     the toxic waste it was carrying. If something is not done about it immediately,
     this waste will enter the seas and cause a lot of pollution!
