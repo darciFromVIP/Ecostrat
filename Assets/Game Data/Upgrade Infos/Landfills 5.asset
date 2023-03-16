@@ -19,7 +19,7 @@ MonoBehaviour:
     big ego trip, but when there is no place on planet earth to store garbage, it
     will be necessary to launch our rockets into space. They probably won't bother
     anyone there, right?
-  benefits: <sprite=2>+15 + 10 000 trash capacity
+  benefits: <sprite=2>+15 + <sprite=5>+10 000
   actions:
   - {fileID: 11400000, guid: 24b63840c232b6b40988eaf3127a3899, type: 2}
   - {fileID: 11400000, guid: 93b9a8b2ad1966d4d913668751d312b2, type: 2}

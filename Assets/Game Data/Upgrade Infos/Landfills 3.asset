@@ -19,7 +19,7 @@ MonoBehaviour:
     to our name, so it's best to burn all the trash and get rid of all evidence of
     our connection. It won't do much good for the atmosphere, but at least we'll
     increase a capacity for the next inflow of waste.
-  benefits: <sprite=2>+7 +3 000 trash capacity
+  benefits: <sprite=2>+7 + <sprite=5>+3 000
   actions:
   - {fileID: 11400000, guid: ecb65d59010fc1740ba457359ec6939c, type: 2}
   - {fileID: 11400000, guid: 7421000b7c9cbe344a14d86005d59280, type: 2}

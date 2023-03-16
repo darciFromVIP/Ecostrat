@@ -19,6 +19,6 @@ MonoBehaviour:
     This is the highest political game about saving our planet, and if we want to
     influence the decisions of countries, we need to financially support political
     campaigns to gain influence over politicians and to gain their trust as well."
-  benefits: <sprite=1>per donation +250
+  benefits: <sprite=7>+250
   actions:
   - {fileID: 11400000, guid: 9bb5be17a84693347b69054fae37780d, type: 2}

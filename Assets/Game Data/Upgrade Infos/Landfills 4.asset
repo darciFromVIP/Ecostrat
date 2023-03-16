@@ -19,7 +19,7 @@ MonoBehaviour:
     know what to do next. That's why we came up with the idea of introducing the
     waste somewhere far into the ocean, where no one would look for it. At least
     until it washes up somewhere else.
-  benefits: <sprite=2>+10 + 5 000 trash capacity
+  benefits: <sprite=2>+10 + <sprite=5>+5 000
   actions:
   - {fileID: 11400000, guid: e35cf0a47b9159047a9da026d7fab3f5, type: 2}
   - {fileID: 11400000, guid: cdba35fe5f70825499a469d3a785e3e1, type: 2}

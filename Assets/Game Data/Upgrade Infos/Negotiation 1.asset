@@ -18,6 +18,6 @@ MonoBehaviour:
   description: 'You were never a good speaker, but your friend Cynthia studies geo-political
     relationships and speech, so she offered to help you with your inexperience for
     some money. '
-  benefits: <sprite=1>per donation +15
+  benefits: <sprite=7>+15
   actions:
   - {fileID: 11400000, guid: 34a5ae574646a3843bd2044d1a5cd82e, type: 2}

@@ -19,7 +19,7 @@ MonoBehaviour:
     group from Yugoslavia, WHN, which stands for We Help Nature. You don\u2019t hesitate
     and ask them for help to protect the Earth together."
   benefits: Hints for your upcoming reaction (a hint shows you the consequences of
-    your reactions). +2 Hints Illegality Capacity +20
+    your reactions). <sprite=8>+2 <sprite=6>+20
   actions:
   - {fileID: 11400000, guid: 95ec3378c0116fa4da256325c32cc817, type: 2}
   - {fileID: 11400000, guid: f7748fb1742a62e4da916aff8c82241a, type: 2}

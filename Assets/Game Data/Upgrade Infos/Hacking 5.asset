@@ -19,7 +19,7 @@ MonoBehaviour:
     to the government and worldwide conglomerates, the only group that can help you
     is ANONYMOUS.
   benefits: Hints for your upcoming reaction (a hint shows you the consequences of
-    your reactions). +3 Hints Illegality Capacity +30
+    your reactions). <sprite=8>+3 <sprite=6>+30
   actions:
   - {fileID: 11400000, guid: 50649e19f81cbc642a2f7cffd3342981, type: 2}
   - {fileID: 11400000, guid: b42a8138f3fa7e243b600f1fe75091bc, type: 2}
