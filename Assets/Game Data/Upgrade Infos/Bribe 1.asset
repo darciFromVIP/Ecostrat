@@ -20,7 +20,7 @@ MonoBehaviour:
     some experience with. He doesn\u2019t look completely trustworthy, but it\u2019ll
     have to be enough."
   benefits: More time to save the planet Earth and reduces all prices. <sprite=11>+10
-    + <sprite=1>-2.5%
+    + <sprite=10>-2.5%
   actions:
   - {fileID: 11400000, guid: 1ec24f16e0985de4a912d1dd66612b68, type: 2}
   - {fileID: 11400000, guid: 9e19b9761a9b2254bba9d1bcd4b3939c, type: 2}

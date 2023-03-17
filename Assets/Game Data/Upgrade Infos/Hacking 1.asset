@@ -18,8 +18,7 @@ MonoBehaviour:
   description: Your friend Johny Novovitch studies IT technologies. Together with
     his friends as you talked over a beer, you thought it would be a great idea to
     do some illegal activity for a good cause.
-  benefits: Hints for your upcoming reaction (a hint shows you the consequences of
-    your reactions). <sprite=8>+1 <sprite=6>+10
+  benefits: Hints for your upcoming reaction. <sprite=8>+1 <sprite=6>+10
   actions:
   - {fileID: 11400000, guid: 9c91fe5cef0e80f49abc920fc68ef2d2, type: 2}
   - {fileID: 11400000, guid: 0b0ff9d6d5020c24c8af5e06b6a94873, type: 2}

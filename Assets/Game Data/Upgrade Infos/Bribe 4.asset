@@ -23,7 +23,7 @@ MonoBehaviour:
     themselves under the name ProBribers, which definitely suggests they are highly
     professional."
   benefits: More time to save the planet Earth and reduces all prices. <sprite=11>+40
-    + <sprite=1>-10%
+    + <sprite=10>-10%
   actions:
   - {fileID: 11400000, guid: 0ec178dec6689cc439c9a3635b4139e7, type: 2}
   - {fileID: 11400000, guid: 608915229dff376499453a7de5ca55d3, type: 2}
