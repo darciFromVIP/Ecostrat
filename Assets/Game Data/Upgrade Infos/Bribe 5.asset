@@ -22,7 +22,8 @@ MonoBehaviour:
     nicknames, nothing. Communication via head-to-head meetings, because online messages
     and calls are not advisable. Highly organised secret mafia will fulfil everything
     you require. Of course, for the right amount of money.
-  benefits: Gives you more time to save the planet Earth. +50 days All Prices -15%
+  benefits: More time to save the planet Earth and reduces all prices. <sprite=11>+50
+    + <sprite=10>-15%
   actions:
   - {fileID: 11400000, guid: 1f6522f9afc4c7541aa19a8d2e7baefc, type: 2}
   - {fileID: 11400000, guid: f6fed4601aff64c4cb314bd62d02872f, type: 2}

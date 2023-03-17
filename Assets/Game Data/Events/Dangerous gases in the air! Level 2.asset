@@ -47,6 +47,8 @@ MonoBehaviour:
   ignoreConsequences:
   - {fileID: 11400000, guid: ac00acdd5697a2b4fb06fb94b682a477, type: 2}
   - {fileID: 11400000, guid: c6ce4426384c0464f82986169e413910, type: 2}
+  ignoreMessage: 'You ignored to take an action for: Dangerous gases in the air!
+    Level 2. <sprite=0>+2500 <sprite=3>-2000.'
   eventDescription: Too many cars in the area are emitting dangerous gases into the
     air!
   mapPosition: {x: 0, y: 0}

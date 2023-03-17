@@ -19,8 +19,7 @@ MonoBehaviour:
     MIT student Paul Sancrine, with whom you\u2019ve had a chat with and found out
     that he\u2019d be willing to help for a small financial reward, as he engages
     in greenpeace activities."
-  benefits: Hints for your upcoming reaction (a hint shows you the consequences of
-    your reactions). +1 Hint Illegality Capacity +15
+  benefits: Hints for your upcoming reaction. <sprite=8>+1 <sprite=6>+15
   actions:
   - {fileID: 11400000, guid: 9c91fe5cef0e80f49abc920fc68ef2d2, type: 2}
   - {fileID: 11400000, guid: 06ab58e1b03a0c5468be3e796d9407f3, type: 2}

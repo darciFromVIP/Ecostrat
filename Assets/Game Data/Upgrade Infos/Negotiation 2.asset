@@ -20,6 +20,6 @@ MonoBehaviour:
     with corporations for real, you will need more than that. Luckily, you know a
     police investigator, who will reveal some of his tips and tricks, but it\u2019s
     not going to be for free."
-  benefits: <sprite=1>per donation +30
+  benefits: <sprite=7>+30
   actions:
   - {fileID: 11400000, guid: 3374b3bc0c1e0244f93c4c4e373aa586, type: 2}

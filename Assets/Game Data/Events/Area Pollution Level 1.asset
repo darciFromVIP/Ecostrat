@@ -48,5 +48,7 @@ MonoBehaviour:
   ignoreConsequences:
   - {fileID: 11400000, guid: 0657bc9c82aafb54cb44d3acb1c2b6ea, type: 2}
   - {fileID: 11400000, guid: e2d8f8b07f4400841a34221092a14524, type: 2}
+  ignoreMessage: 'You ignored to take an action for: Area Pollution Level 1. <sprite=0>+100
+    <sprite=3>-100.'
   eventDescription: There is too much trash in the streets!
   mapPosition: {x: 0, y: 0}

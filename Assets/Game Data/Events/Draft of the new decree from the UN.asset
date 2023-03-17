@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3844d973ff520a43986b101af840fef, type: 3}
   m_Name: Draft of the new decree from the UN
   m_EditorClassIdentifier: 
-  artwork: {fileID: 0}
-  eventPicture: {fileID: 0}
-  eventSound: {fileID: 0}
+  artwork: {fileID: 21300000, guid: b65f9c29b1e37404c87b789199ebb4ed, type: 3}
+  eventPicture: {fileID: 21300000, guid: 67b08cfedff109a4fbf5401ba3296f38, type: 3}
+  eventSound: {fileID: 8300000, guid: 1b725463b38f60b4396c66363a0f8d4f, type: 3}
   time: 2100
   repeatInterval: 250
   repeatTimes: 2
@@ -50,5 +50,7 @@ MonoBehaviour:
       vandal protests. On the other hand it does not help with pollution whatsoever.
       <sprite=2>+15<sprite=3>+10000<sprite=4>+40
   ignoreConsequences: []
+  ignoreMessage: 'You ignored to take an action for: Draft of the new decree from
+    the UN. No consequences. '
   eventDescription: Quotas for waste capacity per inhabitant of the planet Earth!
   mapPosition: {x: 0, y: 0}

@@ -30,6 +30,34 @@ public class SoundManager : MonoBehaviour
     {
         audioSource.PlayOneShot(FindSoundByName("radiotalk"));
     }
+    public void Victory()
+    {
+        audioSource.PlayOneShot(FindSoundByName("victory"));
+    }
+    public void Defeat()
+    {
+        audioSource.PlayOneShot(FindSoundByName("defeat"));
+    }
+    public void Illegality()
+    {
+        audioSource.PlayOneShot(FindSoundByName("illegality"));
+    }
+    public void Income()
+    {
+        audioSource.PlayOneShot(FindSoundByName("income"));
+    }
+    public void Penalty()
+    {
+        audioSource.PlayOneShot(FindSoundByName("penalty"));
+    }
+    public void Upgrade(int number)
+    {
+        audioSource.PlayOneShot(FindSoundByName("upgrade" + number.ToString()));
+    }
+    public void Speed(int number)
+    {
+        audioSource.PlayOneShot(FindSoundByName(number.ToString() + "xtime"));
+    }
     public void PlaySound(AudioClip sound)
     {
         audioSource.PlayOneShot(sound);

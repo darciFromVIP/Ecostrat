@@ -36,20 +36,20 @@ TextureImporter:
     filterMode: 1
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -76,9 +76,297 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: mriezka_update_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 997.3334
+        width: 501.5
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76f795ef54e132341b749bff985f6620
+      internalID: 1302066530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mriezka_update_1
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 997.3334
+        width: 501.5
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9299e83274e0cd94e82c2de1f1ae967a
+      internalID: -588279093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mriezka_update_2
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 997.3334
+        width: 501.5
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1be53d32e488cb48ac7ce5fb669cb8e
+      internalID: 2106609939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mriezka_update_3
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 997.3334
+        width: 501.5
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85bf7372193c3b94182a3d7d613ec4c0
+      internalID: 1389828306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mriezka_update_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 499.33334
+        width: 501.5
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d2abad71c639794db04d3e5fdcadfea
+      internalID: -518929399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mriezka_update_5
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 499.33334
+        width: 501.5
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caf917c731ec06d4e9eb1b117c95e9e8
+      internalID: 1140980126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mriezka_update_6
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 499.33334
+        width: 501.5
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b11f0cc2e5593b8468b24a6e721b519a
+      internalID: -1549284696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mriezka_update_7
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 499.33334
+        width: 501.5
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 787f29f788afeaa4f8140204a8416fab
+      internalID: -1313466926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mriezka_update_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.3333435
+        width: 501.5
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ddd2b9aa4f408df4abb799f512d9c36a
+      internalID: -218067690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mriezka_update_9
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1.3333435
+        width: 501.5
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00aa88468afa38c429c0a71dccaf78a3
+      internalID: 2099621790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mriezka_update_10
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 1.3333435
+        width: 501.5
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 592698263e5b34a4ca5374b0edcbe082
+      internalID: -166910352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mriezka_update_11
+      rect:
+        serializedVersion: 2
+        x: 1503
+        y: 1.3333435
+        width: 501.5
+        height: 498.66666
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a402ccfb258b2d45a3b55b5ce760f08
+      internalID: 2146546921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -89,7 +377,19 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      mriezka_update_0: 1302066530
+      mriezka_update_11: 2146546921
+      mriezka_update_1: -588279093
+      mriezka_update_8: -218067690
+      mriezka_update_5: 1140980126
+      mriezka_update_4: -518929399
+      mriezka_update_9: 2099621790
+      mriezka_update_3: 1389828306
+      mriezka_update_10: -166910352
+      mriezka_update_6: -1549284696
+      mriezka_update_7: -1313466926
+      mriezka_update_2: 2106609939
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

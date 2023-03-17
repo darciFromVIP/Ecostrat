@@ -19,6 +19,6 @@ MonoBehaviour:
     decided to meet with detective Shawn Diaz. He is the number one when it comes
     to detectives. He\u2019s famous for his skills in investigation and negotiation,
     but he\u2019s not really cheap. However, he\u2019s surely worth it!"
-  benefits: <sprite=1>per donation +50
+  benefits: <sprite=7>+50
   actions:
   - {fileID: 11400000, guid: 2a221a778e0bff84a991730a3e7eff69, type: 2}

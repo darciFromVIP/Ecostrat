@@ -27,6 +27,8 @@ MonoBehaviour:
       expensive by 15%!
   ignoreConsequences:
   - {fileID: 11400000, guid: 1a2bd63acb7cd844aa7e67580da2e9d2, type: 2}
+  ignoreMessage: Inflation greatly increases and all expenses become more expensive
+    by 15%!
   eventDescription: Inflation greatly increases and all expenses become more expensive
     by 15%!
   mapPosition: {x: 0, y: 0}
