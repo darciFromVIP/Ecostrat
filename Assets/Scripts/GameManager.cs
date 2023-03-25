@@ -9,7 +9,7 @@ public class GameManager : MonoBehaviour
     public float money = 500;
     private float followers = 0;
     private float followerIncomeTimer = 0;
-    private float illegality = 0;
+    [SerializeField] private float illegality = 0;
     [SerializeField] private float trash = 0;
     private float gameTimer = 1825;
     private float elapsedTime = 0;
@@ -71,6 +71,7 @@ public class GameManager : MonoBehaviour
     public RectTransform timeFloatingText;
     public RectTransform illegalityFloatingText;
     public RectTransform trashFloatingText;
+    public Animator upgradeBTNAnimator;
 
     public static GameManager instance;
 
@@ -209,7 +210,7 @@ public class GameManager : MonoBehaviour
     }
     public void UpdateUI()
     {
-        moneyText.text = money.ToString();
+        moneyText.text = ((int)money).ToString();
         followerText.text = followers.ToString();
         trashText.text = trash.ToString() + "/" + trashCapacity.ToString();
         illegalitySlider.maxValue = illegalCapacity;
@@ -238,6 +239,14 @@ public class GameManager : MonoBehaviour
                     money = 0;
                 text = Instantiate(floatingTextPrefab, moneyFloatingText);
                 text.UpdateText("<sprite=1>" + ((int)modifier).ToString("+#;-#;0"), modifier > 0, true);
+                foreach (var item in FindObjectsOfType<UpgradeButton>(true))
+                {
+                    if (money >= item.currentUpgradeInfo.price)
+                    {
+                        upgradeBTNAnimator.SetTrigger("Highlight");
+                        break;
+                    }
+                }
                 break;
             case PlayerStat.Timer:
                 gameTimer += modifier;
@@ -311,7 +320,7 @@ public class GameManager : MonoBehaviour
             if (!illegalityGameOverEvent.activeInHierarchy)
             {
                 illegalityGameOverEvent.SetActive(true);
-                PauseGameToggle(true);
+                StartCoroutine(DelayedPause(true));
             }
         }
         if (trash >= trashCapacity)
@@ -478,6 +487,11 @@ public class GameManager : MonoBehaviour
             GameOver("Planet Earth is saved!",
                 "You have such a great influence on a huge group of your supporters that even the largest manufacturing companies are prying from your hand and are ready to submit to any measures that will help reduce their part of the blame for the pollution of our planet Earth.");
         }
+    }
+    private IEnumerator DelayedPause(bool value)
+    {
+        yield return new WaitForSeconds(1);
+        PauseGameToggle(value);
     }
     public void PauseGameToggle(bool value)
     {

@@ -19,8 +19,8 @@ MonoBehaviour:
     they can stick them wherever they want. \u201CFor Green Planet\u201D stickers
     are meant to show everyone who still doesn\u2019t understand that it\u2019s important
     to take good care of your planet Earth. Our supporters will certainly be happy
-    to support your idea in such a way and spread the message to the streets. REQUIRES
-    ALL OTHER ILLEGAL PERKS ON LEVEL 5"
+    to support your idea in such a way and spread the message to the streets. <b>REQUIRES
+    ALL OTHER ILLEGAL PERKS ON LEVEL 5</b>"
   benefits: <sprite=0>-1500
   actions:
   - {fileID: 11400000, guid: fd22956f93c454c4cb16d9c700c3d376, type: 2}

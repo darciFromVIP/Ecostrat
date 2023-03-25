@@ -7,15 +7,14 @@ using UnityEngine.UI;
 public class Reactions : MonoBehaviour
 {
     public Reaction reactionPrefab;
-    public void SetNewReactions(List<ReactionData> reactionData)
+    public void SetNewReactions(List<ReactionData> reactionData, bool hinted)
     {
         ClearContainer();
         for (int i = 0; i < reactionData.Count; i++)
         {
             Reaction reaction = Instantiate(reactionPrefab, transform);
-            reaction.UpdateReaction(reactionData[i]);
+            reaction.UpdateReaction(reactionData[i], hinted);
         }
-        GameManager.instance.ChangeStats(PlayerStat.Hint, -1);
     }
     public void AddListenerToReactions(UnityAction listener)
     {

@@ -16,7 +16,7 @@ public class Reaction : MonoBehaviour
     {
         btn = GetComponent<Button>();
     }
-    public void UpdateReaction(ReactionData data)
+    public void UpdateReaction(ReactionData data, bool hinted)
     {
         btn.interactable = true;
         int priceValue = data.GetPrice();
@@ -30,7 +30,7 @@ public class Reaction : MonoBehaviour
         btn.onClick.AddListener(data.ExecuteActions);
         btn.onClick.AddListener(EventWindow.instance.Hide);
         description.text = data.description;
-        if (GameManager.instance.hints > 0)
+        if (hinted)
             hint.text = data.additionalDescription;
         if (!data.TestExecute())
             btn.interactable = false;

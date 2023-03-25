@@ -6,7 +6,7 @@ public class UpgradeButton : MonoBehaviour
 {
     private Button btn;
     public List<UpgradeInfo> upgradeInfos = new();
-    private UpgradeInfo currentUpgradeInfo;
+    public UpgradeInfo currentUpgradeInfo;
     private int currentIndex = 0;
     private void Awake()
     {
