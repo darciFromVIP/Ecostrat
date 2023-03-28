@@ -6,6 +6,6 @@ public class EarthRotation : MonoBehaviour
 {
     private void Update()
     {
-        transform.Rotate(Vector3.up, 0.1f);
+        transform.Rotate(Vector3.up, 0.02f);
     }
 }

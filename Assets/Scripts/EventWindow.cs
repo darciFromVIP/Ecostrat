@@ -23,9 +23,14 @@ public class EventWindow : MonoBehaviour
         Show();
         eventPicture.sprite = eventData.eventPicture;
         this.currentEvent = currentEvent;
+        if (GameManager.instance.hints > 0)
+        {
+            currentEvent.isHinted = true;
+            GameManager.instance.ChangeStats(PlayerStat.Hint, -1);
+        }
         labelText.text = eventData.name;
         descriptionText.text = eventData.eventDescription;
-        reactions.SetNewReactions(eventData.reactions);
+        reactions.SetNewReactions(eventData.reactions, currentEvent.isHinted);
         reactions.AddListenerToReactions(EventResolved);
         ignoreButton.onClick.RemoveAllListeners();
         ignoreButton.onClick.AddListener(Hide);

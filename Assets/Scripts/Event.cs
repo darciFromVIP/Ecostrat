@@ -8,6 +8,7 @@ public class Event : MonoBehaviour
     private Button btn;
     private Image image;
     private EventDataScriptable eventData;
+    public bool isHinted = false;
     [SerializeField] private Slider slider;
     private float timer = 60;
     private void Awake()
@@ -22,7 +23,7 @@ public class Event : MonoBehaviour
     {
         if (GameManager.instance.paused || eventData.name == "Amogus")
             return;
-        timer -= Time.deltaTime;
+        timer -= Time.deltaTime * GameManager.instance.speed;
         slider.value = timer;
         if (timer <= 0)
         {

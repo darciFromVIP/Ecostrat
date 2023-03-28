@@ -8,6 +8,7 @@ public class UpgradesWindow : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        gameObject.SetActive(false);
     }
     public void ShowUpgradesWindow()
     {
