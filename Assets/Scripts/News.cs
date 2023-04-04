@@ -16,7 +16,7 @@ public class News : MonoBehaviour
 
     public void AddMessage(string message)
     {
-        SoundManager.instance.RadioTalk();
+        RadioSoundManager.instance.PlayRadioSound();
         textContent.text += "\n\n[" + GameManager.instance.GetTimeStamp() + "] " + message;
         Canvas.ForceUpdateCanvases();
 

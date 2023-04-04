@@ -182,17 +182,17 @@ public class GameManager : MonoBehaviour
     {
         Vector2 targetPos;
         if (isTrashBubble)
-            targetPos = new Vector2(Random.Range(0, mapCanvas.pixelRect.width), Random.Range(0, mapCanvas.pixelRect.height));
+            targetPos = new Vector2(Random.Range(0, 1920), Random.Range(0, 1080));
         else
-            targetPos = new Vector2(Random.Range(0, mapCanvas.pixelRect.width - 164), Random.Range(0, mapCanvas.pixelRect.height - 253));
+            targetPos = new Vector2(Random.Range(0, 1920 - 164), Random.Range(0, 1080 - 253));
 
         Color color = mapSprite.GetPixel((int)targetPos.x * 4, (int)targetPos.y * 4);
         while (color.r >= 0.202 && color.r <= 0.206 && color.g >= 0.410 && color.g <= 0.414 && color.b >= 0.578 && color.b <= 0.582)    // Sea Color: R 204 G 412 B 480
         {
             if (isTrashBubble)
-                targetPos = new Vector2(Random.Range(0, mapCanvas.pixelRect.width), Random.Range(0, mapCanvas.pixelRect.height));
+                targetPos = new Vector2(Random.Range(0, 1920), Random.Range(0, 1080));
             else
-                targetPos = new Vector2(Random.Range(0, mapCanvas.pixelRect.width - 164), Random.Range(0, mapCanvas.pixelRect.height - 253));
+                targetPos = new Vector2(Random.Range(0, 1920 - 164), Random.Range(0, 1080 - 253));
             color = mapSprite.GetPixel((int)targetPos.x * 4, (int)targetPos.y * 4);
         }
         return targetPos;

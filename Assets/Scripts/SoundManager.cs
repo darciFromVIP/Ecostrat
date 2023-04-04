@@ -26,10 +26,6 @@ public class SoundManager : MonoBehaviour
     {
         audioSource.PlayOneShot(FindSoundByName("click"));
     }
-    public void RadioTalk()
-    {
-        audioSource.PlayOneShot(FindSoundByName("radiotalk"));
-    }
     public void Victory()
     {
         audioSource.PlayOneShot(FindSoundByName("victory"));
