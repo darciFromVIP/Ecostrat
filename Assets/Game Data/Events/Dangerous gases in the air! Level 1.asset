@@ -19,7 +19,8 @@ MonoBehaviour:
   repeatInterval: 500
   repeatTimes: 2
   reactions:
-  - description: Create a vandalism protest where we can clearly state what we think
+  - label: Vandalism
+    description: Create a vandalism protest where we can clearly state what we think
       about it.
     additionalDescription: <sprite=0>+1000<sprite=4>+30<sprite=3>+3000
     actions:
@@ -28,7 +29,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: f4e9b49b71194ee4dae3207f6aa1ea1f, type: 2}
     consequenceMessage: Sadly, your chosen option did not work well. The problem
       should have been solved in a different way. <sprite=0>+1000<sprite=4>+30<sprite=3>+3000
-  - description: Agreement with local companies for the creation of a joint campaign
+  - label: City Transport
+    description: Agreement with local companies for the creation of a joint campaign
       for more frequent use of city transport, bicycles and walking.
     additionalDescription: <sprite=2>+10<sprite=3>+5000
     actions:
@@ -37,7 +39,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 6d89670dc37218b4898bf7f03ab3b2fa, type: 2}
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
       but at least you gained more followers! <sprite=2>+10<sprite=3>+5000"
-  - description: Negotiations with politicians for the creation of special benefits
+  - label: Negotiation
+    description: Negotiations with politicians for the creation of special benefits
       for owners of electronic vehicles.
     additionalDescription: <sprite=2>-10
     actions:

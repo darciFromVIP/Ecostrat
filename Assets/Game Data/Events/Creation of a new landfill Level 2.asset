@@ -19,7 +19,8 @@ MonoBehaviour:
   repeatInterval: 250
   repeatTimes: 2
   reactions:
-  - description: Making a video for social networks to point out the new landfill.
+  - label: Video
+    description: Making a video for social networks to point out the new landfill.
     additionalDescription: <sprite=0>+400<sprite=3>+800
     actions:
     - {fileID: 11400000, guid: 79d034ea81520a34cadd89ea8b10bf79, type: 2}
@@ -27,7 +28,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 75fd2671ce01f48469b0eb5ab5b0d326, type: 2}
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
       but at least you gained more followers! <sprite=0>+400<sprite=3>+800"
-  - description: Hacking the landfill with the threat of a complete shutdown of the
+  - label: Hack Attack
+    description: Hacking the landfill with the threat of a complete shutdown of the
       landfill.
     additionalDescription: <sprite=0>-400<sprite=4>+25
     actions:
@@ -35,7 +37,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 9feb916535d23c94fa726ed1e7f0aac3, type: 2}
     consequenceMessage: Even though you risked your freedom, you still earned exactly
       what you wanted! <sprite=0>-400<sprite=4>+25
-  - description: "Negotiation with the management of the landfill to cancel the landfill.\r"
+  - label: Negotiation
+    description: "Negotiation with the management of the landfill to cancel the landfill.\r"
     additionalDescription: <sprite=0>+400<sprite=3>-300
     actions:
     - {fileID: 11400000, guid: 8fe8670e373e0b94e8941616f6f03561, type: 2}

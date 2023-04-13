@@ -19,7 +19,8 @@ MonoBehaviour:
   repeatInterval: 500
   repeatTimes: 2
   reactions:
-  - description: Hiring an outside cleaning company to remove waste, even if it is
+  - label: Hire Cleaners
+    description: Hiring an outside cleaning company to remove waste, even if it is
       dangerous for the company's workers.
     additionalDescription: <sprite=0>-1500<sprite=3>-2000
     actions:
@@ -29,7 +30,8 @@ MonoBehaviour:
     consequenceMessage: You managed to solve the problem, yet some of workers are
       now sick for the rest of their lives due to toxic substances they had to clean
       up and your followers do not like this at all. <sprite=0>-1500<sprite=3>-2000
-  - description: Bribe the deputies at the Ministry of Environmental Protection,
+  - label: Bribe
+    description: Bribe the deputies at the Ministry of Environmental Protection,
       let them solve it their way.
     additionalDescription: <sprite=0>-1500<sprite=4>+30
     actions:
@@ -38,7 +40,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: fd22956f93c454c4cb16d9c700c3d376, type: 2}
     consequenceMessage: "You can\u2019t write a media post about bribing, but it\u2019s
       important that it solved the problem! <sprite=0>-1500<sprite=4>+30"
-  - description: Address journalists to warn citizens about the pollution of tributaries
+  - label: Journalists
+    description: Address journalists to warn citizens about the pollution of tributaries
       and river rafts
     additionalDescription: <sprite=0>+1500<sprite=3>+2500
     actions:

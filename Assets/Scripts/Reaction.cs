@@ -7,6 +7,7 @@ using System;
 
 public class Reaction : MonoBehaviour
 {
+    public TextMeshProUGUI label;
     public TextMeshProUGUI description;
     public TextMeshProUGUI price;
     public TextMeshProUGUI hint;
@@ -29,6 +30,7 @@ public class Reaction : MonoBehaviour
             price.text = "<sprite=1>+" + (priceValue * -1).ToString();
         btn.onClick.AddListener(data.ExecuteActions);
         btn.onClick.AddListener(EventWindow.instance.Hide);
+        label.text = data.label;
         description.text = data.description;
         if (hinted)
             hint.text = data.additionalDescription;

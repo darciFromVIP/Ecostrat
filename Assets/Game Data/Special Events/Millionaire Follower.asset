@@ -19,7 +19,8 @@ MonoBehaviour:
   repeatInterval: 0
   repeatTimes: 0
   reactions:
-  - description: He's very generous.
+  - label: He's very generous.
+    description: 
     additionalDescription: 
     actions:
     - {fileID: 11400000, guid: 4978de58496740c43a34a6dcf11c479b, type: 2}

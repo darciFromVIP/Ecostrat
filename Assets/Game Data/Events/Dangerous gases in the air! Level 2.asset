@@ -19,7 +19,8 @@ MonoBehaviour:
   repeatInterval: 300
   repeatTimes: 2
   reactions:
-  - description: Bribing MPs to increase emissions for non-electronic vehicles.
+  - label: Bribe
+    description: Bribing MPs to increase emissions for non-electronic vehicles.
     additionalDescription: <sprite=2>-15<sprite=4>+25
     actions:
     - {fileID: 11400000, guid: 20f56ffd831ada84a847916ee59318cb, type: 2}
@@ -27,7 +28,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 76f39640be5df194c89b827b37cebad1, type: 2}
     consequenceMessage: "You can\u2019t write a media post about bribing, but it\u2019s
       important that it solved the problem! <sprite=2>-15<sprite=4>+25"
-  - description: Online campaign in the given location for more frequent use of city
+  - label: City Transport
+    description: Online campaign in the given location for more frequent use of city
       transport, bicycles and walking.
     additionalDescription: <sprite=2>+10<sprite=3>+4000
     actions:
@@ -36,7 +38,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 330b68308a21f214d8923f941c5e3503, type: 2}
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
       but at least you gained more followers! <sprite=2>+10<sprite=3>+4000"
-  - description: Agreement with local companies for the creation of electric bicycles
+  - label: Electric Bicycles
+    description: Agreement with local companies for the creation of electric bicycles
       in the given area.
     additionalDescription: <sprite=2>-15<sprite=3>+5000
     actions:

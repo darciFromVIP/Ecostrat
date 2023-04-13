@@ -19,7 +19,8 @@ MonoBehaviour:
   repeatInterval: 500
   repeatTimes: 1
   reactions:
-  - description: Protests against throwing plastics into the sea and non-recycling
+  - label: Protest
+    description: Protests against throwing plastics into the sea and non-recycling
       of waste.
     additionalDescription: <sprite=2>+25<sprite=3>+6000
     actions:
@@ -28,7 +29,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: abb6a522f1e0c564b943e82f5be5bf7c, type: 2}
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
       but at least you gained more followers! <sprite=2>+25<sprite=3>+6000"
-  - description: Purchase of special equipment and personnel for the removal of marine
+  - label: Special Personnel
+    description: Purchase of special equipment and personnel for the removal of marine
       waste.
     additionalDescription: <sprite=0>-3000<sprite=3>+4000
     actions:
@@ -37,7 +39,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 417d95e78aa626e4495bf2eab3a81b1a, type: 2}
     consequenceMessage: You managed to remove a huge part of the ocean waste and
       thus extended the life of our planet! <sprite=0>-3000<sprite=3>+4000
-  - description: Hacker shutdown of transport ships that produce waste.
+  - label: Hack Attack
+    description: Hacker shutdown of transport ships that produce waste.
     additionalDescription: <sprite=2>-25<sprite=4>+40
     actions:
     - {fileID: 11400000, guid: 07e7db6c4c9466d40b9a1a4cbb4d496f, type: 2}

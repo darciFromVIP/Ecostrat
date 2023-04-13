@@ -19,7 +19,8 @@ MonoBehaviour:
   repeatInterval: 0
   repeatTimes: 0
   reactions:
-  - description: I'll need to reconsider my economic strategies.
+  - label: I'll need to reconsider my economic strategies.
+    description: 
     additionalDescription: 
     actions:
     - {fileID: 11400000, guid: 20bced320919fa64caa928a75910a8a2, type: 2}

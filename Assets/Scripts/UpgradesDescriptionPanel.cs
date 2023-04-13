@@ -16,7 +16,7 @@ public class UpgradesDescriptionPanel : MonoBehaviour
     public void UpdateDescription(UpgradeInfo info)
     {
         nameText.text = info.name;
-        priceText.text = info.price * GameManager.instance.priceModifier + "$";
+        priceText.text = info.price * GameManager.instance.priceModifier + "<sprite=1>";
         descriptionText.text = info.description;
         benefitsText.text = info.benefits;
     }

@@ -96,11 +96,11 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
+        System.TimeSpan timeSpan = System.TimeSpan.FromSeconds(elapsedTime);
+        elapsedTime += Time.deltaTime;
+        elapsedTimeText.text = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
         if (paused)
             return;
-        elapsedTime += Time.deltaTime;
-        System.TimeSpan timeSpan = System.TimeSpan.FromSeconds(elapsedTime);
-        elapsedTimeText.text = string.Format("{0:D2}:{1:D2}:{2:D2}", timeSpan.Hours, timeSpan.Minutes, timeSpan.Seconds);
         gameTimer -= Time.deltaTime * speed;
         gameTimerSlider.value = gameTimer;
         dayText.text = (int)(gameTimer / oneDayInSec) + " days left";
@@ -513,6 +513,7 @@ public class GameManager : MonoBehaviour
     public void GameOver(string label, string description)
     {
         gameoverScreen.UpdateTexts(label, description);
+        RadioSoundManager.instance.StopPlaying();
         PauseGameToggle(true);
     }
     public void MainMenu()

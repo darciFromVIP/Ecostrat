@@ -19,7 +19,8 @@ MonoBehaviour:
   repeatInterval: 750
   repeatTimes: 1
   reactions:
-  - description: Paid advertising campaign on social networks.
+  - label: Advertising
+    description: Paid advertising campaign on social networks.
     additionalDescription: <sprite=2>+20<sprite=3>+7 000
     actions:
     - {fileID: 11400000, guid: be9bdf21b372aee4a96a157871773f97, type: 2}
@@ -27,14 +28,16 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 735ad536ed66b8d4a9bf951721f49277, type: 2}
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
       but at least you gained more followers! <sprite=2>+20<sprite=3>+7 000"
-  - description: Purchase of special cleaning works.
+  - label: Cleaning
+    description: Purchase of special cleaning works.
     additionalDescription: <sprite=0>-3000
     actions:
     - {fileID: 11400000, guid: 43c97e6e6c9855145b1a456befb6690d, type: 2}
     - {fileID: 11400000, guid: 8f1ff4d1715166b4dad1e78d91c38e97, type: 2}
     consequenceMessage: Residents are happy about your garbage collection event!
       <sprite=0>-3000
-  - description: 'A viral video on social networks where we scold people who throw
+  - label: Viral Video
+    description: 'A viral video on social networks where we scold people who throw
       garbage into the river.
 
 '

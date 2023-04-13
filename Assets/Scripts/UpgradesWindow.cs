@@ -5,7 +5,7 @@ using UnityEngine;
 public class UpgradesWindow : MonoBehaviour
 {
     public static UpgradesWindow instance;
-    private void Awake()
+    private void Start()
     {
         instance = this;
         gameObject.SetActive(false);

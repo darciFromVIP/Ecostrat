@@ -19,14 +19,16 @@ MonoBehaviour:
   repeatInterval: 120
   repeatTimes: 2
   reactions:
-  - description: Organize trash collection with our followers.
+  - label: Trash Collection
+    description: Organize trash collection with our followers.
     additionalDescription: <sprite=0>-300
     actions:
     - {fileID: 11400000, guid: 99d85beae6bdf024c856f769e41cb8f7, type: 2}
     - {fileID: 11400000, guid: 6dbea55d1c068124fbc50b9d8c4c1ce4, type: 2}
     consequenceMessage: Congratulations! You managed to clean the pollution from
       the river. Keep up the good work! <sprite=0>-300
-  - description: Make a post on social sites.
+  - label: Social
+    description: Make a post on social sites.
     additionalDescription: <sprite=0>+300<sprite=3>+800
     actions:
     - {fileID: 11400000, guid: 79d034ea81520a34cadd89ea8b10bf79, type: 2}
@@ -34,7 +36,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 488d2fe792eb04446b9c59aa4a5135f0, type: 2}
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
       but at least you gained more followers! <sprite=0>+300<sprite=3>+800"
-  - description: Anonymously create a mass dump of waste.
+  - label: Dump of Waste
+    description: Anonymously create a mass dump of waste.
     additionalDescription: <sprite=2>+1<sprite=0>-400
     actions:
     - {fileID: 11400000, guid: edf234e8cd8bc2349be38f7c156fb79a, type: 2}

@@ -5,6 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class ReactionData 
 {
+    public string label;
     [TextArea(3, 3)]
     public string description;
     public string additionalDescription;

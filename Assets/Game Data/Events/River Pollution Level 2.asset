@@ -19,7 +19,8 @@ MonoBehaviour:
   repeatInterval: 350
   repeatTimes: 2
   reactions:
-  - description: Organize a protest.
+  - label: Protest
+    description: Organize a protest.
     additionalDescription: <sprite=0>+400<sprite=3>+2 500
     actions:
     - {fileID: 11400000, guid: 78fae729bf7330b4e81779a6167f4e56, type: 2}
@@ -27,14 +28,16 @@ MonoBehaviour:
     - {fileID: 11400000, guid: ee450c8a11893b442bcae8cbc3e99e2e, type: 2}
     consequenceMessage: "Unfortunately, you didn\u2019t manage to solve the pollution,
       but at least you gained more followers! <sprite=0>+400<sprite=3>+2 500"
-  - description: Negotiate with the city council for a remedy.
+  - label: Negotiation
+    description: Negotiate with the city council for a remedy.
     additionalDescription: <sprite=2>-5
     actions:
     - {fileID: 11400000, guid: 5a910878b3d275e4193ae6583db25b67, type: 2}
     - {fileID: 11400000, guid: 75fd2671ce01f48469b0eb5ab5b0d326, type: 2}
     consequenceMessage: Congratulations! You managed to clean the pollution from
       the river. Keep up the good work! <sprite=2>-5
-  - description: Talk to graffiti artists and let them move the message of pollution
+  - label: Grafitti
+    description: Talk to graffiti artists and let them move the message of pollution
       to the streets.
     additionalDescription: <sprite=2>-3<sprite=3>+800<sprite=4>+20
     actions:

@@ -19,7 +19,8 @@ MonoBehaviour:
   repeatInterval: 550
   repeatTimes: 2
   reactions:
-  - description: A hacker attack on the factory with the threat of a complete shutdown
+  - label: Hack Attack
+    description: A hacker attack on the factory with the threat of a complete shutdown
       of the factory.
     additionalDescription: <sprite=2>-3<sprite=3>-1000<sprite=4>+25
     actions:
@@ -29,7 +30,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: f4810ef93bf84cb4aa35ec74a9df5346, type: 2}
     consequenceMessage: "Hacking can solve many problems, but as an illegal activity
       it has its disadvantages. People don\u2019t like this approach. <sprite=2>-3<sprite=3>-1000<sprite=4>+25"
-  - description: Bribing the head of the company to support a more ecological solution.
+  - label: Bribe
+    description: Bribing the head of the company to support a more ecological solution.
     additionalDescription: <sprite=2>-3<sprite=4>+20
     actions:
     - {fileID: 11400000, guid: cbea1d0188bb1764cbed38ecaae48313, type: 2}
@@ -37,7 +39,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: ee450c8a11893b442bcae8cbc3e99e2e, type: 2}
     consequenceMessage: "You can\u2019t write a media post about bribing, but it\u2019s
       important that it solved the problem! <sprite=2>-3<sprite=4>+20"
-  - description: Public protests in the given areas.
+  - label: Protest
+    description: Public protests in the given areas.
     additionalDescription: <sprite=2>+3<sprite=3>+2500
     actions:
     - {fileID: 11400000, guid: b7d9995dfffd230418f528ec8a5dac45, type: 2}

@@ -19,7 +19,8 @@ MonoBehaviour:
   repeatInterval: 180
   repeatTimes: 2
   reactions:
-  - description: "Organize trash collection with our followers.\r"
+  - label: Trash Collection
+    description: "Organize trash collection with our followers.\r"
     additionalDescription: <sprite=0>-350<sprite=3>+300
     actions:
     - {fileID: 11400000, guid: 2c451700aca233a48bcfd0437c1720f2, type: 2}
@@ -27,7 +28,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 57ac0c7c268791d46beabdf596938ddd, type: 2}
     consequenceMessage: Residents are happy about your garbage collection event!
       <sprite=0>-350<sprite=3>+300
-  - description: Bribe the mayor to procure cleaning services.
+  - label: Bribe
+    description: Bribe the mayor to procure cleaning services.
     additionalDescription: <sprite=0>-400<sprite=4>+15
     actions:
     - {fileID: 11400000, guid: 6ad33248fb674c6468974514ba3714bf, type: 2}
@@ -35,7 +37,8 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 75fd2671ce01f48469b0eb5ab5b0d326, type: 2}
     consequenceMessage: "You can\u2019t write a media post about bribing, but it\u2019s
       important that it solved the problem! <sprite=0>-400<sprite=4>+15"
-  - description: 'Hacking the city office with threatening messages and demanding
+  - label: Hack Attack
+    description: 'Hacking the city office with threatening messages and demanding
       immediate correction.
 
 '

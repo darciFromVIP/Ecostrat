@@ -20,4 +20,8 @@ public class RadioSoundManager : MonoBehaviour
             audioSource.PlayOneShot(radioSounds[random]);
         }
     }
+    public void StopPlaying()
+    {
+        audioSource.Stop();
+    }
 }
