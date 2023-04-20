@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: 77c9790152f0f704e9c0358720599eb4, type: 3}
   upgradeType: 2
-  price: 25000
+  price: 20000
   description: "Our protests are protected by one common idea. Take responsibility
     into your own hands and make order in high political and managerial corporations,
     for people who are not competent to meet our demands. The pressure we exert on

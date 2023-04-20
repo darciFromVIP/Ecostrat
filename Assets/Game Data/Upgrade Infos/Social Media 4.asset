@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: b13ef5ac73c20f2498ad899606c7cff8, type: 3}
   upgradeType: 1
-  price: 20000
+  price: 25000
   description: "When it comes to high quality social media, it\u2019s not only important
     to have perfectly edited posts, good advertisement and target audience. If you
     want to aim high and have your posts reach all around the world and gain traction

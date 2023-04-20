@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   artwork: {fileID: 21300000, guid: e87f48ba8fc58964f883f1cce44cc297, type: 3}
   upgradeType: 1
-  price: 60000
+  price: 50000
   description: "Cooperation with other corporations works well, but there\u2019s
     something else that interests people even more. Influencers! The last step is
     to create a team that can work with them. For that you\u2019ll need an even bigger
