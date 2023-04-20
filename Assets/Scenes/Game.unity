@@ -2796,7 +2796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df7531f7d658c6c46a503c71aad87a97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 500
+  money: 1000
   illegality: 0
   trash: 0
   trashIncrementAmount: 10
