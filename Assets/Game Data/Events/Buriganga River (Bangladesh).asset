@@ -54,4 +54,4 @@ MonoBehaviour:
   ignoreMessage: 'You ignored to take an action for: Buriganga River (Bangladesh).
     <sprite=2>+10 <sprite=3>-2000.'
   eventDescription: Buriganga River (Bangladesh) is polluted by industry and people!
-  mapPosition: {x: 0, y: 0}
+  mapPosition: {x: 5504, y: 2348}
